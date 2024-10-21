@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="615.0" minWidth="100.0" prefHeight="161.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.UserLoginController">
+   <children>
+      <!-- Botón para hacer Login -->
+      <Button fx:id="loginButton" layoutX="114.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="48.0" prefWidth="89.0" text="Login" />
+      <!-- Botón para ir a la ventana de Sign Up -->
+      <Button fx:id="signUpButton" layoutX="76.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSignUpButtonAction" text="Sign Up" />
+      <!-- Campos de texto para el login -->
+      <TextField fx:id="usernameField" layoutX="83.0" layoutY="338.0" promptText="Username" />
+      <PasswordField fx:id="passwordField" layoutX="84.0" layoutY="376.0" promptText="Password" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="forgotPasswordButton" layoutX="129.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleForgotPasswordAction"  text="Forget Password" />
+   </children>
+</AnchorPane>

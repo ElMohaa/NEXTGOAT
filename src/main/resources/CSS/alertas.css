@@ -1,0 +1,28 @@
+/* Cambia el estilo del encabezado de la alerta */
+.dialog-pane .header-panel {
+    -fx-background-color: #4CAF50; /* Fondo verde */
+    -fx-font-size: 16px;           /* Tamaño del texto del encabezado */
+    -fx-text-fill: white;          /* Color de texto blanco */
+    -fx-font-weight: bold;         /* Texto en negrita */
+}
+
+/* Cambia el estilo del contenido de la alerta */
+.dialog-pane .content-panel {
+    -fx-font-size: 14px;           /* Tamaño del texto del contenido */
+    -fx-text-fill: #333333;        /* Color del texto gris oscuro */
+}
+
+/* Cambia el estilo de los botones */
+.dialog-pane .button {
+    -fx-background-color: #4CAF50; /* Fondo verde para el botón */
+    -fx-text-fill: white;          /* Texto blanco */
+    -fx-font-weight: bold;         /* Texto en negrita */
+}
+
+/* Cambia el borde y la sombra del diálogo */
+.dialog-pane {
+    -fx-border-color: #4CAF50;     /* Borde verde */
+    -fx-border-width: 2px;         /* Grosor del borde */
+    -fx-background-radius: 10px;   /* Bordes redondeados */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0.0, 0.0);
+}
