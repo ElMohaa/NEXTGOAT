@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MidfielderController">
+   <children>
+      <Button layoutX="21.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+   </children>
+</AnchorPane>

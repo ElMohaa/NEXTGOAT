@@ -1,0 +1,26 @@
+#anchorpane {
+    -fx-background-color: linear-gradient(#000310, #0a145a, #0cd151);
+}
+
+#backToLoginButton{
+    -fx-background-color: transparent; /* Verde claro */
+    -fx-text-fill: #f6f7fa;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+#botnSing {
+    -fx-background-color: transparent; /* Verde claro */
+    -fx-text-fill: #f6f7fa;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-border-color: transparent transparent #1def66 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+#signUpButton {
+    -fx-background-color: #000209; /* Blanco */
+    -fx-text-fill: #f6f7fa; /* Texto negro */
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
