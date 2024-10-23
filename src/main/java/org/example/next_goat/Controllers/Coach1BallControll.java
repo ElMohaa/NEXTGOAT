@@ -10,17 +10,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ForwardController {
-    @FXML
-    private void handleBackButtonAction(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Training.fxml"));
-            Parent training = loader.load();
+public class Coach1BallControll {
 
-            Scene trainingScene = new Scene(training);
+
+    @FXML
+    private void buttonSoleRole(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SoleRoleStop.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
 
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(laLigaScene);
             window.show();
 
         } catch (IOException e) {
@@ -28,15 +31,16 @@ public class ForwardController {
         }
     }
     @FXML
-    private void controlball(ActionEvent event) {
+    private void buttonTurn(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/BallControl.fxml"));
-            Parent training = loader.load();
 
-            Scene trainingScene = new Scene(training);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/U_TurnMoving.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
 
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(laLigaScene);
             window.show();
 
         } catch (IOException e) {

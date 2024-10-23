@@ -1,9 +1,10 @@
 module org.example.next_goat {
-    requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
     requires java.mail;
     requires com.google.gson;
+    requires javafx.web;
+    requires javafx.media;
 
 
     // Exponer el paquete principal y los controladores a JavaFX
