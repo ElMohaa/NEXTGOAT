@@ -12,6 +12,7 @@ import javafx.scene.media.MediaView;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,6 +32,7 @@ public class SoleRoleStopControll {
 
         mediaView.setPreserveRatio(false);
         mediaView.setMediaPlayer(mediaPlayer);
+        mediaPlayer.setOnEndOfMedia(() -> mediaPlayer.seek(Duration.ZERO));
 
         // Reproduce el video automáticamente
         mediaPlayer.play();

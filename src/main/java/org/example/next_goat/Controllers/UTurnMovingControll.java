@@ -10,6 +10,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -21,12 +22,13 @@ public class UTurnMovingControll {
     @FXML
     public void initialize() {
         // Cargar el video desde un archivo local
-        String videoPath = getClass().getResource("/VIDEOS/U_TrunMoving.mp4").toExternalForm(); // Cambia esta ruta a la ubicación de tu video
+        String videoPath = getClass().getResource("/VIDEOS/skill2.mp4").toExternalForm(); // Cambia esta ruta a la ubicación de tu video
         Media media = new Media(videoPath);
         MediaPlayer mediaPlayer = new MediaPlayer(media);
 
         mediaView.setPreserveRatio(false);
         mediaView.setMediaPlayer(mediaPlayer);
+        mediaPlayer.setOnEndOfMedia(() -> mediaPlayer.seek(Duration.ZERO));
 
         // Reproduce el video automáticamente
         mediaPlayer.play();

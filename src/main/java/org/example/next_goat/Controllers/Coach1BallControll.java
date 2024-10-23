@@ -47,4 +47,57 @@ public class Coach1BallControll {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void buttonRonaldo(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SoleRoleRonaldo.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void buttonOut(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SoleDragOutside.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void buttonSkill(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Skill.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
