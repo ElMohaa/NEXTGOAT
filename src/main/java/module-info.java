@@ -18,4 +18,6 @@ module org.example.next_goat {
     // Exponer controladores si necesitas acceso dinámico
     exports org.example.next_goat.Controllers;
     opens org.example.next_goat.Controllers to javafx.fxml;
+    exports org.example.next_goat.Controllers.BallControl;
+    opens org.example.next_goat.Controllers.BallControl to javafx.fxml;
 }
