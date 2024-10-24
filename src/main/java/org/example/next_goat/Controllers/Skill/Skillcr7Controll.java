@@ -38,7 +38,7 @@ public class Skillcr7Controll {
     @FXML
     private void back(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/Coach2BallSkill.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/Coach2BallSkill.fxml"));
             Parent training = loader.load();
 
             Scene trainingScene = new Scene(training);

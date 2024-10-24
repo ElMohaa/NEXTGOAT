@@ -39,7 +39,7 @@ public class SoleRoleStopControll {
     @FXML
     private void back(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/Coach1BallSkill.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/Coach1BallSkill.fxml"));
             Parent training = loader.load();
 
             Scene trainingScene = new Scene(training);

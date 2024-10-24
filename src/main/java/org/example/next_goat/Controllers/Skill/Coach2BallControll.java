@@ -15,7 +15,7 @@ public class Coach2BallControll {
     private void buttonSoleDrag(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SoleRoleDrag.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SoleRoleDrag.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -33,7 +33,7 @@ public class Coach2BallControll {
     private void buttoncr(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SkillCR7.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SkillCR7.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -51,7 +51,7 @@ public class Coach2BallControll {
     private void buttonEasy(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SkillEasy.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SkillEasy.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -68,7 +68,7 @@ public class Coach2BallControll {
     private void buttonBack(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/BallControl.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/BallControl.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);

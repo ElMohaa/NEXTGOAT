@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Skill.BallControll">
+   <children>
+      <Button layoutX="132.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonCochac1" text="Coach1" />
+      <Button layoutX="132.0" layoutY="210.0" mnemonicParsing="false" onAction="#buttonCochac2" text="Coach2" />
+      <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+   </children>
+</AnchorPane>

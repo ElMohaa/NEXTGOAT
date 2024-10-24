@@ -16,7 +16,7 @@ public class BallControll {
     private void buttonCochac1(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/Coach1BallSkill.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/Coach1BallSkill.fxml"));
             Parent laLigaView = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga
@@ -36,7 +36,7 @@ public class BallControll {
     private void buttonCochac2(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/Coach2BallSkill.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/Coach2BallSkill.fxml"));
             Parent laLigaView = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga

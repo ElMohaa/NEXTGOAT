@@ -30,7 +30,7 @@ public class ForwardController {
     @FXML
     private void controlball(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/BallControl.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/BallControl.fxml"));
             Parent training = loader.load();
 
             Scene trainingScene = new Scene(training);

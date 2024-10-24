@@ -15,7 +15,7 @@ public class Coach1BallControll {
     private void buttonBack(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/BallControl.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/BallControl.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -34,7 +34,7 @@ public class Coach1BallControll {
     private void buttonSoleRole(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SoleRoleStop.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SoleRoleStop.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -53,7 +53,7 @@ public class Coach1BallControll {
     private void buttonRonaldo(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SoleRoleRonaldo.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SoleRoleRonaldo.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -71,7 +71,7 @@ public class Coach1BallControll {
     private void buttonOut(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/SoleDragOutside.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/SoleDragOutside.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
@@ -88,7 +88,7 @@ public class Coach1BallControll {
     private void buttonSkill(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/Skill.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/DRIBLLES/Skill.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
