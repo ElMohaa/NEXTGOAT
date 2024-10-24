@@ -30,7 +30,41 @@ public class ForwardController {
     @FXML
     private void controlball(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/BALLCONTROL/BallControl.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/SKILL/BallControl.fxml"));
+            Parent training = loader.load();
+
+            Scene trainingScene = new Scene(training);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(trainingScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void topass(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/TOPASS/ToPass.fxml"));
+            Parent training = loader.load();
+
+            Scene trainingScene = new Scene(training);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(trainingScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void control(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/COTROLLBALL/ControllBall.fxml"));
             Parent training = loader.load();
 
             Scene trainingScene = new Scene(training);
