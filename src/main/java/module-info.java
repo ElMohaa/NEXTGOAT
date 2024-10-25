@@ -18,10 +18,23 @@ module org.example.next_goat {
     // Exponer controladores si necesitas acceso dinámico
     exports org.example.next_goat.Controllers;
     opens org.example.next_goat.Controllers to javafx.fxml;
-    exports org.example.next_goat.Controllers.Skill;
-    opens org.example.next_goat.Controllers.Skill to javafx.fxml;
-    exports org.example.next_goat.Controllers.ToPass;
-    opens org.example.next_goat.Controllers.ToPass to javafx.fxml;
-    exports org.example.next_goat.Controllers.ControllBall;
-    opens org.example.next_goat.Controllers.ControllBall to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.ForAndMid.Dribble;
+    opens org.example.next_goat.Controllers.ForAndMid.Dribble to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.ForAndMid.ToPass;
+    opens org.example.next_goat.Controllers.ForAndMid.ToPass to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.ForAndMid.ControllBall;
+    opens org.example.next_goat.Controllers.ForAndMid.ControllBall to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.ForAndMid.Skill;
+    opens org.example.next_goat.Controllers.ForAndMid.Skill to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.ForAndMid;
+    opens org.example.next_goat.Controllers.ForAndMid to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Defen;
+    opens org.example.next_goat.Controllers.Defen to javafx.fxml;
+
 }

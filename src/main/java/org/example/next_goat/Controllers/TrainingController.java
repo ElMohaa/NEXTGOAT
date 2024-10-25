@@ -31,7 +31,7 @@ public class TrainingController {
     private void handleDelanteroButtonAction(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Forward.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/Forward.fxml"));
             Parent Forward = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga
@@ -50,7 +50,7 @@ public class TrainingController {
     private void handleCentroButtonAction(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Midfielder.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/Midfielder.fxml"));
             Parent medio = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga
@@ -69,7 +69,7 @@ public class TrainingController {
     private void handleDefensaButtonAction(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/Defense.fxml"));
             Parent defense = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga

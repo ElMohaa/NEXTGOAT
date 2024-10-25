@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Skill.HabilidadControll">
+   <children>
+      <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Button layoutX="122.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonSkill1" text="Skill 1" />
+      <Button layoutX="122.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonSkill2" text="Skill 2" />
+      <Button layoutX="122.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSkill3" text="Skill 3" />
+      <Button layoutX="122.0" layoutY="336.0" mnemonicParsing="false" onAction="#buttonSkill4" text="Skill 4" />
+      <Button layoutX="134.0" layoutY="406.0" mnemonicParsing="false" onAction="#buttonSkill5" text="Skill 5" />
+   </children>
+</AnchorPane>

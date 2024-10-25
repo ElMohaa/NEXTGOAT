@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.media.MediaView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.next_goat.Controllers.ForAndMid.ToPass.CutterPassControll"
+            prefHeight="615.0" prefWidth="315.0">
+    <children>
+        <Button fx:id="backButton" layoutX="139.0" layoutY="547.0" onAction="#back" text="Volver" />
+        <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="260.0" layoutX="28.0" layoutY="33.0" />
+    </children>
+
+</AnchorPane>
