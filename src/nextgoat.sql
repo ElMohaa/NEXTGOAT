@@ -25,3 +25,17 @@ CREATE TABLE ProgresoEntrenamiento (
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
 
+CREATE TABLE MejoraFsica (
+    id INT auto_increment PRIMARY KEY,
+    id_usuario INT,
+    ritmo int,
+    regate int,
+    fisico int,
+    tiro int,
+    pase int,
+    defensa int,
+    media int,
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+);
+
+
