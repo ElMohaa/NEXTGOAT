@@ -5,8 +5,13 @@
 
 <AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Dribble.BallControll">
    <children>
-      <Button layoutX="132.0" layoutY="150.0" mnemonicParsing="false" onAction="#buttonCochac1" text="Coach1" />
-      <Button layoutX="132.0" layoutY="210.0" mnemonicParsing="false" onAction="#buttonCochac2" text="Coach2" />
+      <Button layoutX="82.0" layoutY="50.0" onAction="#buttonDriblle1" text="Sole Role and Stop" />
+      <Button layoutX="82.0" layoutY="100.0" onAction="#buttonDriblle2" text="Sole Role and Ronaldo" />
+      <Button layoutX="82.0" layoutY="150.0" onAction="#buttonDriblle3" text="Sole Drag Outside" />
+      <Button layoutX="82.0" layoutY="200.0" onAction="#buttonDriblle4" text="Skill" />
+      <Button layoutX="82.0" layoutY="250.0" onAction="#buttonDriblle5" text="Sole Role Drag 90s back" />
+      <Button layoutX="82.0" layoutY="300.0" onAction="#buttonDriblle6" text="Skill CR7" />
+      <Button layoutX="82.0" layoutY="350.0" onAction="#buttonDriblle7" text="Skill Easy" />
       <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
    </children>
 </AnchorPane>

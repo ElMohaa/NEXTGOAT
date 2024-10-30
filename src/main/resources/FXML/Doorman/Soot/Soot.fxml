@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.Soot.SootController">
+    <children>
+        <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+        <Button layoutX="132.0" layoutY="155.0" mnemonicParsing="false" onAction="#buttonSoot1" text="Soot" />
+        <Button layoutX="132.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSoot2" text="Save" />
+        <Button layoutX="132.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSoot3" text="Low Dive" />
+      <Button layoutX="132.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonSoot4" text="Save" />
+    </children>
+
+</AnchorPane>

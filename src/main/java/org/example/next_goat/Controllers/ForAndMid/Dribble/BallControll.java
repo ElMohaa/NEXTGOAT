@@ -7,46 +7,58 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.next_goat.Controllers.ForAndMid.Skill.SkillController;
 
 import java.io.IOException;
 
 public class BallControll {
 
     @FXML
-    private void buttonCochac1(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/DRIBLLES/Coach1BallSkill.fxml"));
-            Parent laLigaView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(laLigaView);
-
-            // Obtener el stage actual y cambiar la escena
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void buttonDriblle1(ActionEvent event) {
+        loadSkill(event, 1);
     }
 
     @FXML
-    private void buttonCochac2(ActionEvent event) {
+    private void buttonDriblle2(ActionEvent event) {
+        loadSkill(event, 2);
+    }
+
+    @FXML
+    private void buttonDriblle3(ActionEvent event) {
+        loadSkill(event, 3);
+    }
+
+    @FXML
+    private void buttonDriblle4(ActionEvent event) {
+        loadSkill(event, 4);
+    }
+
+    @FXML
+    private void buttonDriblle5(ActionEvent event) {
+        loadSkill(event, 5);
+    }
+
+    @FXML
+    private void buttonDriblle6(ActionEvent event) {
+        loadSkill(event, 6);
+    }
+    @FXML
+    private void buttonDriblle7(ActionEvent event) {
+        loadSkill(event, 7);
+    }
+
+    private void loadSkill(ActionEvent event, int skillNumber) {
         try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/DRIBLLES/Coach2BallSkill.fxml"));
-            Parent laLigaView = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/DRIBLLES/Driblle.fxml"));
+            Parent skillView = loader.load();
 
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(laLigaView);
+            DriblleController controller = loader.getController();
+            controller.setDriblleNumber(skillNumber); // Establece el número de habilidad
 
-            // Obtener el stage actual y cambiar la escena
+            Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
+            window.setScene(skillScene);
             window.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

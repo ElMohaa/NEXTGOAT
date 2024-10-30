@@ -44,4 +44,40 @@ public class DefenseController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void buttonControllBall(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/ControllBallDefense/ControllDefense.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void buttonPass(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/PassDefense/PassDefense.fxml"));
+            Parent laLigaView = loader.load();
+
+            Scene laLigaScene = new Scene(laLigaView);
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

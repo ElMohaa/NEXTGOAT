@@ -37,4 +37,20 @@ module org.example.next_goat {
     exports org.example.next_goat.Controllers.Defen;
     opens org.example.next_goat.Controllers.Defen to javafx.fxml;
 
+    exports org.example.next_goat.Controllers.Defen.Seated;
+    opens org.example.next_goat.Controllers.Defen.Seated to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Defen.ControllDefense;
+    opens org.example.next_goat.Controllers.Defen.ControllDefense to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Defen.ToPassDefense;
+    opens org.example.next_goat.Controllers.Defen.ToPassDefense to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Goalkeeper;
+    opens org.example.next_goat.Controllers.Goalkeeper to javafx.fxml;
+    exports org.example.next_goat.Controllers.Goalkeeper.Soot;
+    opens org.example.next_goat.Controllers.Goalkeeper.Soot to javafx.fxml;
+    exports org.example.next_goat.Controllers.Goalkeeper.PassGK;
+    opens org.example.next_goat.Controllers.Goalkeeper.PassGK to javafx.fxml;
+
 }

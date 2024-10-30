@@ -88,7 +88,7 @@ public class TrainingController {
     private void handlePorteroButtonAction(ActionEvent event) {
         try {
             // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Doorman.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Doorman/Goalkeeper.fxml"));
             Parent Doorman = loader.load();
 
             // Crear una nueva escena con la ventana de LaLiga

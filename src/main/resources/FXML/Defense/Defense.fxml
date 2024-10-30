@@ -7,8 +7,7 @@
    <children>
       <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
       <Button layoutX="142.0" layoutY="144.0" mnemonicParsing="false" onAction="#buttonSeated" text="Seated" />
-      <Button layoutX="143.0" layoutY="195.0" mnemonicParsing="false" text="Controll Ball" />
-      <Button layoutX="143.0" layoutY="262.0" mnemonicParsing="false" text="Pass" />
-      <Button layoutX="137.0" layoutY="308.0" mnemonicParsing="false" text="Skill" />
+      <Button layoutX="143.0" layoutY="195.0" mnemonicParsing="false" onAction="#buttonControllBall" text="Controll Ball" />
+      <Button layoutX="143.0" layoutY="262.0" mnemonicParsing="false" onAction="#buttonPass" text="Pass" />
    </children>
 </AnchorPane>

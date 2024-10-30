@@ -6,11 +6,11 @@
 <AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ToPass.ToPassControll">
    <children>
       <Button layoutX="26.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-      <Button layoutX="132.0" layoutY="177.0" mnemonicParsing="false" onAction="#buttonCurl" text="Curl Pass" />
-      <Button layoutX="132.0" layoutY="252.0" mnemonicParsing="false" onAction="#buttonTri" text="Trivela Pass" />
-      <Button layoutX="132.0" layoutY="338.0" mnemonicParsing="false" onAction="#buttonLong" text="Long Pass" />
-      <Button layoutX="141.0" layoutY="396.0" mnemonicParsing="false" onAction="#buttonCutter" text="Cutter Pass" />
-      <Button layoutX="153.0" layoutY="452.0" mnemonicParsing="false" onAction="#buttonGras" text="Grasscutter" />
-      <Button layoutX="145.0" layoutY="295.0" mnemonicParsing="false" onAction="#buttonCurvLong" text="Curve Long Pass" />
+      <Button layoutX="132.0" layoutY="177.0" mnemonicParsing="false" onAction="#buttonPass1" text="Curl Pass" />
+      <Button layoutX="132.0" layoutY="252.0" mnemonicParsing="false" onAction="#buttonPass2" text="Trivela Pass" />
+      <Button layoutX="132.0" layoutY="338.0" mnemonicParsing="false" onAction="#buttonPass3" text="Long Pass" />
+      <Button layoutX="141.0" layoutY="396.0" mnemonicParsing="false" onAction="#buttonPass4" text="Cutter Pass" />
+      <Button layoutX="153.0" layoutY="452.0" mnemonicParsing="false" onAction="#buttonPass5" text="Grasscutter" />
+      <Button layoutX="145.0" layoutY="295.0" mnemonicParsing="false" onAction="#buttonPass6" text="Curve Long Pass" />
    </children>
 </AnchorPane>

@@ -3,12 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.SeatedController">
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.Seated.SeatedController">
    <children>
       <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-      <Button layoutX="132.0" layoutY="155.0" mnemonicParsing="false" onAction="#buttonTack" text="Tackle" />
-      <Button layoutX="132.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonMista" text="Mistake" />
-      <Button layoutX="132.0" layoutY="283.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="132.0" layoutY="352.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="132.0" layoutY="155.0" mnemonicParsing="false" onAction="#buttonSeatedlll1" text="Tackle" />
+      <Button layoutX="132.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSeatedlll2" text="Mistake" />
+      <Button layoutX="132.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSeatedlll3" text="To Hold" />
    </children>
 </AnchorPane>
