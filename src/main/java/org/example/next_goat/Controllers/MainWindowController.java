@@ -49,4 +49,64 @@ public class MainWindowController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void buttonAtletismo(ActionEvent event) {
+        try {
+            // Cargar la vista de LaLiga
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical.fxml"));
+            Parent traView = loader.load();
+
+            // Crear una nueva escena con la ventana de LaLiga
+            Scene laLigaScene = new Scene(traView);
+
+            // Obtener el stage actual y cambiar la escena
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void buttonRecovery(ActionEvent event) {
+        try {
+            // Cargar la vista de LaLiga
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Recovery.fxml"));
+            Parent traView = loader.load();
+
+            // Crear una nueva escena con la ventana de LaLiga
+            Scene laLigaScene = new Scene(traView);
+
+            // Obtener el stage actual y cambiar la escena
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void buttonUser(ActionEvent event) {
+        try {
+            // Cargar la vista de LaLiga
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/User.fxml"));
+            Parent traView = loader.load();
+
+            // Crear una nueva escena con la ventana de LaLiga
+            Scene laLigaScene = new Scene(traView);
+
+            // Obtener el stage actual y cambiar la escena
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

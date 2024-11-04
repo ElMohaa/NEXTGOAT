@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Mobility.MobilityController">
+   <children>
+      <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#buttonBack" text="Button" />
+      <Button layoutX="106.0" layoutY="165.0" mnemonicParsing="false" onAction="#buttonMobi1" text="Kneeling Cars" />
+      <Button layoutX="116.0" layoutY="206.0" mnemonicParsing="false" onAction="#buttonMobi2" text="Bridge Abdution" />
+      <Button layoutX="142.0" layoutY="270.0" mnemonicParsing="false" onAction="#buttonMobi3" text="Active 90/90" />
+      <Button layoutX="132.0" layoutY="340.0" mnemonicParsing="false" onAction="#buttonMobi4" text="Hip CARs" />
+   </children>
+</AnchorPane>

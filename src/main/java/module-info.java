@@ -48,9 +48,28 @@ module org.example.next_goat {
 
     exports org.example.next_goat.Controllers.Goalkeeper;
     opens org.example.next_goat.Controllers.Goalkeeper to javafx.fxml;
+
     exports org.example.next_goat.Controllers.Goalkeeper.Soot;
     opens org.example.next_goat.Controllers.Goalkeeper.Soot to javafx.fxml;
+
     exports org.example.next_goat.Controllers.Goalkeeper.PassGK;
     opens org.example.next_goat.Controllers.Goalkeeper.PassGK to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Physical.Force;
+    opens org.example.next_goat.Controllers.Physical.Force to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Physical.Speed;
+    opens org.example.next_goat.Controllers.Physical.Speed to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Physical.Resistance;
+    opens org.example.next_goat.Controllers.Physical.Resistance to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Physical.Mobility;
+    opens org.example.next_goat.Controllers.Physical.Mobility to javafx.fxml;
+
+    exports org.example.next_goat.Controllers.Recovery;
+    opens org.example.next_goat.Controllers.Recovery to javafx.fxml;
+
+
 
 }

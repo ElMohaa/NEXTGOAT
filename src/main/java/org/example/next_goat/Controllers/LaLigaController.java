@@ -3,13 +3,19 @@ package org.example.next_goat.Controllers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.example.next_goat.Clases.*;
 
 import java.io.IOException;
@@ -162,6 +168,26 @@ public class LaLigaController {
         } catch (Exception e) {
             System.err.println("Ocurrió un error inesperado: " + e.getMessage());
             e.printStackTrace(); // Imprimir la traza de la excepción
+        }
+    }
+
+    @FXML
+    private void buttonBack(ActionEvent event) {
+        try {
+            // Cargar la vista de LaLiga
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
+            Parent traView = loader.load();
+
+            // Crear una nueva escena con la ventana de LaLiga
+            Scene laLigaScene = new Scene(traView);
+
+            // Obtener el stage actual y cambiar la escena
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(laLigaScene);
+            window.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

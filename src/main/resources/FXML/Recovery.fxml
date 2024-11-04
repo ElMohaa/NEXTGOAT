@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="615.0" minWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RecoveryController">
+   <children>
+      <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+      <Button layoutX="57.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonForce1" text="Knee" />
+      <Button layoutX="197.0" layoutY="100.0" mnemonicParsing="false" onAction="#buttonForce2" text="Ankle" />
+      <Button layoutX="57.0" layoutY="170.0" mnemonicParsing="false" onAction="#buttonForce3" text="Groin" />
+      <Button layoutX="186.0" layoutY="170.0" mnemonicParsing="false" onAction="#buttonForce4" text="Hamstrings " />
+      <Button layoutX="66.0" layoutY="244.0" mnemonicParsing="false" onAction="#buttonForce5" text="Leg Calf" />
+      <Button layoutX="197.0" layoutY="232.0" mnemonicParsing="false" onAction="#buttonForce6" text="Shoulder" />
+   </children>
+</AnchorPane>

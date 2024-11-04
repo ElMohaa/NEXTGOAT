@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="615.0" minWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.PhysicalController">
+   <children>
+      <Button layoutX="48.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonForce" text="Force" />
+      <Button layoutX="190.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonSpeed" text="Speed" />
+      <Button layoutX="56.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonResis" text="Resistencia" />
+      <Button layoutX="190.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonMobby" text="Movilidad" />
+      <Button layoutX="22.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+   </children>
+</AnchorPane>

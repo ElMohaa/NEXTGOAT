@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Speed.SpeedController">
+   <children>
+      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+      <Button layoutX="123.0" layoutY="173.0" mnemonicParsing="false" onAction="#buttonSpeed1" text="Broad Jumps" />
+      <Button layoutX="132.0" layoutY="246.0" mnemonicParsing="false" onAction="#buttonSpeed2" text="Calf Speed" />
+      <Button layoutX="132.0" layoutY="326.0" mnemonicParsing="false" onAction="#buttonSpeed3" text="Fall Sprints" />
+   </children>
+</AnchorPane>
