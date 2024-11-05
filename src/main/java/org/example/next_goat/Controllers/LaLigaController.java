@@ -67,6 +67,7 @@ public class LaLigaController {
         new Thread(() -> {
             try {
                 String matchesData = footballApiClient.getUpcomingMatchesByCompetition(competition.getId());
+                System.out.println("Aqui estan los equipos"+matchesData);
                 Gson gson = new Gson();
                 MatchesResponse matchesResponse = gson.fromJson(matchesData, MatchesResponse.class);
 
@@ -74,8 +75,8 @@ public class LaLigaController {
                 Platform.runLater(() -> {
                     matchesListView.getItems().clear();
                     if (matchesResponse != null && matchesResponse.getMatches() != null) {
-                        matchesResponse.getMatches().stream().limit(4).forEach(match ->
-                                matchesListView.getItems().add(match.toString()));
+                        matchesResponse.getMatches().stream().limit(6).forEach(match ->
+                                matchesListView.getItems().add(match.getFormattedMatch()));
                     }
                 });
             } catch (IOException e) {
@@ -114,7 +115,7 @@ public class LaLigaController {
     private void loadClasificacion(Competition competition) {
         try {
             String clasificacionData = footballApiClient.getClasificacionByCompetition(competition.getId());
-            System.out.println("Clasificación de la liga: " + clasificacionData); // Depuración
+            //System.out.println("Clasificación de la liga: " + clasificacionData); // Depuración
 
             // Parsear la respuesta
             Gson gson = new Gson();

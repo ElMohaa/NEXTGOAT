@@ -1,9 +1,12 @@
 package org.example.next_goat.Clases;
 
+import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Match {
     private Team homeTeam;
     private Team awayTeam;
-    private String date; // Podrías usar un tipo de dato más específico para la fecha.
+    private String utcDate;
 
     public Team getHomeTeam() {
         return homeTeam;
@@ -14,24 +17,36 @@ public class Match {
     }
 
     public String getDate() {
-        return date;
+        return utcDate;
     }
 
-    @Override
-    public String toString() {
-        return homeTeam.toString() + " vs " + awayTeam.toString() + " on " + date; // Personaliza la cadena según tus necesidades
+    public String getFormattedMatch() {
+        if (utcDate == null) {
+            return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + " - Fecha no disponible";
+        }
+
+        try {
+            OffsetDateTime matchDateTime = OffsetDateTime.parse(utcDate);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd ',' HH:mm ");
+            String formattedDate = matchDateTime.format(formatter);
+            return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + ": " + formattedDate;
+        } catch (Exception e) {
+            // Si ocurre un error al parsear, manejarlo aquí
+            return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + " - Fecha inválida";
+        }
     }
+
 
     public class Team {
         private String name;
+        private String shortName; // Añadir shortName
 
         public String getName() {
             return name;
         }
 
-        @Override
-        public String toString() {
-            return  name ;
+        public String getShortName() {
+            return shortName; // Método para obtener shortName
         }
     }
 }

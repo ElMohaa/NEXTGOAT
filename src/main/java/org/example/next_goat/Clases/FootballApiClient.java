@@ -59,7 +59,7 @@ public class FootballApiClient {
     }
 
     public String getUpcomingMatchesByCompetition(int competitionId) throws IOException {
-        String endpoint = "/competitions/" + competitionId + "/matches?status=SCHEDULED&limit=4";
+        String endpoint = "/competitions/" + competitionId + "/matches?status=SCHEDULED&limit=6";
         return sendRequest(endpoint);
     }
 
