@@ -15,7 +15,7 @@ public class FootballApiClient {
     private static final String BASE_URL = "https://api.football-data.org/v4";
 
     // Token de autenticación de la API
-    private static final String API_KEY = "d82563d8845a4103af07f5164f6c3b79";  // Aquí va tu token
+    private static final String API_KEY = "e6e28ccf195848d380518569beb75823";  // Aquí va tu token
 
     // Método para obtener las competiciones
     public String getCompetitions() throws IOException {
@@ -54,9 +54,15 @@ public class FootballApiClient {
 
     // Método para obtener los partidos del equipo usando su ID
     public String getMatchesByTeamId(int teamId) throws IOException {
-        String endpoint = "/teams/" + teamId + "/matches";
+        String endpoint = "/teams/" + teamId + "/matches?status=SCHEDULED";
         return sendRequest(endpoint);
     }
+
+    public String getUpcomingMatchesByCompetition(int competitionId) throws IOException {
+        String endpoint = "/competitions/" + competitionId + "/matches?status=SCHEDULED&limit=4";
+        return sendRequest(endpoint);
+    }
+
 
 
 

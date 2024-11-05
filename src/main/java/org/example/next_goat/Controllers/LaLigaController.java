@@ -51,7 +51,8 @@ public class LaLigaController {
         leagueComboBox.setOnAction(event -> {
             Competition selectedCompetition = leagueComboBox.getValue();
             if (selectedCompetition != null) {
-                loadClasificacion(selectedCompetition); // Cargar la clasificación de la liga seleccionada
+                loadClasificacion(selectedCompetition);
+                loadUpcomingMatches(selectedCompetition);// Cargar la clasificación de la liga seleccionada
             }
         });
     }
@@ -62,6 +63,27 @@ public class LaLigaController {
         equipoCol.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         puntosCol.setCellValueFactory(new PropertyValueFactory<>("puntos"));
     }
+    private void loadUpcomingMatches(Competition competition) {
+        new Thread(() -> {
+            try {
+                String matchesData = footballApiClient.getUpcomingMatchesByCompetition(competition.getId());
+                Gson gson = new Gson();
+                MatchesResponse matchesResponse = gson.fromJson(matchesData, MatchesResponse.class);
+
+                // Actualizar la UI con los próximos partidos en el hilo principal
+                Platform.runLater(() -> {
+                    matchesListView.getItems().clear();
+                    if (matchesResponse != null && matchesResponse.getMatches() != null) {
+                        matchesResponse.getMatches().stream().limit(4).forEach(match ->
+                                matchesListView.getItems().add(match.toString()));
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+
 
     // Cargar las competiciones (ligas)
     private void loadCompetitions() {

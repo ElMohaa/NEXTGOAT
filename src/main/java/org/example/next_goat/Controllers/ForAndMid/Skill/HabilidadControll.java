@@ -19,7 +19,7 @@ public class HabilidadControll {
 
     @FXML
     private void buttonSkill2(ActionEvent event) {
-        loadSkill(event, 22);
+        loadSkill(event, 2);
     }
 
     @FXML

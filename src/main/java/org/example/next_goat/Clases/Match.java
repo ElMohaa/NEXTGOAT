@@ -1,15 +1,15 @@
 package org.example.next_goat.Clases;
 
 public class Match {
-    private String homeTeam;
-    private String awayTeam;
+    private Team homeTeam;
+    private Team awayTeam;
     private String date; // Podrías usar un tipo de dato más específico para la fecha.
 
-    public String getHomeTeam() {
+    public Team getHomeTeam() {
         return homeTeam;
     }
 
-    public String getAwayTeam() {
+    public Team getAwayTeam() {
         return awayTeam;
     }
 
@@ -19,6 +19,19 @@ public class Match {
 
     @Override
     public String toString() {
-        return homeTeam + " vs " + awayTeam + " on " + date; // Personaliza la cadena según tus necesidades
+        return homeTeam.toString() + " vs " + awayTeam.toString() + " on " + date; // Personaliza la cadena según tus necesidades
+    }
+
+    public class Team {
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public String toString() {
+            return  name ;
+        }
     }
 }

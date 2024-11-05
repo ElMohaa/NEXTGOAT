@@ -27,7 +27,7 @@ public class SkillController {
     }
 
     private void loadVideo() {
-        String videoPath = getClass().getResource("/VIDEOS/skill" + skillNumber + ".mp4").toExternalForm();
+        String videoPath = getClass().getResource("/VIDEOS/shooting" + skillNumber + ".mp4").toExternalForm();
         Media media = new Media(videoPath);
         MediaPlayer mediaPlayer = new MediaPlayer(media);
 
