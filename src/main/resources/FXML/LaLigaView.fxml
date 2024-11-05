@@ -10,8 +10,8 @@
 
         <TableView fx:id="clasificacionTable" layoutX="35.0" layoutY="120.0" prefHeight="200.0" prefWidth="240.0">
             <columns>
-                <TableColumn fx:id="posicionCol" text="Posición" />
-                <TableColumn fx:id="equipoCol" text="Equipo" />
+                <TableColumn fx:id="posicionCol" prefWidth="22.79998779296875" text=" " />
+                <TableColumn fx:id="equipoCol" prefWidth="138.79999160766602" text="Equipo" />
                 <TableColumn fx:id="puntosCol" text="Puntos" />
             </columns>
         </TableView>
