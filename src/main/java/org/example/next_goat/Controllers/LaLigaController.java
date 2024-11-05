@@ -1,5 +1,11 @@
 package org.example.next_goat.Controllers;
 
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.application.Platform;
@@ -33,7 +39,9 @@ public class LaLigaController {
     @FXML
     private TableView<Equipo> clasificacionTable; // Para mostrar la clasificación
     @FXML
-    private TableColumn<Equipo, String> posicionCol; // Columna de posición
+    private TableColumn<Equipo, String> posicionCol;// Columna de posición
+    @FXML
+    private TableColumn<Equipo, String> escudoCol;
     @FXML
     private TableColumn<Equipo, String> equipoCol; // Columna de equipo
     @FXML
@@ -45,6 +53,7 @@ public class LaLigaController {
     @FXML
     public void initialize() {
         setupTableColumns(); // Configurar columnas de la tabla
+        configureEscudoColumn();
         loadCompetitions(); // Cargar ligas al iniciar la ventana
 
         // Detectar selección en el ComboBox
@@ -53,6 +62,28 @@ public class LaLigaController {
             if (selectedCompetition != null) {
                 loadClasificacion(selectedCompetition);
                 loadUpcomingMatches(selectedCompetition);// Cargar la clasificación de la liga seleccionada
+            }
+        });
+    }
+    private void configureEscudoColumn() {
+        escudoCol.setCellValueFactory(new PropertyValueFactory<>("crest"));
+        escudoCol.setCellFactory(column -> new TableCell<Equipo, String>() {
+            private final ImageView imageView = new ImageView();
+
+            {
+                imageView.setFitWidth(23.5); // Ancho del escudo
+                imageView.setFitHeight(23.5); // Altura del escudo
+            }
+
+            @Override
+            protected void updateItem(String crestUrl, boolean empty) {
+                super.updateItem(crestUrl, empty);
+                if (crestUrl == null || empty) {
+                    setGraphic(null);
+                } else {
+                    imageView.setImage(new Image(crestUrl, true));
+                    setGraphic(imageView);
+                }
             }
         });
     }
@@ -131,7 +162,8 @@ public class LaLigaController {
                         .map(standing -> new Equipo(
                                 standing.getPosition(),
                                 standing.getTeam().getName(),
-                                standing.getPoints()
+                                standing.getPoints(),
+                                standing.getTeam().getCrest()
                         )).collect(Collectors.toList()); // Crear objetos Equipo a partir de los datos
 
             }

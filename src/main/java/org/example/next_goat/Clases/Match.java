@@ -39,11 +39,13 @@ public class Match {
 
     public class Team {
         private String name;
+
         private String shortName; // Añadir shortName
 
         public String getName() {
             return name;
         }
+
 
         public String getShortName() {
             return shortName; // Método para obtener shortName

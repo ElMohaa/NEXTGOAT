@@ -38,10 +38,14 @@ public class ClasificacionResponse {
 
     public static class Team {
         private String name;
+        private String crest;
 
         // Getter
         public String getName() {
             return name;
+        }
+        public String getCrest() {
+            return crest;
         }
     }
 }
