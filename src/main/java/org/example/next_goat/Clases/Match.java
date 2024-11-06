@@ -19,6 +19,13 @@ public class Match {
     public String getDate() {
         return utcDate;
     }
+    public String getHomeTeamCrest() {
+        return homeTeam.getCrest();
+    }
+
+    public String getAwayTeamCrest() {
+        return awayTeam.getCrest();
+    }
 
     public String getFormattedMatch() {
         if (utcDate == null) {
@@ -35,15 +42,28 @@ public class Match {
             return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + " - Fecha inválida";
         }
     }
+    public String getFormattedDate() {
+        if (utcDate == null) return "Fecha no disponible";
+        try {
+            OffsetDateTime matchDateTime = OffsetDateTime.parse(utcDate);
+            return matchDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd, HH:mm"));
+        } catch (Exception e) {
+            return "Fecha inválida";
+        }
+    }
 
 
     public class Team {
         private String name;
+        private String crest;
 
         private String shortName; // Añadir shortName
 
         public String getName() {
             return name;
+        }
+        public String getCrest() {
+            return crest;
         }
 
 

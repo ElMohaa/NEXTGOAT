@@ -1,7 +1,6 @@
 package org.example.next_goat.Controllers;
 
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,12 +14,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.example.next_goat.Clases.*;
 
@@ -35,7 +31,7 @@ public class LaLigaController {
     @FXML
     private ComboBox<Competition> leagueComboBox;  // Cambiado para usar el objeto Competition
     @FXML
-    private ListView<String> matchesListView; // Para mostrar los partidos
+    private ListView<Match> matchesListView; // Para mostrar los partidos
     @FXML
     private TableView<Equipo> clasificacionTable; // Para mostrar la clasificación
     @FXML
@@ -62,6 +58,38 @@ public class LaLigaController {
             if (selectedCompetition != null) {
                 loadClasificacion(selectedCompetition);
                 loadUpcomingMatches(selectedCompetition);// Cargar la clasificación de la liga seleccionada
+            }
+        });
+
+        matchesListView.setCellFactory(param -> new ListCell<Match>() {
+            private final ImageView homeCrestView = new ImageView();
+            private final ImageView awayCrestView = new ImageView();
+            private final Label matchLabel = new Label();
+
+            {
+                homeCrestView.setFitHeight(20);
+                homeCrestView.setFitWidth(20);
+                awayCrestView.setFitHeight(20);
+                awayCrestView.setFitWidth(20);
+            }
+
+            @Override
+            protected void updateItem(Match match, boolean empty) {
+                super.updateItem(match, empty);
+
+                if (match == null || empty) {
+                    setGraphic(null);
+                } else {
+                    homeCrestView.setImage(new Image(match.getHomeTeamCrest()));
+                    awayCrestView.setImage(new Image(match.getAwayTeamCrest()));
+
+                    matchLabel.setText(match.getHomeTeam().getShortName() + " vs " + match.getAwayTeam().getShortName() +
+                            " - " + match.getFormattedDate());
+
+                    HBox hbox = new HBox(5, homeCrestView, matchLabel, awayCrestView);
+                    hbox.setStyle("-fx-alignment: center-left;");
+                    setGraphic(hbox);
+                }
             }
         });
     }
@@ -106,10 +134,10 @@ public class LaLigaController {
                 Platform.runLater(() -> {
                     matchesListView.getItems().clear();
                     if (matchesResponse != null && matchesResponse.getMatches() != null) {
-                        matchesResponse.getMatches().stream().limit(6).forEach(match ->
-                                matchesListView.getItems().add(match.getFormattedMatch()));
+                        matchesListView.getItems().addAll(matchesResponse.getMatches().stream().limit(6).collect(Collectors.toList()));
                     }
                 });
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -185,7 +213,7 @@ public class LaLigaController {
 
 
     // Buscar partidos por nombre del equipo
-    @FXML
+    /*@FXML
     private void handleBuscarEquipo() {
         String teamName = equipoField.getText().trim().toLowerCase(); // Convertir a minúsculas
         if (teamName.isEmpty()) {
@@ -224,7 +252,7 @@ public class LaLigaController {
             System.err.println("Ocurrió un error inesperado: " + e.getMessage());
             e.printStackTrace(); // Imprimir la traza de la excepción
         }
-    }
+    }*/
 
     @FXML
     private void buttonBack(ActionEvent event) {
