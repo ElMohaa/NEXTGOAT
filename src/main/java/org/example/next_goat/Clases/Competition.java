@@ -3,6 +3,16 @@ package org.example.next_goat.Clases;
 public class Competition {
     private int id;
     private String name;
+    private String code;
+
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getName() {
         return name;

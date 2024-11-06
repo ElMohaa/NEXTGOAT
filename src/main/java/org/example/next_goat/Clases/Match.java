@@ -36,10 +36,10 @@ public class Match {
             OffsetDateTime matchDateTime = OffsetDateTime.parse(utcDate);
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd ',' HH:mm ");
             String formattedDate = matchDateTime.format(formatter);
-            return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + ": " + formattedDate;
+            return homeTeam.getShortName() + " VS " + awayTeam.getShortName() + ": " + formattedDate;
         } catch (Exception e) {
             // Si ocurre un error al parsear, manejarlo aquí
-            return homeTeam.getShortName() + " vs " + awayTeam.getShortName() + " - Fecha inválida";
+            return homeTeam.getShortName() + " VS " + awayTeam.getShortName() + " - Fecha inválida";
         }
     }
     public String getFormattedDate() {

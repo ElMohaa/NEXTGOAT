@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.next_goat.Clases.*;
 
@@ -64,7 +65,8 @@ public class LaLigaController {
         matchesListView.setCellFactory(param -> new ListCell<Match>() {
             private final ImageView homeCrestView = new ImageView();
             private final ImageView awayCrestView = new ImageView();
-            private final Label matchLabel = new Label();
+            private final Label teamsLabel = new Label(); // Añadir esta línea
+            private final Label dateLabel = new Label();  // Añadir esta línea
 
             {
                 homeCrestView.setFitHeight(20);
@@ -83,15 +85,77 @@ public class LaLigaController {
                     homeCrestView.setImage(new Image(match.getHomeTeamCrest()));
                     awayCrestView.setImage(new Image(match.getAwayTeamCrest()));
 
-                    matchLabel.setText(match.getHomeTeam().getShortName() + " vs " + match.getAwayTeam().getShortName() +
-                            " - " + match.getFormattedDate());
+                    // Configura el texto de los equipos y la fecha
+                    teamsLabel.setText(match.getHomeTeam().getShortName() + " VS " + match.getAwayTeam().getShortName());
+                    dateLabel.setText(match.getFormattedDate());
 
-                    HBox hbox = new HBox(5, homeCrestView, matchLabel, awayCrestView);
-                    hbox.setStyle("-fx-alignment: center-left;");
-                    setGraphic(hbox);
+                    // Organiza los elementos visualmente
+                    HBox teamsBox = new HBox(5, homeCrestView, teamsLabel, awayCrestView);
+                    teamsBox.setStyle("-fx-alignment: center;");
+
+                    VBox mainBox = new VBox(teamsBox, dateLabel);
+                    mainBox.setStyle("-fx-alignment: center; -fx-spacing: 2;"); // Ajusta el espaciado si es necesario
+
+                    setGraphic(mainBox);
                 }
             }
         });
+        leagueComboBox.setCellFactory(param -> new ListCell<Competition>() {
+            private final ImageView logoView = new ImageView();
+            private final Label nameLabel = new Label();
+
+            @Override
+            protected void updateItem(Competition competition, boolean empty) {
+                super.updateItem(competition, empty);
+                if (competition == null || empty) {
+                    setGraphic(null);
+                } else {
+                    nameLabel.setText(competition.getName());
+                    if (competition.getCode().equals("WC")){
+                        competition.setCode("qatar");
+                    }else if (competition.getCode().equals("DED")){
+                        competition.setCode("ED");
+                    }else if (competition.getCode().equals("EC")){
+                        competition.setCode("ec");
+                    }else if (competition.getCode().equals("BSA")){
+                        competition.setCode("bsa");
+                    }
+                    String emblemUrl = "https://crests.football-data.org/" + competition.getCode() + ".png";
+                    logoView.setImage(new Image(emblemUrl));
+                    logoView.setFitHeight(22);
+                    logoView.setFitWidth(22);
+
+                    HBox box = new HBox(12, logoView, nameLabel);
+                    setGraphic(box);
+                }
+            }
+        });
+
+        leagueComboBox.setButtonCell(new ListCell<Competition>() {
+            private final ImageView logoView = new ImageView();
+            private final Label nameLabel = new Label();
+
+            @Override
+            protected void updateItem(Competition competition, boolean empty) {
+                super.updateItem(competition, empty);
+                if (competition == null || empty) {
+                    setGraphic(null);
+                } else {
+                    nameLabel.setText(competition.getName());
+
+
+                    String emblemUrl = "https://crests.football-data.org/" + competition.getCode() + ".png";
+                    logoView.setImage(new Image(emblemUrl));
+                    logoView.setFitHeight(20);
+                    logoView.setFitWidth(20);
+
+                    HBox box = new HBox(10, logoView, nameLabel);
+                    setGraphic(box);
+                }
+            }
+        });
+
+
     }
     private void configureEscudoColumn() {
         escudoCol.setCellValueFactory(new PropertyValueFactory<>("crest"));
@@ -134,7 +198,7 @@ public class LaLigaController {
                 Platform.runLater(() -> {
                     matchesListView.getItems().clear();
                     if (matchesResponse != null && matchesResponse.getMatches() != null) {
-                        matchesListView.getItems().addAll(matchesResponse.getMatches().stream().limit(6).collect(Collectors.toList()));
+                        matchesListView.getItems().addAll(matchesResponse.getMatches().stream().limit(9).collect(Collectors.toList()));
                     }
                 });
 
@@ -174,7 +238,7 @@ public class LaLigaController {
     private void loadClasificacion(Competition competition) {
         try {
             String clasificacionData = footballApiClient.getClasificacionByCompetition(competition.getId());
-            //System.out.println("Clasificación de la liga: " + clasificacionData); // Depuración
+            System.out.println("Clasificación de la liga: " + clasificacionData); // Depuración
 
             // Parsear la respuesta
             Gson gson = new Gson();

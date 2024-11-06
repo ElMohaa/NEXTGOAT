@@ -3,17 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
+<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
     <children>
         <Label layoutX="14.0" layoutY="78.0" text="Selecciona una liga:" />
         <ComboBox fx:id="leagueComboBox" layoutX="120.0" layoutY="74.0" prefHeight="26.0" prefWidth="159.0" />
 
-        <TableView fx:id="clasificacionTable" layoutX="19.0" layoutY="118.0" prefHeight="200.0" prefWidth="276.0">
+        <TableView fx:id="clasificacionTable" layoutX="36.0" layoutY="117.0" prefHeight="200.0" prefWidth="251.0">
             <columns>
                 <TableColumn fx:id="posicionCol" prefWidth="22.79998779296875" text=" " />
                 <TableColumn fx:id="escudoCol" prefWidth="35.999996185302734" text=" " />
                 <TableColumn fx:id="equipoCol" prefWidth="134.4000244140625" text="Equipo" />
-                <TableColumn fx:id="puntosCol" prefWidth="77.59999084472656" text="Puntos" />
+                <TableColumn fx:id="puntosCol" prefWidth="52.60003662109375" text="Puntos" />
             </columns>
         </TableView>
 
