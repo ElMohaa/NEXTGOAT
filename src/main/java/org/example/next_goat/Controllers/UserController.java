@@ -14,18 +14,12 @@ public class UserController {
     @FXML
     private void buttonHome(ActionEvent event) {
         try {
-            // Cargar la vista de LaLiga
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
             Parent traView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
             Scene laLigaScene = new Scene(traView);
-
-            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(laLigaScene);
             window.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
