@@ -12,89 +12,48 @@ import java.io.IOException;
 
 public class MidfielderController {
 
-    @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    // Método genérico para cargar y cambiar la escena
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Training.fxml"));
-            Parent training = loader.load();
+            // Cargar la vista desde el archivo FXML especificado
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
 
-            Scene trainingScene = new Scene(training);
+            // Crear una nueva escena con la vista cargada
+            Scene newScene = new Scene(newView);
 
+            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(newScene);
             window.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        changeScene(event, "/FXML/Training.fxml");
+    }
+
     @FXML
     private void controlball(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/DRIBLLES/BallControl.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/ForwardAndMid/DRIBLLES/BallControl.fxml");
     }
 
     @FXML
     private void topass(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/TOPASS/ToPass.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/ForwardAndMid/TOPASS/ToPass.fxml");
     }
 
     @FXML
     private void control(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/COTROLLBALL/ControllBall.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/ForwardAndMid/COTROLLBALL/ControllBall.fxml");
     }
 
     @FXML
     private void skill(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ForwardAndMid/SKILL/Habilidad.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/ForwardAndMid/SKILL/Habilidad.fxml");
     }
 }
-
-

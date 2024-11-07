@@ -12,91 +12,48 @@ import java.io.IOException;
 
 public class PhysicalController {
 
-    @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+    // Método genérico para cargar y cambiar la escena
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
-            Parent training = loader.load();
+            // Cargar la vista desde el archivo FXML especificado
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
 
-            Scene trainingScene = new Scene(training);
+            // Crear una nueva escena con la vista cargada
+            Scene newScene = new Scene(newView);
 
+            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(newScene);
             window.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        changeScene(event, "/FXML/MainWindow.fxml");
     }
 
     @FXML
     private void buttonForce(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical/Force.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Physical/Force.fxml");
     }
 
     @FXML
     private void buttonSpeed(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical/Speed.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Physical/Speed.fxml");
     }
 
     @FXML
     private void buttonResis(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical/Resistance.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Physical/Resistance.fxml");
     }
 
     @FXML
     private void buttonMobby(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical/Mobility.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Physical/Mobility.fxml");
     }
-
-
-
 }

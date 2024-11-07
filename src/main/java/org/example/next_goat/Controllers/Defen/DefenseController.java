@@ -11,73 +11,44 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DefenseController {
-    @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+
+    // Método genérico para cargar y cambiar la escena
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Training.fxml"));
-            Parent training = loader.load();
+            // Cargar la vista desde el archivo FXML especificado
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
 
-            Scene trainingScene = new Scene(training);
+            // Crear una nueva escena con la vista cargada
+            Scene newScene = new Scene(newView);
 
+            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(newScene);
             window.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        changeScene(event, "/FXML/Training.fxml");
+    }
+
     @FXML
     private void buttonSeated(ActionEvent event) {
-        try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/SEATED/Seated.fxml"));
-            Parent laLigaView = loader.load();
-
-            Scene laLigaScene = new Scene(laLigaView);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Defense/SEATED/Seated.fxml");
     }
 
     @FXML
     private void buttonControllBall(ActionEvent event) {
-        try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/ControllBallDefense/ControllDefense.fxml"));
-            Parent laLigaView = loader.load();
-
-            Scene laLigaScene = new Scene(laLigaView);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Defense/ControllBallDefense/ControllDefense.fxml");
     }
+
     @FXML
     private void buttonPass(ActionEvent event) {
-        try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Defense/PassDefense/PassDefense.fxml"));
-            Parent laLigaView = loader.load();
-
-            Scene laLigaScene = new Scene(laLigaView);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Defense/PassDefense/PassDefense.fxml");
     }
-
 }

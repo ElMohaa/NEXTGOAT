@@ -11,71 +11,44 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GoalkeeperController {
-    @FXML
-    private void handleBackButtonAction(ActionEvent event) {
+
+    // Método genérico para cargar y cambiar la escena
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Training.fxml"));
-            Parent training = loader.load();
+            // Cargar la vista desde el archivo FXML especificado
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
 
-            Scene trainingScene = new Scene(training);
+            // Crear una nueva escena con la vista cargada
+            Scene newScene = new Scene(newView);
 
+            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
+            window.setScene(newScene);
             window.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        changeScene(event, "/FXML/Training.fxml");
+    }
+
     @FXML
     private void bootonSoot(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Doorman/Soot/Soot.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Doorman/Soot/Soot.fxml");
     }
 
     @FXML
     private void bootonPass(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Doorman/PassGK/PassGK.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Doorman/PassGK/PassGK.fxml");
     }
 
     @FXML
     private void bootonControl(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Doorman/Control/ControlGK.fxml"));
-            Parent training = loader.load();
-
-            Scene trainingScene = new Scene(training);
-
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(trainingScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/Doorman/Control/ControlGK.fxml");
     }
-
 }

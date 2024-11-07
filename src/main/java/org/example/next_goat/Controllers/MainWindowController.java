@@ -11,102 +11,49 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainWindowController {
-    @FXML
-    private void handleLaLigaButtonAction(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/LaLigaView.fxml"));
-            Parent laLigaView = loader.load();
 
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(laLigaView);
+    @FXML
+    private void handleButtonAction(ActionEvent event, String fxmlPath) {
+        try {
+            // Cargar la vista desde el archivo FXML especificado
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
+
+            // Crear una nueva escena con la vista cargada
+            Scene newScene = new Scene(newView);
 
             // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
+            window.setScene(newScene);
             window.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleLaLigaButtonAction(ActionEvent event) {
+        handleButtonAction(event, "/FXML/LaLigaView.fxml");
+    }
+
     @FXML
     private void handleEntreButtonAction(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Training.fxml"));
-            Parent traView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(traView);
-
-            // Obtener el stage actual y cambiar la escena
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        handleButtonAction(event, "/FXML/Training.fxml");
     }
 
     @FXML
     private void buttonAtletismo(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical.fxml"));
-            Parent traView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(traView);
-
-            // Obtener el stage actual y cambiar la escena
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        handleButtonAction(event, "/FXML/Physical.fxml");
     }
 
     @FXML
     private void buttonRecovery(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Recovery.fxml"));
-            Parent traView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(traView);
-
-            // Obtener el stage actual y cambiar la escena
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        handleButtonAction(event, "/FXML/Recovery.fxml");
     }
 
     @FXML
     private void buttonUser(ActionEvent event) {
-        try {
-            // Cargar la vista de LaLiga
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/User.fxml"));
-            Parent traView = loader.load();
-
-            // Crear una nueva escena con la ventana de LaLiga
-            Scene laLigaScene = new Scene(traView);
-
-            // Obtener el stage actual y cambiar la escena
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        handleButtonAction(event, "/FXML/User.fxml");
     }
 }
