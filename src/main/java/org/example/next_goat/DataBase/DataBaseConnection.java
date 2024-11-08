@@ -140,38 +140,6 @@ public class DataBaseConnection {
     }
 
 
-    public static boolean verifyDni(String dni) {
-        String sql = "SELECT COUNT(*) FROM Usuario WHERE dni = ?"; // Asegúrate de que la columna "dni" exista
-        try (Connection conn = DriverManager.getConnection(urlDB, user, password);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, dni);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    int count = rs.getInt(1);
-                    return count > 0;
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return false;
-    }
-
-    public static boolean updateUserPasswordByDNI(String dni, String newPassword) {
-        String sql = "UPDATE Usuario SET contrsena = ? WHERE dni = ?";
-        try (Connection conn = DriverManager.getConnection(urlDB, user, password);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, newPassword);
-            pstmt.setString(2, dni);
-            int rowsAffected = pstmt.executeUpdate();
-            return rowsAffected > 0;
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return false;
-    }
     public static String getEmailByUsername(String username) {
         String sql = "SELECT correo_usuario FROM Usuario WHERE username = ?";
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
@@ -203,26 +171,6 @@ public class DataBaseConnection {
             System.out.println("Error al actualizar la contraseña: " + e.getMessage());
         }
         return false;
-    }
-    public static void insertMejoraFisica(MejoraFisica mejoraFisica) {
-        String sql = "INSERT INTO MejoraFisica (id_usuario, ritmo, regate, fisico, tiro, pase, defensa, media) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(urlDB, user, password);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setInt(1, mejoraFisica.getId_usuario());
-            pstmt.setInt(2, mejoraFisica.getRitmo());
-            pstmt.setInt(3, mejoraFisica.getRegate());
-            pstmt.setInt(4, mejoraFisica.getFisico());
-            pstmt.setInt(5, mejoraFisica.getTiro());
-            pstmt.setInt(6, mejoraFisica.getPase());
-            pstmt.setInt(7, mejoraFisica.getDefensa());
-            pstmt.setInt(8, mejoraFisica.getMedia());
-
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     public static MejoraFisica getMejoraFisicaByUserId(int idUsuario) {
