@@ -10,7 +10,7 @@
       <Button layoutX="69.0" layoutY="576.0" mnemonicParsing="false" onAction="#buttonHome" text="Home" />
       <Button layoutX="209.0" layoutY="72.0" mnemonicParsing="false" onAction="#closeSession" text="Cerrar sesion" />
       <Button layoutX="30.0" layoutY="72.0" mnemonicParsing="false" onAction="#editUser" text="Editar Perfil" />
-      <ImageView fitHeight="252.0" fitWidth="210.0" layoutX="67.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView" fitHeight="252.0" fitWidth="210.0" layoutX="67.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../IMAGENS/totySinFondo.png" />
          </image>

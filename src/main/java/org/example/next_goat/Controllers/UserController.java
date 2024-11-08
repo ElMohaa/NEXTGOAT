@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.example.next_goat.Clases.MejoraFisica;
 import org.example.next_goat.Clases.UserSession;
@@ -31,6 +33,8 @@ public class UserController {
     private Label mediaLabel;
     @FXML
     private Label nombreLabel;
+    @FXML
+    private ImageView imageView;
 
     @FXML
     private void initialize() {
@@ -58,6 +62,11 @@ public class UserController {
             defeLabel.setText(String.valueOf(mejoraFisica.getDefensa()));
             fisicoLabel.setText(String.valueOf(mejoraFisica.getFisico()));
             mediaLabel.setText(String.valueOf(mejoraFisica.getMedia()));
+            if (mejoraFisica.getMedia() > 50) {
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/totySinFondo.png")));
+            } else {
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/iconoSinFondo.png")));
+            }
 
             nombreLabel.setText(nombre);
         } else {
