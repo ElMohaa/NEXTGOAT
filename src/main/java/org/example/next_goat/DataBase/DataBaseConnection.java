@@ -2,6 +2,7 @@ package org.example.next_goat.DataBase;
 
 import org.example.next_goat.Clases.MejoraFisica;
 import org.example.next_goat.Clases.Usuario;
+import org.example.next_goat.Exceptios.*;
 
 import java.sql.*;
 
@@ -256,12 +257,72 @@ public class DataBaseConnection {
             if (resultSet.next()) {
                 fullName = resultSet.getString("nombre_usuario");
             }
-
         } catch (SQLException e) {
             e.printStackTrace(); // Manejo de excepciones
         }
-
         return fullName; // Retorna el nombre completo (o null si no se encuentra)
+    }
+    public static void updateUser(Usuario usuario) {
+        String query = "UPDATE Usuario SET nombre_usuario = ?, apellidos_usuario = ?,dni = ?,fecha_nacimiento=?, correo_usuario = ?, telefono_usuario = ?, dirrecion_vivienda = ?, username = ?, contrsena = ? WHERE id_usuario = ?";
+
+        try (Connection conn = DriverManager.getConnection(urlDB,user,password); PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, usuario.getNombre_usuario());
+            stmt.setString(2, usuario.getApellidos_usuario());
+            stmt.setString(3,usuario.getDni_usuario());
+            stmt.setDate(4, (Date) usuario.getFecha_nacimiento());
+            stmt.setString(5, usuario.getCorreo_usuario());
+            stmt.setString(6, usuario.getTelefono_usuario());
+            stmt.setString(7, usuario.getDirrecion_vivienda());
+            stmt.setString(8, usuario.getUsername());
+            stmt.setString(9, usuario.getContrsena());
+            stmt.setInt(10, usuario.getId_usuario());
+
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Usuario getUserById(int userId) {
+        Usuario usuario = null;
+        String query = "SELECT * FROM Usuario WHERE id_usuario = ?";
+
+        try (Connection conn = DriverManager.getConnection(urlDB,user,password);
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            // Establecer el valor del id_usuario en la consulta
+            stmt.setInt(1, userId);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                // Si se encuentra el usuario
+                if (rs.next()) {
+                    usuario = new Usuario();
+                    usuario.setId_usuario(rs.getInt("id_usuario"));
+                    usuario.setNombre_usuario(rs.getString("nombre_usuario"));
+                    usuario.setApellidos_usuario(rs.getString("apellidos_usuario"));
+                    usuario.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                    usuario.setCorreo_usuario(rs.getString("correo_usuario"));
+                    usuario.setTelefono_usuario(rs.getString("telefono_usuario"));
+                    usuario.setDirrecion_vivienda(rs.getString("dirrecion_vivienda"));
+                    usuario.setUsername(rs.getString("username"));
+                    usuario.setContrsena(rs.getString("contrsena"));
+                    usuario.setEdad_ususario(rs.getInt("edad_ususario"));
+                    usuario.setDni_usuario(rs.getString("dni"));
+                }
+            } catch (SurnameIllegalException e) {
+                throw new RuntimeException(e);
+            } catch (NumberIllegalException e) {
+                throw new RuntimeException(e);
+            } catch (NameIllegalException e) {
+                throw new RuntimeException(e);
+            } catch (EmailIllegalException e) {
+                throw new RuntimeException(e);
+            } catch (DNIIllegalException e) {
+                throw new RuntimeException(e);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return usuario; // Retorna el usuario encontrado o null si no se encuentra
     }
 
 
