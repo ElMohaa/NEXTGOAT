@@ -15,7 +15,6 @@
             <Image url="@../IMAGENS/totySinFondo.png" />
          </image>
       </ImageView>
-      <Label layoutX="40.0" layoutY="34.0" text="Hola user" />
       <Label fx:id="resistenciaLabel" layoutX="93.0" layoutY="299.0" text="Label" />
       <Label fx:id="tiroLabel" layoutX="93.0" layoutY="317.0" text="Label" />
       <Label fx:id="paseLabel" layoutX="93.0" layoutY="335.0" text="Label" />
