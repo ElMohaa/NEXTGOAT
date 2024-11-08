@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
+import org.example.next_goat.Clases.UserSession;
 import org.example.next_goat.DataBase.DataBaseConnection;
 
 import java.io.IOException;
@@ -36,6 +37,10 @@ public class UserLoginController {
         String password = passwordField.getText();
 
         if (DataBaseConnection.authenticateUser(username, password)) {
+            int userId = DataBaseConnection.getIdByUsername(username);
+
+            // Guardar el id_usuario en la sesión
+            UserSession.getInstance().setIdUsuario(userId);
             // Si la autenticación es exitosa, carga la ventana Start.fxml
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Start.fxml"));

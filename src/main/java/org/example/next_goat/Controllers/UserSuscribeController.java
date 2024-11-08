@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.example.next_goat.Clases.MejoraFisica;
 import org.example.next_goat.Clases.Usuario;
 import org.example.next_goat.DataBase.DataBaseConnection;
 import org.example.next_goat.Exceptios.*;
@@ -96,6 +97,7 @@ public class UserSuscribeController {
             // Insertar el usuario en la base de datos
             DataBaseConnection.insertUser(newUser);
             System.out.println("Usuario registrado correctamente.");
+
 
             // Volver a la pantalla de inicio de sesión
             handleBackToLoginButtonAction(event);

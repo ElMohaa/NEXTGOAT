@@ -66,7 +66,7 @@ public class RecoveryController {
     private void buttonBack(ActionEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Physical.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
             Parent laLigaView = loader.load();
 
             Scene laLigaScene = new Scene(laLigaView);
