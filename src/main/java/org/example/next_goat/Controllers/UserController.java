@@ -47,7 +47,7 @@ public class UserController {
     private void loadMejoraFisicaData(int userId) {
         // Obtener la mejora física del usuario desde la base de datos
         MejoraFisica mejoraFisica = DataBaseConnection.getMejoraFisicaByUserId(userId);
-        String nombre=DataBaseConnection.getFullNameById(userId);
+        String nombre = DataBaseConnection.getFullNameById(userId);
 
         // Si se obtiene la mejora física, actualizar los labels
         if (mejoraFisica != null) {
@@ -68,45 +68,35 @@ public class UserController {
     public void actualizarLabelPase(int nuevoPase) {
         paseLabel.setText("Pase: " + nuevoPase);
     }
-    @FXML
-    private void buttonHome(ActionEvent event) {
+
+    // Método común para cambiar de escena
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
-            Parent traView = loader.load();
-            Scene laLigaScene = new Scene(traView);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent newView = loader.load();
+            Scene newScene = new Scene(newView);
+
+            // Obtener la ventana actual y establecer la nueva escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
+            window.setScene(newScene);
             window.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Considera loguear o mostrar un mensaje de error
         }
+    }
+
+    @FXML
+    private void buttonHome(ActionEvent event) {
+        changeScene(event, "/FXML/MainWindow.fxml");
     }
 
     @FXML
     private void closeSession(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/UserLogin.fxml"));
-            Parent traView = loader.load();
-            Scene laLigaScene = new Scene(traView);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/UserLogin.fxml");
     }
 
     @FXML
     private void editUser(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/EditUser.fxml"));
-            Parent traView = loader.load();
-            Scene laLigaScene = new Scene(traView);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(laLigaScene);
-            window.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/FXML/EditUser.fxml");
     }
 }
