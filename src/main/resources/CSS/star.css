@@ -1,7 +1,15 @@
 #anchorpane{
-    -fx-background-color: linear-gradient( #12e8e8, #14df5b);
+    -fx-background-image: url("../IMAGENS/elfondodeStar.png");
+    -fx-background-size: cover;            /* Ajusta la imagen para cubrir todo el AnchorPane */
+    -fx-background-position: center;
 }
 #welcomeLabel{
-    -fx-font-weight: 40px;
-    -fx-fill: bold;
+    -fx-font-weight:bold;
+    -fx-text-fill: black;
+}
+#continueButton{
+    -fx-background-color: #27ce56;
+    -fx-text-fill: #efefef;
+    -fx-font-size: 20;
+    -fx-font-weight:bold;
 }

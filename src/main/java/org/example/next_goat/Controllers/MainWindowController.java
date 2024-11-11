@@ -109,7 +109,7 @@ public class MainWindowController {
 
     @FXML
     private void buttonRecovery(ActionEvent event) {
-        actualizarMejoraFisica(DESCREMENTO_LESION, -DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, event, "/FXML/Recovery.fxml");
+        actualizarMejoraFisica(DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, DESCREMENTO_LESION, event, "/FXML/Recovery.fxml");
     }
 
     @FXML
