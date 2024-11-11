@@ -1,0 +1,7 @@
+#anchorpane{
+    -fx-background-color: linear-gradient( #12e8e8, #14df5b);
+}
+#welcomeLabel{
+    -fx-font-weight: 40px;
+    -fx-fill: bold;
+}

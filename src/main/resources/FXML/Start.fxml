@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.next_goat.Controllers.StartController"
-            prefHeight="615.0" prefWidth="315.0">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" stylesheets="@../CSS/star.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.StartController">
 
-    <Label fx:id="welcomeLabel" text="Welcome, " style="-fx-font-size: 24;" layoutX="50" layoutY="100"/>
-    <Button fx:id="continueButton" text="Continuar" onAction="#handleContinueButton" layoutX="100" layoutY="200"/>
+    <Label fx:id="welcomeLabel" layoutX="50" layoutY="100" style="-fx-font-size: 24;"  text="Welcome, " />
+    <Button fx:id="continueButton" layoutX="123.0" layoutY="233.0" onAction="#handleContinueButton" text="Continuar" />
 </AnchorPane>

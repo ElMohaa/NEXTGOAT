@@ -1,3 +1,49 @@
 #anchorpane {
-    -fx-background-color: linear-gradient(#000310, #0a145a, #0cd151);
+    -fx-background-color: linear-gradient(#000310, #0a145a, #058130);
+}
+.label{
+    -fx-text-fill: #f6f7fa;
+    -fx-font-size: 12px;
+    -fx-font-weight:bold;
+}
+#labelR{
+    -fx-font-size: 20px;
+    -fx-font-weight:bold;
+    -fx-text-fill: #0cd161;
+}
+
+.text-field {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
+    -fx-border-color: white;    /* Color del borde inferior (verde) */
+    -fx-padding: 2px;             /* Espaciado interno para mejor apariencia */
+}
+
+/* Estilo para los botones sin fondo ni borde */
+.button {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-border-width: 0;               /* Sin bordes */
+    -fx-text-fill: #0cd161;            /* Color de texto verde */
+    -fx-font-weight: bold;             /* Texto en negrita */
+    -fx-padding: 10px 20px;            /* Espaciado interno para mejorar el tamaño del botón */
+    -fx-cursor: hand;                 /* Cambiar el cursor al pasar sobre el botón */
+}
+
+
+#cancel {
+    -fx-background-color: transparent; /* Fondo transparente */
+    -fx-font-size: 14px;              /* Sin bordes */
+    -fx-text-fill: #ffff;              /* Texto negro */
+    -fx-font-weight: bold;             /* Texto en negrita */
+    -fx-padding: 10px 20px;            /* Espaciado interno */
+    -fx-cursor: hand;                 /* Cambiar cursor a mano */
+}
+
+#changePasswordButton {
+    -fx-background-color: #0cd161; /* Fondo verde para el botón */
+    -fx-border-width: 20px;           /* Sin bordes */
+    -fx-text-fill: white;          /* Texto blanco */
+    -fx-font-weight: bold;         /* Texto en negrita */
+    -fx-padding: 10px 20px;        /* Espaciado interno */
+    -fx-cursor: hand;             /* Cambiar el cursor al pasar sobre el botón */
 }

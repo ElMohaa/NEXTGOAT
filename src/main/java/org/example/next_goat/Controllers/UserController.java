@@ -62,9 +62,19 @@ public class UserController {
             defeLabel.setText(String.valueOf(mejoraFisica.getDefensa()));
             fisicoLabel.setText(String.valueOf(mejoraFisica.getFisico()));
             mediaLabel.setText(String.valueOf(mejoraFisica.getMedia()));
-            if (mejoraFisica.getMedia() > 50) {
+
+            //distintas cartas para cada media
+            if (mejoraFisica.getMedia() < 50) {
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/bronce.png")));
+            }else if (mejoraFisica.getMedia() >=50&& mejoraFisica.getMedia() <79){
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/plata.png")));
+            } else if (mejoraFisica.getMedia() >=79&& mejoraFisica.getMedia() <91){
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/oro.png")));
+            }else if (mejoraFisica.getMedia() >=91 && mejoraFisica.getMedia() <98){
                 imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/totySinFondo.png")));
-            } else {
+            } else if (mejoraFisica.getMedia() >=98){
+                imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/iconoSinFondo.png")));
+            }else {
                 imageView.setImage(new Image(getClass().getResourceAsStream("/IMAGENS/iconoSinFondo.png")));
             }
 

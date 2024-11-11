@@ -10,6 +10,10 @@
     -fx-background-radius: 10;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
 }
+.loginButton:hover {
+    -fx-text-fill: #000209;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #14df5b; /* Fondo verde claro al pasar el ratón */
+}
 
 #signUpButton {
     -fx-background-color: transparent; /* Verde claro */
@@ -31,4 +35,8 @@
     -fx-background-color: transparent; /* Amarillo */
     -fx-text-fill: #000000;
     -fx-font-weight: bold;
+}
+#signUpButton:hover {
+    -fx-text-fill: #0cd151;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: transparent; /* Fondo verde claro al pasar el ratón */
 }

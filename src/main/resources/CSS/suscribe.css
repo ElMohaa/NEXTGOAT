@@ -24,3 +24,19 @@
     -fx-background-radius: 10;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
 }
+#backToLoginButton:hover {
+    -fx-text-fill: #0cd151;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: transparent; /* Fondo verde claro al pasar el ratón */
+}
+.text-field{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
+    -fx-border-color: #0cd151;
+    -fx-text-fill: white;
+}
+#datePicker{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
+    -fx-border-color: #0cd151;
+    -fx-text-fill: white;
+}
