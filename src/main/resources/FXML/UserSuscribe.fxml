@@ -9,7 +9,7 @@
       <!-- Botón para regresar a la ventana de Login -->
       <Button fx:id="backToLoginButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToLoginButtonAction" text="Login" />
       <!-- Botón para hacer el registro (Sign Up) -->
-      <Button fx:id="signUpButton" layoutX="106.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleSignUpButtonAction" prefHeight="36.0" prefWidth="94.0" text="SING UP" />
+      <Button fx:id="signUpButton" layoutX="106.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleSignUpButtonAction" prefHeight="36.0" prefWidth="94.0" text="SIGN UP" />
       <!-- Campos de texto para el registro -->
       <TextField fx:id="nameField" layoutX="29.0" layoutY="148.0" prefHeight="26.0" prefWidth="124.0" promptText="Name" />
       <TextField fx:id="surnameField" layoutX="170.0" layoutY="148.0" prefHeight="26.0" prefWidth="110.0" promptText="Surnames" />

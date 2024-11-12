@@ -16,14 +16,6 @@ CREATE TABLE Usuario (
     edad_ususario INT (10)
 );
 
-CREATE TABLE ProgresoEntrenamiento (
-    id INT auto_increment PRIMARY KEY,
-    id_usuario INT,
-    ejercicio VARCHAR(100),
-    completado BOOLEAN,
-    fecha DATE,
-    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
-);
 
 CREATE TABLE MejoraFisica (
     id INT auto_increment PRIMARY KEY,

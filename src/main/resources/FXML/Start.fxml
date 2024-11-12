@@ -6,6 +6,6 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/star.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.StartController">
 
-    <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="-56.0" prefHeight="312.0" prefWidth="254.0" style="-fx-font-size: 40;" text="Welcome, " wrapText="true" />
+    <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="-56.0" prefHeight="312.0" prefWidth="254.0" style="-fx-font-size: 35;" text="Welcome, " wrapText="true" />
     <Button fx:id="continueButton" layoutX="121.0" layoutY="339.0" onAction="#handleContinueButton" text="Start" wrapText="true" />
 </AnchorPane>
