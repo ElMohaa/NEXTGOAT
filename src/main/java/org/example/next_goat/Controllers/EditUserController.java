@@ -90,6 +90,20 @@ public class EditUserController {
             currentUser.setDni_usuario(dni);
             currentUser.setFecha_nacimiento(fechaNac);
 
+            // Verificar si el usuario ya existe en la base de datos
+            // Verificar si el usuario ya existe en la base de datos
+            if (DataBaseConnection.checkUserExists(currentUser)) {
+                // Mostrar un mensaje de error si el usuario ya existe
+                showAlert("Error", "Ya existe una cuenta con ese username");
+                return; // Salir de la función sin intentar la inserción
+            } else if (DataBaseConnection.checkEmailExists(currentUser)) {
+                showAlert("Error", "Ya existe una cuenta con ese correo");
+                return;
+            } else if (DataBaseConnection.checkTelExists(currentUser)) {
+                showAlert("Error", "Ya existe una cuenta con ese numero de teléfono");
+                return;
+            }
+
             // Actualizar los datos en la base de datos
             DataBaseConnection.updateUser(currentUser);
 

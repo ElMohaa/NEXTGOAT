@@ -90,8 +90,14 @@ public class UserSuscribeController {
             // Verificar si el usuario ya existe en la base de datos
             if (DataBaseConnection.checkUserExists(newUser)) {
                 // Mostrar un mensaje de error si el usuario ya existe
-                showStyledAlert("Error", "Ya existe un usuario con ese nombre.Por favor escriba otro ");
+                showStyledAlert("Error", "Ya existe una cuenta con ese username");
                 return; // Salir de la función sin intentar la inserción
+            } else if (DataBaseConnection.checkEmailExists(newUser)) {
+                showStyledAlert("Error", "Ya existe una cuenta con ese correo");
+                return;
+            } else if (DataBaseConnection.checkTelExists(newUser)) {
+                showStyledAlert("Error", "Ya existe una cuenta con ese numero de teléfono");
+                return;
             }
 
             // Insertar el usuario en la base de datos

@@ -80,14 +80,49 @@ public class DataBaseConnection {
     }
 
 
-    public static boolean checkUserExists(Usuario usuario) {
-        String sql = "SELECT * FROM Usuario WHERE correo_usuario = ? OR username = ? OR telefono_usuario = ?";
+    public static boolean checkEmailExists(Usuario usuario) {
+        String sql = "SELECT * FROM Usuario WHERE correo_usuario = ?";
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getCorreo_usuario());
-            pstmt.setString(2, usuario.getUsername());
-            pstmt.setString(3, usuario.getTelefono_usuario());
+
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    int count = rs.getInt(1);
+                    return count > 0;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+    public static boolean checkUserExists(Usuario usuario) {
+        String sql = "SELECT * FROM Usuario WHERE  username = ?";
+        try (Connection conn = DriverManager.getConnection(urlDB, user, password);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, usuario.getUsername());
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    int count = rs.getInt(1);
+                    return count > 0;
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+    public static boolean checkTelExists(Usuario usuario) {
+        String sql = "SELECT * FROM Usuario WHERE  telefono_usuario = ?";
+        try (Connection conn = DriverManager.getConnection(urlDB, user, password);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, usuario.getTelefono_usuario());
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {

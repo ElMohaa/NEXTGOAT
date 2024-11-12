@@ -4,14 +4,14 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
+<AnchorPane prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
    <children>
-      <Button fx:id="entrenamiento" layoutX="40.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleEntreButtonAction" prefHeight="76.0" prefWidth="247.0" text="Entrenamiento" />
+      <Button fx:id="entrenamiento" layoutX="40.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleEntreButtonAction" prefHeight="76.0" prefWidth="247.0" text="Entrenamiento" textFill="#f7f3f3" />
       <Button layoutX="34.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonRecovery" prefHeight="76.0" prefWidth="247.0" text="Recovery" />
       <Button layoutX="34.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleLaLigaButtonAction" prefHeight="76.0" prefWidth="247.0" text="LaLiga" />
       <Button layoutX="82.0" layoutY="575.0" mnemonicParsing="false" text="Inicio" />
       <Button layoutX="185.0" layoutY="575.0" mnemonicParsing="false" onAction="#buttonUser" text="Uusuario" />
-      <Button layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onAction="#buttonAtletismo" prefHeight="76.0" prefWidth="247.0" text="Atletismo" />
+      <Button layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onAction="#buttonAtletismo" prefHeight="76.0" prefWidth="247.0" text="Athletics" />
       <ImageView fitHeight="111.0" fitWidth="147.0" layoutX="110.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../IMAGENS/LOGO.png" />
