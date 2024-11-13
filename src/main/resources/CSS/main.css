@@ -1,19 +1,18 @@
 #anchorpane{}
 #entrenamiento{
     -fx-background-image: url("../IMAGENS/entrenamineto.png");
-    -fx-background-size: 100% 100%;         /* Asegura que la imagen cubra todo el tamaño del botón */
+    -fx-background-size:100%100%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 
     /* Bordes y esquinas redondeadas */
     -fx-border-color: black;                /* Color del borde */
     -fx-border-width: 2px;                  /* Grosor del borde */
-    -fx-border-radius: 20px;                /* Radio de los bordes redondeados */
+    -fx-border-radius: 10px;                /* Radio de los bordes redondeados */
     -fx-border-style: solid;                /* Estilo del borde */
 
     /* Ajuste de radio del fondo para coincidir con los bordes redondeados */
-    -fx-background-radius: 20px;            /* Radio de la imagen de fondo */
-    -fx-padding: 4px; /* Estilo de borde sólido */
+    -fx-background-radius:20;
 
 
 }

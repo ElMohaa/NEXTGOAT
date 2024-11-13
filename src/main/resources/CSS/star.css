@@ -1,16 +1,22 @@
 #anchorpane{
-    -fx-background-image: url("../IMAGENS/elfondodeStar.png");
+    -fx-background-image: url("../IMAGENS/start.png");
     -fx-background-size: cover;            /* Ajusta la imagen para cubrir todo el AnchorPane */
     -fx-background-position: center;
 }
 #welcomeLabel{
     -fx-font-weight:bold;
-    -fx-text-fill: #014218;
+    -fx-text-fill: #f2f4f6;
 }
+
 #continueButton{
-    -fx-background-color: linear-gradient(#17c552, #cbe3cf);
-    -fx-text-fill: #efefef;
+    -fx-background-color: #14df5b; /* Blanco */
+    -fx-text-fill: #f6f7fa; /* Texto negro */
+    -fx-font-weight: bold;
     -fx-font-size: 20;
-    -fx-font-weight:bold;
-    -fx-background-radius: 15;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+#continueButton:hover {
+    -fx-text-fill: #f6f7fa;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #000209; /* Fondo verde claro al pasar el ratón */
 }
