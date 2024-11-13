@@ -81,11 +81,12 @@ public class DataBaseConnection {
 
 
     public static boolean checkEmailExists(Usuario usuario) {
-        String sql = "SELECT * FROM Usuario WHERE correo_usuario = ?";
+        String sql = "SELECT * FROM Usuario WHERE correo_usuario = ? and id_usuario != ?";
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getCorreo_usuario());
+            pstmt.setString(2, String.valueOf(usuario.getId_usuario()));
 
 
             try (ResultSet rs = pstmt.executeQuery()) {
@@ -100,11 +101,12 @@ public class DataBaseConnection {
         return false;
     }
     public static boolean checkUserExists(Usuario usuario) {
-        String sql = "SELECT * FROM Usuario WHERE  username = ?";
+        String sql = "SELECT * FROM Usuario WHERE  username = ? and id_usuario != ?";
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getUsername());
+            pstmt.setString(2, String.valueOf(usuario.getId_usuario()));
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
@@ -118,11 +120,12 @@ public class DataBaseConnection {
         return false;
     }
     public static boolean checkTelExists(Usuario usuario) {
-        String sql = "SELECT * FROM Usuario WHERE  telefono_usuario = ?";
+        String sql = "SELECT * FROM Usuario WHERE  telefono_usuario = ?and id_usuario != ?";
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, usuario.getTelefono_usuario());
+            pstmt.setString(2, String.valueOf(usuario.getId_usuario()));
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
