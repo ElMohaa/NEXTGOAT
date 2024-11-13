@@ -5,11 +5,12 @@
 }
 #welcomeLabel{
     -fx-font-weight:bold;
-    -fx-text-fill: black;
+    -fx-text-fill: #014218;
 }
 #continueButton{
-    -fx-background-color: #27ce56;
+    -fx-background-color: linear-gradient(#17c552, #cbe3cf);
     -fx-text-fill: #efefef;
     -fx-font-size: 20;
     -fx-font-weight:bold;
+    -fx-background-radius: 15;
 }
