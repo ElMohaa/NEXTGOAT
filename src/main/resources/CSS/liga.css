@@ -1,0 +1,41 @@
+.anchorpane {
+    -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
+}
+#back{
+    -fx-background-image: url("../ICONS/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+    -fx-background-color: transparent;
+}
+
+.table-view{
+    -fx-background-color:  #f6f7fa;
+}
+
+.table-view .column-header {
+    -fx-background-color: #aeefc5; /* Color de fondo negro */
+    -fx-text-fill: #000209; /* Texto blanco */
+}
+
+/* Cambiar color de fondo de las celdas de la tabla */
+.table-view .table-cell {
+    -fx-background-color: #f6f7fa; /* Fondo negro */
+    -fx-text-fill: #000209; /* Texto blanco */
+}
+
+
+/* Estilo para el ComboBox (si también lo quieres con fondo negro) */
+.combo-box {
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: #000209; /* Texto blanco */
+}
+
+/* Otros elementos de texto si necesitas cambiar su color */
+#partidosLabel, #frsa {
+    -fx-text-fill: #1def66;
+    -fx-font-weight: bold;
+    -fx-font-size: 14; /* Esto ya lo tienes, sigue con color verde */
+}
+.list-view{
+    -fx-background-color: #f6f7fa;
+}

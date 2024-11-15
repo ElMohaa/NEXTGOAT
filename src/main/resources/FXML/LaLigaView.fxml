@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/liga.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
     <children>
-        <Label layoutX="26.0" layoutY="78.0" text="Select a league:" />
+        <Label fx:id="frsa" layoutX="14.0" layoutY="77.0" text="Select a league:" />
         <ComboBox fx:id="leagueComboBox" layoutX="120.0" layoutY="74.0" prefHeight="26.0" prefWidth="159.0" />
 
         <TableView fx:id="clasificacionTable" layoutX="36.0" layoutY="117.0" prefHeight="200.0" prefWidth="251.0">
@@ -13,12 +13,12 @@
                 <TableColumn fx:id="posicionCol" prefWidth="22.79998779296875" text=" " />
                 <TableColumn fx:id="escudoCol" prefWidth="35.999996185302734" text=" " />
                 <TableColumn fx:id="equipoCol" prefWidth="134.4000244140625" text="Team" />
-                <TableColumn fx:id="puntosCol" prefWidth="52.60003662109375" text="Points" />
+                <TableColumn fx:id="puntosCol" prefWidth="55.999972534179676" text="Points" />
             </columns>
         </TableView>
 
         <Label fx:id="partidosLabel" layoutX="19.0" layoutY="329.0" text="Upcoming matches:" />
         <ListView fx:id="matchesListView" layoutX="19.0" layoutY="349.0" prefHeight="200.0" prefWidth="282.0" />
-      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+      <Button fx:id="back" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="20.0" prefWidth="30.0" />
     </children>
 </AnchorPane>
