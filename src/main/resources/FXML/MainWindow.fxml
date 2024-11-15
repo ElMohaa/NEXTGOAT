@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
    <children>
-      <Button fx:id="entrenamiento" layoutX="40.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleEntreButtonAction" prefHeight="76.0" prefWidth="247.0" text="Entrenamiento" textFill="#f7f3f3" />
-      <Button layoutX="34.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonRecovery" prefHeight="76.0" prefWidth="247.0" text="Recovery" />
-      <Button layoutX="34.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleLaLigaButtonAction" prefHeight="76.0" prefWidth="247.0" text="LaLiga" />
-      <Button layoutX="82.0" layoutY="575.0" mnemonicParsing="false" text="Inicio" />
-      <Button layoutX="185.0" layoutY="575.0" mnemonicParsing="false" onAction="#buttonUser" text="Uusuario" />
-      <Button layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onAction="#buttonAtletismo" prefHeight="76.0" prefWidth="247.0" text="Athletics" />
+      <Button fx:id="entrenamiento" alignment="TOP_RIGHT" layoutX="39.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleEntreButtonAction" prefHeight="76.0" prefWidth="247.0" text="   TRAINING    ">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGENS/en.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="lesion" layoutX="39.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonRecovery" prefHeight="76.0" prefWidth="247.0" text="  RECOVERY">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGENS/lesion.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="ligas" alignment="CENTER" layoutX="39.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleLaLigaButtonAction" prefHeight="76.0" prefWidth="247.0" text=" LEAGUES  ">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGENS/ligas.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="atletismo" alignment="CENTER" layoutX="39.0" layoutY="211.0" mnemonicParsing="false" onAction="#buttonAtletismo" prefHeight="76.0" prefWidth="247.0" text="  PHYSICAL">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGENS/gym.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <ImageView fitHeight="111.0" fitWidth="147.0" layoutX="110.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../IMAGENS/LOGO.png" />
          </image>
       </ImageView>
+      <Pane fx:id="barra" layoutX="63.0" layoutY="549.0" prefHeight="52.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="home" layoutX="64.0" layoutY="14.0" mnemonicParsing="false" />
+            <Button fx:id="usuario" layoutX="117.0" layoutY="5.0" mnemonicParsing="false" onAction="#buttonUser" prefHeight="41.0" prefWidth="37.0" />
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="52.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGENS/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

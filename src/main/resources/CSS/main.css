@@ -1,18 +1,94 @@
-#anchorpane{}
-#entrenamiento{
-    -fx-background-image: url("../IMAGENS/entrenamineto.png");
-    -fx-background-size:100%100%;
+.anchorpane {
+    -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
+}
+#entrenamiento {
+    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    /* Centra la imagen */
+    -fx-background-radius: 25px;
+
+
+
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
+
+    -fx-font-size: 20px;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: #000209;
+}
+#entrenamiento:hover {
+    -fx-text-fill: #000310;
+    -fx-background-color: #1def66;
+
+}
+
+
+#atletismo {
+    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    /* Centra la imagen */
+    -fx-background-radius: 25px;
+
+
+
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
+
+    -fx-font-size: 20px;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: #000209;
+}
+#atletismo:hover {
+    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+}
+
+#lesion {
+    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    /* Centra la imagen */
+    -fx-background-radius: 25px;
+
+
+
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
+
+    -fx-font-size: 20px;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: #000209;
+}
+#lesion:hover {
+    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+}
+#ligas {
+    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    /* Centra la imagen */
+    -fx-background-radius: 25px;
+
+
+
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
+
+    -fx-font-size: 20px;
+
+    -fx-font-weight: bold;
+    -fx-text-fill: #000209;
+}
+#ligas:hover {
+    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+}
+#barra{
+    -fx-background-color: #079c8f;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 25px;
+    -fx-border-color: #14dfc7;
+}
+#usuario{
+    -fx-background-image: url("../IMAGENS/user.png");
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-
-    /* Bordes y esquinas redondeadas */
-    -fx-border-color: black;                /* Color del borde */
-    -fx-border-width: 2px;                  /* Grosor del borde */
-    -fx-border-radius: 10px;                /* Radio de los bordes redondeados */
-    -fx-border-style: solid;                /* Estilo del borde */
-
-    /* Ajuste de radio del fondo para coincidir con los bordes redondeados */
-    -fx-background-radius:20;
-
-
+    -fx-background-size: 100%100%;
+    -fx-background-color: transparent;
+}
+#home{
+    -fx-background-color: transparent;
 }
