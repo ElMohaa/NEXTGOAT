@@ -3,12 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.TrainingController">
+<AnchorPane fx:id="anchorpane" stylesheets="@../CSS/train.css" prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.TrainingController">
     <children>
-        <Button layoutX="127.0" layoutY="151.0" mnemonicParsing="false" onAction="#handleDelanteroButtonAction" text="Forward" />
-        <Button layoutX="128.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleDefensaButtonAction" text="Defense" />
-        <Button layoutX="119.0" layoutY="446.0" mnemonicParsing="false" onAction="#handlePorteroButtonAction" text="Gaolkeeper" />
-        <Button layoutX="122.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleCentroButtonAction" text="Midfielder" />
-        <Button layoutX="21.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+        <Button layoutX="63.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleDelanteroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Forward" />
+        <Button layoutX="63.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleDefensaButtonAction" prefHeight="58.0" prefWidth="187.0" text="Defense" />
+        <Button layoutX="63.0" layoutY="446.0" mnemonicParsing="false" onAction="#handlePorteroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Gaolkeeper" />
+        <Button layoutX="64.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleCentroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Midfielder" />
+        <Button fx:id="back" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="" />
     </children>
 </AnchorPane>

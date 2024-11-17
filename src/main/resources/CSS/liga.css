@@ -8,26 +8,102 @@
     -fx-background-color: transparent;
 }
 
-.table-view{
-    -fx-background-color:  #f6f7fa;
+/* Fondo general de la TableView */
+.table-view {
+    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo transparente */
+    -fx-control-inner-background: rgba(174, 239, 197, 0.23); /* Fondo interno */
+    -fx-background-insets: 0;
+    -fx-border-color: #14dfc7; /* Borde para que destaque */
+    -fx-border-width: 2; /* Grosor del borde */
+    -fx-border-radius: 5; /* Esquinas redondeadas */
+    -fx-padding: 5; /* Espaciado interior */
 }
 
+/* Estilo para los encabezados de las columnas */
 .table-view .column-header {
-    -fx-background-color: #aeefc5; /* Color de fondo negro */
-    -fx-text-fill: #000209; /* Texto blanco */
+    -fx-background-color: #44ee7f; /* Fondo del encabezado */
+    -fx-text-fill: black; /* Texto blanco */
+    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-alignment: center; /* Centrar texto */
+    -fx-border-color: #44ee7f; /* Borde oscuro */
+    -fx-border-width: 0 0 2 0; /* Borde inferior */
 }
 
-/* Cambiar color de fondo de las celdas de la tabla */
+/* Estilo para las celdas de la tabla */
 .table-view .table-cell {
-    -fx-background-color: #f6f7fa; /* Fondo negro */
-    -fx-text-fill: #000209; /* Texto blanco */
+    -fx-background-color: #aeefc5; /* Fondo de las celdas */
+    -fx-border-color: rgba(0, 0, 0, 0.1); /* Línea de separación entre celdas */
+    -fx-border-width: 0 0 1 0; /* Solo borde inferior */
+    -fx-text-fill: #000209; /* Texto en negro */
+    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-padding: 4; /* Espaciado interno */
+    -fx-alignment: center-left; /* Alinear texto a la izquierda */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1); /* Sombra ligera */
 }
+
+/* Estilo para las celdas seleccionadas */
+.table-view .table-cell:selected {
+    -fx-background-color: #14dfc7; /* Fondo celeste */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-weight: bold; /* Negrita */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 2); /* Sombra destacada */
+}
+
+/* Estilo para filas al pasar el cursor */
+.table-view .table-row-cell:hover {
+    -fx-background-color: rgba(20, 223, 199, 0.5); /* Fondo semitransparente */
+    -fx-cursor: hand; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Estilo para filas alternadas */
+.table-view .table-row-cell:odd {
+    -fx-background-color: rgba(174, 239, 197, 0.1); /* Fondo claro */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo ligeramente más oscuro */
+}
+
 
 
 /* Estilo para el ComboBox (si también lo quieres con fondo negro) */
+/* Estilo general para el ComboBox */
 .combo-box {
-    -fx-background-color: #aeefc5;
-    -fx-text-fill: #000209; /* Texto blanco */
+    -fx-background-color: #aeefc5; /* Fondo del ComboBox cerrado */
+    -fx-text-fill: #000209; /* Texto del ComboBox cerrado */
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para las opciones desplegadas (list-view del ComboBox) */
+.combo-box-popup .list-view {
+    -fx-background-color: #aeefc5; /* Fondo azul de las opciones desplegadas */
+    -fx-text-fill: white; /* Texto de las opciones */
+    -fx-font-weight: bold; /* Negrita */
+}
+
+/* Estilo para las celdas de las opciones */
+.combo-box-popup .list-cell {
+    -fx-background-color: #aeefc5; /* Fondo azul */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+/* Cambiar el color de fondo y texto al pasar el ratón */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #ffffff; /* Fondo más claro al pasar el ratón */
+    -fx-text-fill: black; /* Texto negro */
+}
+
+/* Estilo para la opción seleccionada */
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #ffffff; /* Fondo celeste de la opción seleccionada */
+    -fx-text-fill: black; /* Texto negro */
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+
+.combo-box .label{
+    -fx-text-fill: #000209;
 }
 
 /* Otros elementos de texto si necesitas cambiar su color */
@@ -36,6 +112,39 @@
     -fx-font-weight: bold;
     -fx-font-size: 14; /* Esto ya lo tienes, sigue con color verde */
 }
-.list-view{
-    -fx-background-color: #f6f7fa;
+/* Estilo para el ListView */
+#matchesListView {
+    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo transparente */
+    -fx-control-inner-background: rgba(174, 239, 197, 0.23); /* Fondo interno transparente */
+    -fx-background-insets: 0; /* Ajustar márgenes del fondo */
+    -fx-font-weight: bold;
+    -fx-text-fill: #000209;
 }
+
+/* Estilo para las celdas del ListView */
+#matchesListView .list-cell {
+    -fx-background-color: #aeefc5; /* Fondo de la celda (blanco en este caso) */
+    -fx-background-insets: 0 0 4 0; /* Margen inferior para crear separación */
+    -fx-padding: 10; /* Espaciado interno en las celdas */
+    -fx-text-fill: black; /* Texto en negro */
+    -fx-font-weight: bold; /* Negrita */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, 0, 0, 2); /* Sombra para mayor contraste */
+}
+
+/* Estilo para resaltar la celda seleccionada */
+#matchesListView .list-cell:filled:selected,
+#matchesListView .list-cell:filled:hover {
+    -fx-background-color: #aeefc5; /* Fondo al pasar el cursor o seleccionar */
+    -fx-text-fill: black; /* Texto de color negro */
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+
+#leagueComboBox.list-cell {
+    -fx-background-color: #aeefc5; /* Fondo de las celdas */
+    -fx-text-fill: #000209; /* Color del texto (verde, en tu caso) */
+    -fx-font-weight: bold; /* Negrita en las celdas */
+}
+
+
+

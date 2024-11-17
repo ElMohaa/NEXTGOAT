@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/liga.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/liga.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
     <children>
         <Label fx:id="frsa" layoutX="14.0" layoutY="77.0" text="Select a league:" />
         <ComboBox fx:id="leagueComboBox" layoutX="120.0" layoutY="74.0" prefHeight="26.0" prefWidth="159.0" />
@@ -12,13 +12,13 @@
             <columns>
                 <TableColumn fx:id="posicionCol" prefWidth="22.79998779296875" text=" " />
                 <TableColumn fx:id="escudoCol" prefWidth="35.999996185302734" text=" " />
-                <TableColumn fx:id="equipoCol" prefWidth="134.4000244140625" text="Team" />
-                <TableColumn fx:id="puntosCol" prefWidth="55.999972534179676" text="Points" />
+                <TableColumn fx:id="equipoCol" prefWidth="120.20001220703125" text="Team" />
+                <TableColumn fx:id="puntosCol" prefWidth="71.00001525878906" text="Points" />
             </columns>
         </TableView>
 
         <Label fx:id="partidosLabel" layoutX="19.0" layoutY="329.0" text="Upcoming matches:" />
-        <ListView fx:id="matchesListView" layoutX="19.0" layoutY="349.0" prefHeight="200.0" prefWidth="282.0" />
-      <Button fx:id="back" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="20.0" prefWidth="30.0" />
+        <ListView fx:id="matchesListView" layoutX="19.0" layoutY="349.0" prefHeight="249.0" prefWidth="282.0" />
+      <Button fx:id="back" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="8.0" prefWidth="16.0" />
     </children>
 </AnchorPane>

@@ -122,8 +122,8 @@ public class LaLigaController {
                     }
                     String emblemUrl = "https://crests.football-data.org/" + competition.getCode() + ".png";
                     logoView.setImage(new Image(emblemUrl));
-                    logoView.setFitHeight(22);
-                    logoView.setFitWidth(22);
+                    logoView.setFitHeight(23.5);
+                    logoView.setFitWidth(23.5);
 
                     HBox box = new HBox(12, logoView, nameLabel);
                     setGraphic(box);
@@ -146,10 +146,10 @@ public class LaLigaController {
 
                     String emblemUrl = "https://crests.football-data.org/" + competition.getCode() + ".png";
                     logoView.setImage(new Image(emblemUrl));
-                    logoView.setFitHeight(20);
-                    logoView.setFitWidth(20);
+                    logoView.setFitHeight(23);
+                    logoView.setFitWidth(23);
 
-                    HBox box = new HBox(10, logoView, nameLabel);
+                    HBox box = new HBox(14, logoView, nameLabel);
                     setGraphic(box);
                 }
             }

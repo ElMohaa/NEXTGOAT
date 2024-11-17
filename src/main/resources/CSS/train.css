@@ -1,0 +1,9 @@
+#anchorpane {
+    -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
+}
+#back{
+    -fx-background-image: url("../ICONS/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+    -fx-background-color: transparent;
+}
