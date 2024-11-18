@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" stylesheets="@../CSS/train.css" prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.TrainingController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/train.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.TrainingController">
     <children>
-        <Button layoutX="63.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleDelanteroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Forward" />
-        <Button layoutX="63.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleDefensaButtonAction" prefHeight="58.0" prefWidth="187.0" text="Defense" />
-        <Button layoutX="63.0" layoutY="446.0" mnemonicParsing="false" onAction="#handlePorteroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Gaolkeeper" />
-        <Button layoutX="64.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleCentroButtonAction" prefHeight="58.0" prefWidth="187.0" text="Midfielder" />
-        <Button fx:id="back" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="" />
+        <Button fx:id="delantero" layoutX="44.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleDelanteroButtonAction" prefHeight="77.0" prefWidth="223.0" text="FORWARD" />
+        <Button fx:id="defense" layoutX="46.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleDefensaButtonAction" prefHeight="77.0" prefWidth="223.0" text="DEFENSE" />
+        <Button fx:id="portero" layoutX="46.0" layoutY="450.0" mnemonicParsing="false" onAction="#handlePorteroButtonAction" prefHeight="77.0" prefWidth="223.0" text="GOALKEEPER" />
+        <Button fx:id="centro" layoutX="46.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleCentroButtonAction" prefHeight="77.0" prefWidth="223.0" text="MIDDLE CENTER" />
+        <Button fx:id="back" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="20.0" prefWidth="0.0" text="" />
+      <Label fx:id="texto" layoutX="83.0" layoutY="30.0" text="TRAINING" />
     </children>
 </AnchorPane>

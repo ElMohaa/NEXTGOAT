@@ -1,0 +1,76 @@
+#anchorpane {
+    -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
+}
+
+#back{
+    -fx-background-image: url("../ICONS/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70%45%;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0), 0, 0, 0, 0);
+}
+
+
+.button{
+    -fx-background-color: #f6f7fa;
+    -fx-text-fill: #1def66;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 10, 0.5, 2, 2);
+}
+.button:hover{
+    -fx-background-color: #1def66;
+    -fx-text-fill: #000209;
+}
+
+#texto{
+    -fx-text-fill: #1def66;
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #0cd151;
+
+}
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent; /* Fondo transparente en el contenido */
+}
+
+/* Estilo para el contenido dentro del AnchorPane */
+.scroll-pane .content {
+    -fx-background-color: transparent; /* Fondo transparente para el AnchorPane contenido */
+}
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: #f6f7fa; /* Fondo de la barra */
+    -fx-border-radius: 10; /* Bordes redondeados para la barra */
+    -fx-padding: 1; /* Espaciado interno para el track */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento vertical */
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #75d816; /* Color del pulgar */
+    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
+    -fx-min-width: 10px; /* Ancho mínimo del pulgar */
+    -fx-pref-width: 10px; /* Ancho preferido del pulgar */
+}
+
+/* Estilo para la barra de desplazamiento horizontal */
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: #eeeeee; /* Fondo de la barra */
+    -fx-border-radius: 10; /* Bordes redondeados para la barra */
+    -fx-padding: 1; /* Espaciado interno para el track */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento horizontal */
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #1def66; /* Color del pulgar */
+    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
+    -fx-min-height: 10px; /* Altura mínima del pulgar */
+    -fx-pref-height: 10px; /* Altura preferida del pulgar */
+}
+

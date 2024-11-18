@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="615.0" minWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.PhysicalController">
+<AnchorPane fx:id="anchorpane" minHeight="615.0" minWidth="315.0" stylesheets="@../CSS/positions.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.PhysicalController">
    <children>
-      <Button layoutX="48.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonForce" text="Force" />
-      <Button layoutX="190.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonSpeed" text="Speed" />
-      <Button layoutX="56.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonResis" text="Resistencia" />
-      <Button layoutX="190.0" layoutY="240.0" mnemonicParsing="false" onAction="#buttonMobby" text="Movilidad" />
-      <Button layoutX="22.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+      <Button layoutX="40.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonForce" prefHeight="69.0" prefWidth="239.0" text="STRENGTH" />
+      <Button layoutX="40.0" layoutY="340.0" mnemonicParsing="false" onAction="#buttonSpeed" prefHeight="69.0" prefWidth="239.0" text="SPEED" />
+      <Button layoutX="40.0" layoutY="238.0" mnemonicParsing="false" onAction="#buttonResis" prefHeight="69.0" prefWidth="239.0" text="RESISTANCE" />
+      <Button layoutX="40.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonMobby" prefHeight="69.0" prefWidth="239.0" text="MOBILITY" />
+      <Button fx:id="back" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="48.0" prefWidth="33.0" text=" " />
+      <Label fx:id="texto" layoutX="87.0" layoutY="54.0" text="PHYSICAL" />
    </children>
 </AnchorPane>

@@ -3,11 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.GoalkeeperController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/positions.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.GoalkeeperController">
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
-      <Button layoutX="132.0" layoutY="158.0" mnemonicParsing="false" onAction="#bootonSoot" text="Stoot" />
-      <Button layoutX="132.0" layoutY="230.0" mnemonicParsing="false" onAction="#bootonPass" text="Pass" />
-      <Button layoutX="132.0" layoutY="308.0" mnemonicParsing="false" onAction="#bootonControl" text="Controll" />
+      <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="49.0" prefWidth="36.0" text="" />
+      <Button layoutX="40.0" layoutY="116.0" mnemonicParsing="false" onAction="#bootonSoot" prefHeight="69.0" prefWidth="239.0" text="STOOT" />
+      <Button layoutX="40.0" layoutY="219.0" mnemonicParsing="false" onAction="#bootonPass" prefHeight="69.0" prefWidth="239.0" text="PASS" />
+      <Button layoutX="40.0" layoutY="322.0" mnemonicParsing="false" onAction="#bootonControl" prefHeight="69.0" prefWidth="239.0" text="CONTROL" />
+      <Label fx:id="texto" layoutX="64.0" layoutY="30.0" text="GOALKEEPER" />
    </children>
 </AnchorPane>

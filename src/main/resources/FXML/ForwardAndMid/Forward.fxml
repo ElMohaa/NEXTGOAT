@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ForwardController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/positions.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ForwardController">
    <children>
-      <Button layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
-      <Button layoutX="26.0" layoutY="102.0" mnemonicParsing="false" onAction="#controlball" prefHeight="26.0" prefWidth="176.0" text="Dribbles" />
-      <Button layoutX="26.0" layoutY="139.0" mnemonicParsing="false" onAction="#topass" prefHeight="26.0" prefWidth="176.0" text="Pasar" />
-      <Button layoutX="26.0" layoutY="179.0" mnemonicParsing="false" onAction="#control" prefHeight="26.0" prefWidth="176.0" text="ControllBall" />
-      <Button layoutX="74.0" layoutY="222.0" mnemonicParsing="false" onAction="#skill" text="Shooting" />
+      <Button fx:id="back" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="62.0" prefWidth="36.0" />
+      <Button layoutX="40.0" layoutY="103.0" mnemonicParsing="false" onAction="#controlball" prefHeight="69.0" prefWidth="239.0" text="DRIBBLES" />
+      <Button layoutX="40.0" layoutY="206.0" mnemonicParsing="false" onAction="#topass" prefHeight="69.0" prefWidth="239.0" text="PASS" />
+      <Button layoutX="40.0" layoutY="308.0" mnemonicParsing="false" onAction="#control" prefHeight="69.0" prefWidth="239.0" text="CONTROL BALL" />
+      <Button layoutX="40.0" layoutY="410.0" mnemonicParsing="false" onAction="#skill" prefHeight="69.0" prefWidth="239.0" text="SHOOTING" />
+      <Label fx:id="texto" layoutX="84.0" layoutY="36.0" text="FORWARD" />
    </children>
 </AnchorPane>

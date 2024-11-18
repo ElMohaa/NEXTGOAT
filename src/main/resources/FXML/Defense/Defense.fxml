@@ -3,11 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.DefenseController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/positions.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.DefenseController">
    <children>
-      <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
-      <Button layoutX="142.0" layoutY="144.0" mnemonicParsing="false" onAction="#buttonSeated" text="Seated" />
-      <Button layoutX="143.0" layoutY="195.0" mnemonicParsing="false" onAction="#buttonControllBall" text="Controll Ball" />
-      <Button layoutX="143.0" layoutY="262.0" mnemonicParsing="false" onAction="#buttonPass" text="Pass" />
+      <Button fx:id="back" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="57.0" prefWidth="36.0" text=" " />
+      <Button layoutX="40.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonSeated" prefHeight="69.0" prefWidth="239.0" text="SEATED" />
+      <Button layoutX="40.0" layoutY="220.0" mnemonicParsing="false" onAction="#buttonControllBall" prefHeight="69.0" prefWidth="239.0" text="CONTROL BALL" />
+      <Button layoutX="40.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonPass" prefHeight="69.0" prefWidth="239.0" text="PASS" />
+      <Label fx:id="texto" layoutX="94.0" layoutY="46.0" text="DEFENSE" />
    </children>
 </AnchorPane>

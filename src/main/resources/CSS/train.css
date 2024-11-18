@@ -6,4 +6,52 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100%100%;
     -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0), 0, 0, 0, 0);
+}
+#portero,#defense,#delantero,#centro{
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-color: transparent;
+    -fx-text-fill: #f6f7fa;  /* El texto será visible */
+    -fx-font-size: 25;   /* Tamaño del texto */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-border-radius: 20px; /* Bordes redondeados */
+    -fx-background-radius: 20px; /* Bordes redondeados */
+    -fx-effect: dropshadow(gaussian, rgb(130, 232, 164), 10, 0.5, 2, 2); /* Sombra en los botones */
+    -fx-padding: 10px;
+    -fx-border-width: 2;
+}
+#portero:hover,#defense:hover,#delantero:hover,#centro:hover{
+    -fx-text-fill: #1def66;
+    -fx-effect: dropshadow(gaussian, rgb(246, 247, 250), 10, 0.5, 2, 2);
+}
+
+
+#delantero{
+    -fx-background-image: url("../IMAGENS/delaNegro.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+}
+#centro{
+    -fx-background-image: url("../IMAGENS/medioNegro.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+}
+#defense{
+    -fx-background-image: url("../IMAGENS/defenNegro.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+}
+#portero{
+    -fx-background-image: url("../IMAGENS/porteNegro.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+}
+#texto{
+    -fx-text-fill: #1def66;
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #0cd151;
+
 }
