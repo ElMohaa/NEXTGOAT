@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.media.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ControllBall.ControllBallView">
+<AnchorPane fx:id="anchorpane" stylesheets="@../../../CSS/view.css" prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ControllBall.ControllBallView">
     <children>
-        <Button fx:id="backButton" layoutX="139.0" layoutY="547.0" onAction="#back" text="Back" />
+        <Button fx:id="backButton" layoutX="125.0" layoutY="547.0" onAction="#back" text="Back" />
         <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="260.0" layoutX="28.0" layoutY="33.0" />
     </children>
 

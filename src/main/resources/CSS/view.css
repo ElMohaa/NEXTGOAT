@@ -1,0 +1,22 @@
+#anchorpane {
+    -fx-background-color: linear-gradient(  #14df5b, #14dfc7);
+}
+
+#backButton{
+    -fx-background-color: #094aef;
+    -fx-text-fill: #042e29;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgb(10, 20, 90), 10, 0.5, 2, 2);
+}
+#mediaView{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgb(10, 20, 90), 10, 0.5, 2, 2);
+}

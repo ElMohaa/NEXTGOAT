@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Resistance.ResistanceController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/fisico.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Resistance.ResistanceController">
    <children>
-      <Button layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonBack" text="Button" />
-      <Button layoutX="106.0" layoutY="185.0" mnemonicParsing="false" onAction="#buttonResistence1" text="Power Skips" />
-      <Button layoutX="106.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonResistence2" text="Single Leg Bounds" />
-      <Button layoutX="106.0" layoutY="352.0" mnemonicParsing="false" onAction="#buttonResistence3" text="Bounding" />
-      <Button layoutX="106.0" layoutY="409.0" mnemonicParsing="false " onAction="#buttonResistence4"  text="Pogo Jumps" />
+      <Button fx:id="back" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button layoutX="65.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonResistence1" prefHeight="49.0" prefWidth="187.0" text="Power Skips" />
+      <Button layoutX="65.0" layoutY="192.0" mnemonicParsing="false" onAction="#buttonResistence2" prefHeight="49.0" prefWidth="187.0" text="Single Leg Bounds" />
+      <Button layoutX="65.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonResistence3" prefHeight="49.0" prefWidth="187.0" text="Bounding" />
+      <Button layoutX="65.0" layoutY="332.0" mnemonicParsing="false " onAction="#buttonResistence4" prefHeight="49.0" prefWidth="187.0" text="Pogo Jumps" />
+      <Label fx:id="text" layoutX="72.0" layoutY="49.0" text="RESISTANCE" />
    </children>
 </AnchorPane>

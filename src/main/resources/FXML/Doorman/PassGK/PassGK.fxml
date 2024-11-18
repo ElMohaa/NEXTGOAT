@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.next_goat.Controllers.Goalkeeper.PassGK.PassGKController"
-            prefHeight="615.0" prefWidth="315.0">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.PassGK.PassGKController">
     <children>
-        <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-        <Button layoutX="132.0" layoutY="155.0" mnemonicParsing="false" onAction="#buttonSoot7" text="Pass Long GK" />
-        <Button layoutX="132.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSoot8" text="Drop Kick" />
-        <Button layoutX="132.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSoot3" text="Pass 1" />
-        <Button layoutX="132.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonSoot4" text="Pass 2" />
+        <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+        <Button layoutX="85.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonSoot7" prefHeight="49.0" prefWidth="152.0" text="Pass Long GK" />
+        <Button layoutX="85.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSoot8" prefHeight="49.0" prefWidth="152.0" text="Drop Kick" />
+        <Button layoutX="85.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSoot3" prefHeight="49.0" prefWidth="152.0" text="Pass Easy" />
+        <Button layoutX="85.0" layoutY="359.0" mnemonicParsing="false" onAction="#buttonSoot4" prefHeight="49.0" prefWidth="152.0" text="Other Pass " />
+      <Label fx:id="text" layoutX="121.0" layoutY="54.0" text="PASS" />
     </children>
 
 </AnchorPane>

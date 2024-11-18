@@ -3,13 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Skill.HabilidadControll">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Skill.HabilidadControll">
    <children>
-      <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" text="Back" />
-      <Button layoutX="122.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonSkill1" text="Shoot With Power" />
-      <Button layoutX="122.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonSkill2" text="Shoot Curve" />
-      <Button layoutX="122.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSkill3" text="Shoot Trivela" />
-      <Button layoutX="122.0" layoutY="336.0" mnemonicParsing="false" onAction="#buttonSkill4" text="Shoot Volley" />
-      <Button layoutX="134.0" layoutY="406.0" mnemonicParsing="false" onAction="#buttonSkill5" text="Shoot Ronaldo" />
+      <Button fx:id="back" layoutX="27.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" text=" " />
+      <Button layoutX="36.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonSkill1" prefHeight="49.0" prefWidth="244.0" text="Shoot With Power" />
+      <Button layoutX="36.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonSkill2" prefHeight="49.0" prefWidth="244.0" text="Shoot Curve" />
+      <Button layoutX="36.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonSkill3" prefHeight="49.0" prefWidth="244.0" text="Shoot Trivela" />
+      <Button layoutX="36.0" layoutY="336.0" mnemonicParsing="false" onAction="#buttonSkill4" prefHeight="49.0" prefWidth="244.0" text="Shoot Volley" />
+      <Button layoutX="36.0" layoutY="406.0" mnemonicParsing="false" onAction="#buttonSkill5" prefHeight="49.0" prefWidth="244.0" text="Shoot Ronaldo" />
+      <Label fx:id="text" layoutX="117.0" layoutY="36.0" text="SHOT" />
    </children>
 </AnchorPane>

@@ -1,0 +1,37 @@
+#anchorpane {
+    -fx-background-color: linear-gradient(   #0a145a, #14df5b);
+}
+
+#backButton{
+    -fx-background-color: #0a145a;
+    -fx-text-fill: #f6f7fa;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgb(0, 2, 9), 10, 0.5, 2, 2);
+}
+#mediaView{
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgb(0, 2, 9), 10, 0.5, 2, 2);
+}
+
+/*recovery*/
+#anchor2{
+    -fx-background-color: linear-gradient(   #bdda0a, #14df5b);
+}
+.back{
+    -fx-background-color: #bdda0a;
+    -fx-text-fill: #000209;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgb(0, 2, 9), 10, 0.5, 2, 2);
+}

@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.next_goat.Controllers.Defen.ToPassDefense.PassDefenseController"
-            prefHeight="615.0" prefWidth="315.0">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.ToPassDefense.PassDefenseController">
     <children>
-        <Button layoutX="26.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-        <Button layoutX="132.0" layoutY="177.0" mnemonicParsing="false" onAction="#buttonPass1" text="Curl Pass" />
-        <Button layoutX="132.0" layoutY="252.0" mnemonicParsing="false" onAction="#buttonPass2" text="Trivela Pass" />
-        <Button layoutX="132.0" layoutY="338.0" mnemonicParsing="false" onAction="#buttonPass3" text="Long Pass" />
-        <Button layoutX="141.0" layoutY="396.0" mnemonicParsing="false" onAction="#buttonPass4" text="Cutter Pass" />
-        <Button layoutX="153.0" layoutY="452.0" mnemonicParsing="false" onAction="#buttonPass5" text="Grasscutter" />
-        <Button layoutX="145.0" layoutY="295.0" mnemonicParsing="false" onAction="#buttonPass6" text="Curve Long Pass" />
+        <Button fx:id="back" layoutX="26.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+        <Button layoutX="70.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonPass1" prefHeight="49.0" prefWidth="180.0" text="Curl Pass" />
+        <Button layoutX="70.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonPass2" prefHeight="49.0" prefWidth="180.0" text="Trivela Pass" />
+        <Button layoutX="70.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonPass3" prefHeight="49.0" prefWidth="180.0" text="Long Pass" />
+        <Button layoutX="70.0" layoutY="336.0" mnemonicParsing="false" onAction="#buttonPass4" prefHeight="49.0" prefWidth="180.0" text="Cutter Pass" />
+        <Button layoutX="70.0" layoutY="406.0" mnemonicParsing="false" onAction="#buttonPass5" prefHeight="49.0" prefWidth="180.0" text="Grasscutter" />
+        <Button layoutX="70.0" layoutY="472.0" mnemonicParsing="false" onAction="#buttonPass6" prefHeight="49.0" prefWidth="180.0" text="Curve Long Pass" />
+      <Label fx:id="text" layoutX="123.0" layoutY="50.0" text="PASS" />
     </children>
 
 </AnchorPane>

@@ -3,15 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Dribble.BallControll">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.Dribble.BallControll">
    <children>
-      <Button layoutX="82.0" layoutY="50.0" onAction="#buttonDriblle1" text="Sole Role and Stop" />
-      <Button layoutX="82.0" layoutY="100.0" onAction="#buttonDriblle2" text="Sole Role and Ronaldo" />
-      <Button layoutX="82.0" layoutY="150.0" onAction="#buttonDriblle3" text="Sole Drag Outside" />
-      <Button layoutX="82.0" layoutY="200.0" onAction="#buttonDriblle4" text="Skill" />
-      <Button layoutX="82.0" layoutY="250.0" onAction="#buttonDriblle5" text="Sole Role Drag 90s back" />
-      <Button layoutX="82.0" layoutY="300.0" onAction="#buttonDriblle6" text="Skill CR7" />
-      <Button layoutX="82.0" layoutY="350.0" onAction="#buttonDriblle7" text="Skill Easy" />
-      <Button layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
+      <Button layoutX="36.0" layoutY="129.0" onAction="#buttonDriblle1" prefHeight="49.0" prefWidth="244.0" text="Sole Role and Stop" />
+      <Button layoutX="36.0" layoutY="196.0" onAction="#buttonDriblle2" prefHeight="49.0" prefWidth="244.0" text="Sole Role and Ronaldo" />
+      <Button layoutX="36.0" layoutY="258.0" onAction="#buttonDriblle3" prefHeight="49.0" prefWidth="244.0" text="Sole Drag Outside" />
+      <Button layoutX="36.0" layoutY="323.0" onAction="#buttonDriblle4" prefHeight="49.0" prefWidth="244.0" text="The Skill" />
+      <Button layoutX="36.0" layoutY="389.0" onAction="#buttonDriblle5" prefHeight="49.0" prefWidth="244.0" text="Sole Role Drag 90s back" />
+      <Button layoutX="36.0" layoutY="461.0" onAction="#buttonDriblle6" prefHeight="49.0" prefWidth="244.0" text="Skill CR7" />
+      <Button layoutX="36.0" layoutY="528.0" onAction="#buttonDriblle7" prefHeight="49.0" prefWidth="244.0" text="Skill Easy" />
+      <Button fx:id="back" layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Label fx:id="text" layoutX="90.0" layoutY="49.0" text="DRIBLLES" />
    </children>
 </AnchorPane>

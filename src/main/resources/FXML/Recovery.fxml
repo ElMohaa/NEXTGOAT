@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" minHeight="615.0" minWidth="315.0" stylesheets="@../CSS/positions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RecoveryController">
+<AnchorPane fx:id="anchorpaneR" minHeight="615.0" minWidth="315.0" stylesheets="@../CSS/positions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RecoveryController">
    <children>
       <Button fx:id="back" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="59.0" prefWidth="29.0" text=" " />
       <Label fx:id="texto" layoutX="93.0" layoutY="45.0" text="RECOVERY" />

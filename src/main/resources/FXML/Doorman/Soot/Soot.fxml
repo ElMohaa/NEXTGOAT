@@ -3,13 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.Soot.SootController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.Soot.SootController">
     <children>
-        <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-        <Button layoutX="132.0" layoutY="155.0" mnemonicParsing="false" onAction="#buttonSoot1" text="Soot" />
-        <Button layoutX="132.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSoot2" text="Save" />
-        <Button layoutX="132.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSoot3" text="Low Dive" />
-      <Button layoutX="132.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonSoot4" text="Save" />
+        <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+        <Button layoutX="90.0" layoutY="140.0" mnemonicParsing="false" onAction="#buttonSoot1" prefHeight="40.0" prefWidth="140.0" text="Soot" />
+        <Button layoutX="90.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonSoot2" prefHeight="40.0" prefWidth="140.0" text="Save" />
+        <Button layoutX="90.0" layoutY="253.0" mnemonicParsing="false" onAction="#buttonSoot3" prefHeight="40.0" prefWidth="140.0" text="Low Dive" />
+      <Button layoutX="90.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonSoot4" prefHeight="40.0" prefWidth="140.0" text="Save" />
+      <Label fx:id="text" layoutX="109.0" layoutY="61.0" text="STOOT" />
     </children>
 
 </AnchorPane>

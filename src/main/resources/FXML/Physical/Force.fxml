@@ -3,12 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Force.ForceController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/fisico.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Force.ForceController">
    <children>
-      <Button layoutX="31.0" layoutY="35.0" mnemonicParsing="false" onAction="#buttonBack" text="Back" />
-      <Button layoutX="98.0" layoutY="186.0" mnemonicParsing="false" onAction="#buttonForce1" text="Push-ups" />
-      <Button layoutX="90.0" layoutY="253.0" mnemonicParsing="false" onAction="#buttonForce2" text="Squats" />
-      <Button layoutX="132.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonForce3" text="Bulgarian squats" />
-      <Button layoutX="116.0" layoutY="374.0" mnemonicParsing="false" onAction="#buttonForce4" text="Pulley lunges" />
+      <Button fx:id="back" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonBack" text="" />
+      <Button layoutX="70.0" layoutY="164.0" mnemonicParsing="false" onAction="#buttonForce1" prefHeight="49.0" prefWidth="180.0" text="Push-ups" />
+      <Button layoutX="70.0" layoutY="237.0" mnemonicParsing="false" onAction="#buttonForce2" prefHeight="49.0" prefWidth="180.0" text="Squats" />
+      <Button layoutX="70.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonForce3" prefHeight="49.0" prefWidth="180.0" text="Bulgarian squats" />
+      <Button layoutX="70.0" layoutY="382.0" mnemonicParsing="false" onAction="#buttonForce4" prefHeight="49.0" prefWidth="180.0" text="Pulley lunges" />
+      <Label fx:id="text" layoutX="80.0" layoutY="65.0" text="STRENGTH" />
    </children>
 </AnchorPane>
