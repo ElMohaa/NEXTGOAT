@@ -4,24 +4,55 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="615.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.UserController">
+<AnchorPane fx:id="anUser" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.UserController">
    <children>
-      <Button layoutX="195.0" layoutY="576.0" mnemonicParsing="false" text="User" />
-      <Button layoutX="69.0" layoutY="576.0" mnemonicParsing="false" onAction="#buttonHome" text="Home" />
-      <Button layoutX="209.0" layoutY="72.0" mnemonicParsing="false" onAction="#closeSession" text="Cerrar sesion" />
-      <Button layoutX="30.0" layoutY="72.0" mnemonicParsing="false" onAction="#editUser" text="Editar Perfil" />
-      <ImageView fx:id="imageView" fitHeight="252.0" fitWidth="210.0" layoutX="67.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+      <Pane fx:id="barraUser" layoutX="63.0" layoutY="549.0" prefHeight="52.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="homeUser" layoutX="44.0" layoutY="7.0" mnemonicParsing="false" onAction="#buttonHome" prefHeight="35.0" prefWidth="37.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGENS/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="usuarioUser" layoutX="117.0" layoutY="5.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="37.0" />
+         </children>
+      </Pane>
+      <Button fx:id="cerrarSesion" layoutX="209.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeSession" prefHeight="31.0" prefWidth="93.0" text="SING OUT" />
+      <Button fx:id="editar" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#editUser" text="Edit Profile" />
+      <ImageView fx:id="imageView" fitHeight="340.0" fitWidth="229.0" layoutX="52.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../IMAGENS/totySinFondo.png" />
+            <Image url="@../IMAGENS/cartaNexT.png" />
          </image>
       </ImageView>
-      <Label fx:id="resistenciaLabel" layoutX="93.0" layoutY="299.0" text="Label" />
-      <Label fx:id="tiroLabel" layoutX="93.0" layoutY="317.0" text="Label" />
-      <Label fx:id="paseLabel" layoutX="93.0" layoutY="335.0" text="Label" />
-      <Label fx:id="regateLabel" layoutX="156.0" layoutY="299.0" text="Label" />
-      <Label fx:id="defeLabel" layoutX="156.0" layoutY="317.0" text="Label" />
-      <Label fx:id="fisicoLabel" layoutX="156.0" layoutY="335.0" text="Label" />
-      <Label fx:id="mediaLabel" layoutX="107.0" layoutY="210.0" text="Label" />
-      <Label fx:id="nombreLabel" layoutX="142.0" layoutY="275.0" text="Lsssabel" />
+      <Label fx:id="resistenciaLabel" layoutX="93.0" layoutY="350.0" text="pase" />
+      <Label fx:id="tiroLabel" layoutX="93.0" layoutY="372.0" text="shooo" />
+      <Label fx:id="paseLabel" layoutX="93.0" layoutY="395.0" text="pas" />
+      <Label fx:id="regateLabel" layoutX="184.0" layoutY="350.0" text="drif" />
+      <Label fx:id="defeLabel" layoutX="184.0" layoutY="372.0" text="Lab222el" />
+      <Label fx:id="fisicoLabel" layoutX="184.0" layoutY="395.0" text="Label" />
+      <Label fx:id="mediaLabel" layoutX="100.0" layoutY="243.0" text="LabelMedia" />
+      <Label fx:id="nombreLabel" layoutX="109.0" layoutY="323.0" text="Lsssabel" />
+      <ImageView fitHeight="31.0" fitWidth="99.0" layoutX="149.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMAGENS/LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="131.0" layoutX="98.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMAGENS/LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="104.0" fitWidth="123.0" layoutX="147.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMAGENS/jugadorCarta.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="137.0" fitWidth="215.0" layoutX="56.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMAGENS/nextFrase.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

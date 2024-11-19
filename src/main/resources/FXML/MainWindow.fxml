@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.MainWindowController">
    <children>
       <Button fx:id="entrenamiento" alignment="TOP_RIGHT" layoutX="39.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleEntreButtonAction" prefHeight="76.0" prefWidth="247.0" text="   TRAINING    ">
          <graphic>

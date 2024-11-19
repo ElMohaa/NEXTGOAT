@@ -28,22 +28,22 @@
 
 
 #delantero{
-    -fx-background-image: url("../IMAGENS/delaNegro.png");
+    -fx-background-image: url("../IMAGENS/delanteroVerde.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100%100%;
 }
 #centro{
-    -fx-background-image: url("../IMAGENS/medioNegro.png");
+    -fx-background-image: url("../IMAGENS/medioVerde.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100%100%;
 }
 #defense{
-    -fx-background-image: url("../IMAGENS/defenNegro.png");
+    -fx-background-image: url("../IMAGENS/defensaVerde.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100%100%;
 }
 #portero{
-    -fx-background-image: url("../IMAGENS/porteNegro.png");
+    -fx-background-image: url("../IMAGENS/porteroVerde.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100%100%;
 }

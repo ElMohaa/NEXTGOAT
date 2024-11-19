@@ -1,38 +1,26 @@
+/*MAIN*/
 .anchorpane {
     -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
 }
 #entrenamiento {
     -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
-    /* Centra la imagen */
     -fx-background-radius: 25px;
-
-
-
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
-
     -fx-font-size: 20px;
-
     -fx-font-weight: bold;
     -fx-text-fill: #000209;
 }
 #entrenamiento:hover {
     -fx-text-fill: #000310;
     -fx-background-color: #1def66;
-
 }
 
 
 #atletismo {
     -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
-    /* Centra la imagen */
     -fx-background-radius: 25px;
-
-
-
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
-
     -fx-font-size: 20px;
-
     -fx-font-weight: bold;
     -fx-text-fill: #000209;
 }
@@ -43,15 +31,9 @@
 
 #lesion {
     -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
-    /* Centra la imagen */
     -fx-background-radius: 25px;
-
-
-
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
-
     -fx-font-size: 20px;
-
     -fx-font-weight: bold;
     -fx-text-fill: #000209;
 }
@@ -61,15 +43,9 @@
 }
 #ligas {
     -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
-    /* Centra la imagen */
     -fx-background-radius: 25px;
-
-
-
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
-
     -fx-font-size: 20px;
-
     -fx-font-weight: bold;
     -fx-text-fill: #000209;
 }
@@ -80,8 +56,9 @@
 #barra{
     -fx-background-color: #079c8f;
     -fx-border-radius: 20px;
-    -fx-background-radius: 25px;
-    -fx-border-color: #14dfc7;
+    -fx-border-width: 2;
+    -fx-background-radius: 20px;
+    -fx-border-color: #1def66;
 }
 #usuario{
     -fx-background-image: url("../IMAGENS/user.png");
@@ -94,4 +71,77 @@
     -fx-background-color: transparent;
     -fx-border-color: transparent transparent #1def66 transparent;
     -fx-border-width: 0 0 3 0;
+}
+
+
+/*USUARIO*/
+#anUser{
+    -fx-background-color: linear-gradient(  #12e8e8,#000310);
+}
+#imageView{
+    -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
+}
+.label{
+    -fx-text-fill: #f6f7fa;
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+}
+
+#usuarioUser{
+    -fx-background-image: url("../IMAGENS/user.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #1def66 transparent;
+    -fx-border-width: 0 0 3 0;
+}
+#homeUser{
+    -fx-background-color: transparent;
+}
+#barraUser{
+    -fx-background-color: #5b5e67;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2;
+    -fx-background-radius: 20px;
+    -fx-border-color: #1def66;
+}
+#cerrarSesion{
+    -fx-background-color: #f40606;
+    -fx-font-size: 15;
+    -fx-text-fill: #f6f7fa;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+
+
+}
+#editar{
+    -fx-background-color: #14df5b;
+    -fx-text-fill: #f6f7fa;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+    -fx-background-radius: 15px;
+}
+
+/*EditUser*/
+#ancEdit{
+    -fx-background-color: linear-gradient(  #020b49, #000310);
+}
+
+#name,#apellido,#email,#tele,#direcc,#user,#pass,#nie,#nie,#fechNac{
+    -fx-text-fill: #14df5b;
+    -fx-font-size: 14;
+}
+.text-field{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
+    -fx-border-color: #0cd151;
+    -fx-text-fill: white;
+}
+
+#back{
+    -fx-background-image: url("../ICONS/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70%45%;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0), 0, 0, 0, 0);
 }
