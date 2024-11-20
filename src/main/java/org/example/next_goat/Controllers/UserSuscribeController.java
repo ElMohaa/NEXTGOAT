@@ -104,7 +104,7 @@ public class UserSuscribeController {
             // Insertar el usuario en la base de datos
             DataBaseConnection.insertUser(newUser);
             System.out.println("Usuario registrado correctamente.");
-
+            showWindowGood("You are already registered");
 
             // Volver a la pantalla de inicio de sesión
             handleBackToLoginButtonAction(event);
@@ -145,7 +145,24 @@ public class UserSuscribeController {
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(dialogScene);
-            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
+    }
+    public void showWindowGood(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/good.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
             stage.show();
         } catch (Exception ex) {
             System.err.println("Error: "+ ex.getMessage());

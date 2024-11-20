@@ -164,7 +164,6 @@ public class EditUserController {
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(dialogScene);
-            stage.setTitle("GYM-PRO");
             stage.show();
         } catch (Exception ex) {
             System.err.println("Error: "+ ex.getMessage());
@@ -184,7 +183,6 @@ public class EditUserController {
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(dialogScene);
-            stage.setTitle("GYM-PRO");
             stage.show();
         } catch (Exception ex) {
             System.err.println("Error: "+ ex.getMessage());

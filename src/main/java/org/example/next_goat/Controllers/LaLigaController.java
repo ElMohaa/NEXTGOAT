@@ -272,52 +272,6 @@ public class LaLigaController {
     }
 
 
-
-
-
-
-    // Buscar partidos por nombre del equipo
-    /*@FXML
-    private void handleBuscarEquipo() {
-        String teamName = equipoField.getText().trim().toLowerCase(); // Convertir a minúsculas
-        if (teamName.isEmpty()) {
-            System.out.println("Por favor, ingrese un nombre de equipo.");
-            return; // No hacer nada si el campo está vacío
-        }
-
-        try {
-            // Obtener el ID del equipo
-            int teamId = footballApiClient.getTeamIdByName(teamName);
-
-            // Ahora obtener los partidos usando el ID del equipo
-            String matchesData = footballApiClient.getMatchesByTeamId(teamId);
-            System.out.println("Partidos del equipo: " + matchesData); // Depuración
-
-            // Parsear la respuesta
-            Gson gson = new Gson();
-            MatchesResponse matchesResponse = gson.fromJson(matchesData, MatchesResponse.class);
-
-            // Limpiar el ListView antes de agregar nuevos elementos
-            matchesListView.getItems().clear();
-
-            // Añadir los partidos al ListView
-            if (matchesResponse != null && matchesResponse.getMatches() != null) {
-                for (Match match : matchesResponse.getMatches()) {
-                    matchesListView.getItems().add(match.toString());
-                }
-            } else {
-                System.out.println("No hay partidos disponibles para el equipo.");
-            }
-
-        } catch (IOException e) {
-            System.err.println("Error de entrada/salida: " + e.getMessage());
-            e.printStackTrace(); // Imprimir la traza de la excepción
-        } catch (Exception e) {
-            System.err.println("Ocurrió un error inesperado: " + e.getMessage());
-            e.printStackTrace(); // Imprimir la traza de la excepción
-        }
-    }*/
-
     @FXML
     private void buttonBack(ActionEvent event) {
         try {

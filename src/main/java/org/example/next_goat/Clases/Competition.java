@@ -28,6 +28,6 @@ public class Competition {
 
     @Override
     public String toString() {
-        return name; // Devuelve el nombre para que se muestre en el ComboBox
+        return name;
     }
 }
