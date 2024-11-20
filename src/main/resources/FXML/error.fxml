@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="error" prefHeight="250.0" prefWidth="200.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ErrorController">
+   <children>
+      <Button fx:id="okbutton" layoutX="77.0" layoutY="192.0" mnemonicParsing="false" onAction="#cerrVentana" prefHeight="36.0" prefWidth="46.0" text="OK" />
+      <Label fx:id="textError" alignment="CENTER" layoutX="27.0" layoutY="74.0" prefHeight="102.0" prefWidth="146.0" text="Especific error" wrapText="true" />
+      <ImageView fitHeight="122.0" fitWidth="117.0" layoutX="42.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ICONS/theIconCross.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="good" prefHeight="250.0" prefWidth="200.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ErrorController">
+    <children>
+        <Button fx:id="okgoodbutton" layoutX="77.0" layoutY="185.0" mnemonicParsing="false" onAction="#cerrVentanaGood" prefHeight="36.0" prefWidth="46.0" text="OK" />
+        <Label fx:id="textError" alignment="CENTER" layoutX="22.0" layoutY="90.0" prefHeight="70.0" prefWidth="156.0" text="Especific error" wrapText="true" />
+        <ImageView fitHeight="55.0" fitWidth="57.0" layoutX="72.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../ICONS/iconGood.png" />
+            </image>
+        </ImageView>
+    </children>
+
+</AnchorPane>

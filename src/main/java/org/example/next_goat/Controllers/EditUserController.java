@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Clases.UserSession;
 import org.example.next_goat.Clases.Usuario;
 import org.example.next_goat.DataBase.DataBaseConnection;
@@ -94,13 +95,13 @@ public class EditUserController {
             // Verificar si el usuario ya existe en la base de datos
             if (DataBaseConnection.checkUserExists(currentUser)) {
                 // Mostrar un mensaje de error si el usuario ya existe
-                showAlert("Error", "Ya existe una cuenta con ese username");
+                showWindowError("An account with that username already exists");;
                 return; // Salir de la función sin intentar la inserción
             } else if (DataBaseConnection.checkEmailExists(currentUser)) {
-                showAlert("Error", "Ya existe una cuenta con ese correo");
+                showWindowError("An account with that email already exists.");
                 return;
             } else if (DataBaseConnection.checkTelExists(currentUser)) {
-                showAlert("Error", "Ya existe una cuenta con ese numero de teléfono");
+                showWindowError("An account with that phone number already exists.");
                 return;
             }
 
@@ -108,24 +109,30 @@ public class EditUserController {
             DataBaseConnection.updateUser(currentUser);
 
             // Mostrar un mensaje de confirmación
-            showAlert("Éxito", "La información se ha actualizado correctamente.");
+            showWindowGood( "The information has been updated successfully");
 
             // Volver a la pantalla anterior
-            back(event);
+            //back(event);
         } catch (DNIIllegalException d){
-            showAlert("Error de Registro","El DNI o NIE es incorrecto");
+            showWindowError("The DNI or NIE is incorrect.");
+
         }catch (NullPointerException n){
-            showAlert("Error de Registro","Hay un campo vacio, deben estar todos los campos completados");
+            showWindowError("There is an empty field, all fields must be completed.");
+
         }catch (SurnameIllegalException s){
-            showAlert("Error de Registro","El apellido esta vacio o/y solo debe contener letras");
+            showWindowError("The last name is empty and/or it should only contain letters.");
+
         }catch (NameIllegalException na){
-            showAlert("Error de Registro","El nombre esta vacio o/y solo debe contener letras");
+            showWindowError("The first name is empty and/or it should only contain letters.");
+
         }catch (NumberIllegalException es){
-            showAlert("Error de Registro","El numero es demasiado corto o largo, recuerda son 9 digitos");
+            showWindowError("The number is too short or too long, remember it must be 9 digits");
+
         }catch(EmailIllegalException ma ){
-            showAlert("Error de Registro","El email no tiene el formato correcto");
+            showWindowError("The email does not have the correct format");
+
         } catch (Exception e) {
-            System.err.println("Error :" + e.getMessage());
+            System.err.println("Error al registrar al usuario: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -145,12 +152,43 @@ public class EditUserController {
         }
     }
 
-    // Método para mostrar alertas
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    public void showWindowError(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/error.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
+    }
+
+    public void showWindowGood(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/good.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
     }
 }

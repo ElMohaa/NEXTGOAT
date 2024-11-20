@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Clases.UserSession;
 import org.example.next_goat.DataBase.DataBaseConnection;
 
@@ -61,7 +62,7 @@ public class UserLoginController {
             }
         } else {
             // Si la autenticación falla, muestra un mensaje de error
-            showAlert("Error", "Nombre de usuario o contraseña incorrectos.");
+            showWindowError( "Incorrect username or password.");
         }
     }
 
@@ -97,12 +98,23 @@ public class UserLoginController {
     }
 
 
-    // Método para mostrar alertas
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    public void showWindowError(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/error.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
     }
 }

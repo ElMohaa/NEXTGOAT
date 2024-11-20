@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Email.EmailSender;
 import org.example.next_goat.DataBase.DataBaseConnection;
 import org.example.next_goat.Utilities.VerificationCodeGenerator;
@@ -40,7 +41,7 @@ public class ResetPasswordController {
         userEmail = DataBaseConnection.getEmailByUsername(username);
 
         if (userEmail == null) {
-            showStyledAlert("Error", "No se encontró ningún usuario con ese nombre de usuario.");
+            showWindowError( "No user was found with that username.");
             return;
         }
 
@@ -50,7 +51,7 @@ public class ResetPasswordController {
         // Enviar el código por correo
         EmailSender.sendVerificationCode(userEmail, generatedCode);
 
-        showStyledAlert("Código Enviado", "El código de verificación ha sido enviado a tu correo.");
+        showWindowGood("The verification code has been sent to your email.");
     }
 
     @FXML
@@ -58,10 +59,10 @@ public class ResetPasswordController {
         String enteredCode = verificationCodeField.getText();
 
         if (generatedCode != null && enteredCode.equals(generatedCode)) {
-            showStyledAlert("Éxito", "El código es correcto. Ahora puedes cambiar tu contraseña.");
+            showWindowGood( "The code is correct. You can now change your password.");
             changePasswordButton.setDisable(false); // Habilitar el botón para cambiar la contraseña
         } else {
-            showStyledAlert("Error", "El código ingresado es incorrecto.");
+            showWindowError("The code is incorrect");
         }
     }
 
@@ -71,7 +72,7 @@ public class ResetPasswordController {
         String newPassword = newPasswordField.getText();
 
         if (newPassword.isEmpty()) {
-            showStyledAlert("Error", "La nueva contraseña no puede estar vacía.");
+            showWindowError("Enter the new password.");
             return;
         }
 
@@ -79,7 +80,7 @@ public class ResetPasswordController {
         boolean passwordUpdated = DataBaseConnection.updateUserPasswordByUsername(username, newPassword);
 
         if (passwordUpdated) {
-            showStyledAlert("Éxito", "Contraseña actualizada correctamente.");
+            showWindowGood( "Password updated successfully");
             // Redirigir a la pantalla de inicio de sesión si es necesario
             try {
                 // Cargar la vista del login
@@ -95,10 +96,10 @@ public class ResetPasswordController {
                 stage.show();
             } catch (IOException e) {
                 e.printStackTrace();
-                showStyledAlert("Error", "No se pudo cargar la ventana de inicio de sesión.");
+                showWindowError("Could not load the login window.");
             }
         } else {
-            showStyledAlert("Error", "Hubo un problema al actualizar la contraseña.");
+            showWindowError( "There was a problem updating the password.");
         }
     }
     @FXML
@@ -115,11 +116,43 @@ public class ResetPasswordController {
         }
     }
 
-    private void showStyledAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    public void showWindowError(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/error.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
+    }
+
+    public void showWindowGood(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/good.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
     }
 }

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Clases.MejoraFisica;
 import org.example.next_goat.Clases.Usuario;
 import org.example.next_goat.DataBase.DataBaseConnection;
@@ -90,13 +91,13 @@ public class UserSuscribeController {
             // Verificar si el usuario ya existe en la base de datos
             if (DataBaseConnection.checkUserExists(newUser)) {
                 // Mostrar un mensaje de error si el usuario ya existe
-                showStyledAlert("Error", "Ya existe una cuenta con ese username");
-                return; // Salir de la función sin intentar la inserción
+                showWindowError("An account with that username already exists");
+                return;
             } else if (DataBaseConnection.checkEmailExists(newUser)) {
-                showStyledAlert("Error", "Ya existe una cuenta con ese correo");
+                showWindowError("An account with that email already exists.");
                 return;
             } else if (DataBaseConnection.checkTelExists(newUser)) {
-                showStyledAlert("Error", "Ya existe una cuenta con ese numero de teléfono");
+                showWindowError("An account with that phone number already exists.");
                 return;
             }
 
@@ -109,40 +110,47 @@ public class UserSuscribeController {
             handleBackToLoginButtonAction(event);
 
         } catch (DNIIllegalException d){
-            showStyledAlert("Error de Registro","El DNI o NIE es incorrecto");
+            showWindowError("The DNI or NIE is incorrect.");
+
         }catch (NullPointerException n){
-            showStyledAlert("Error de Registro","Hay un campo vacio, deben estar todos los campos completados");
+            showWindowError("There is an empty field, all fields must be completed.");
+
         }catch (SurnameIllegalException s){
-            showStyledAlert("Error de Registro","El apellido esta vacio o/y solo debe contener letras");
+            showWindowError("The last name is empty and/or it should only contain letters.");
+
         }catch (NameIllegalException na){
-            showStyledAlert("Error de Registro","El nombre esta vacio o/y solo debe contener letras");
+            showWindowError("The first name is empty and/or it should only contain letters.");
+
         }catch (NumberIllegalException es){
-            showStyledAlert("Error de Registro","El numero es demasiado corto o largo, recuerda son 9 digitos");
+            showWindowError("The number is too short or too long, remember it must be 9 digits");
+
         }catch(EmailIllegalException ma ){
-            showStyledAlert("Error de Registro","El email no tiene el formato correcto");
+            showWindowError("The email does not have the correct format");
+
         } catch (Exception e) {
             System.err.println("Error al registrar al usuario: " + e.getMessage());
             e.printStackTrace();
         }
     }
-    private void showStyledAlert(String title, String message) {
-        // Crear la alerta de tipo ERROR o cualquier tipo que desees
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);  // Título de la alerta
-        alert.setHeaderText("¡Error!");  // Texto del encabezado
-        alert.setContentText(message);  // Mensaje de contenido
 
-        // Obtener el DialogPane de la alerta
-        DialogPane dialogPane = alert.getDialogPane();
+    public void showWindowError(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/error.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
 
-        // Cargar el archivo CSS
-        dialogPane.getStylesheets().add(getClass().getResource("/CSS/alertas.css").toExternalForm());
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
 
-        // Aplicar una clase personalizada si lo necesitas
-        dialogPane.getStyleClass().add("custom-alert");
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.setTitle("GYM-PRO");
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
 
-        // Mostrar la alerta
-        alert.showAndWait();
+        }
     }
 
 

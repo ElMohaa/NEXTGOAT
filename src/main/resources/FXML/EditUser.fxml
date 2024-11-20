@@ -7,38 +7,38 @@
 <AnchorPane fx:id="ancEdit" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.EditUserController">
    <children>
       <!-- Botón de volver -->
-      <Button fx:id="back" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="40.0" />
+      <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="40.0" />
 
       <!-- Etiquetas y TextField para la información del usuario -->
-      <Label fx:id="name" layoutX="22.0" layoutY="169.0" text="Name:" />
-      <TextField fx:id="nameField" layoutX="86.0" layoutY="166.0" prefHeight="26.0" prefWidth="124.0" />
+      <Label fx:id="name" layoutX="40.0" layoutY="167.0" text="Name:" />
+      <TextField fx:id="nameField" layoutX="93.0" layoutY="158.0" prefHeight="26.0" prefWidth="124.0" />
 
-      <Label fx:id="apellido" layoutX="22.0" layoutY="208.0" prefHeight="20.0" prefWidth="70.0" text="Lastname:" />
-      <TextField fx:id="surnameField" layoutX="101.0" layoutY="205.0" prefHeight="26.0" prefWidth="112.0" />
+      <Label fx:id="apellido" layoutX="40.0" layoutY="206.0" prefHeight="20.0" prefWidth="70.0" text="Lastname:" />
+      <TextField fx:id="surnameField" layoutX="116.0" layoutY="197.0" prefHeight="26.0" prefWidth="112.0" />
 
-      <Label fx:id="email" layoutX="22.0" layoutY="256.0" text="Email:" />
-      <TextField fx:id="emailField" layoutX="71.0" layoutY="253.0" prefWidth="180.0" />
+      <Label fx:id="email" layoutX="40.0" layoutY="254.0" text="Email:" />
+      <TextField fx:id="emailField" layoutX="89.0" layoutY="245.0" prefWidth="180.0" />
 
-      <Label fx:id="tele" layoutX="22.0" layoutY="290.0" text="Phone:" />
-      <TextField fx:id="phoneField" layoutX="77.0" layoutY="287.0" prefHeight="26.0" prefWidth="124.0" />
+      <Label fx:id="tele" layoutX="40.0" layoutY="288.0" text="Phone:" />
+      <TextField fx:id="phoneField" layoutX="95.0" layoutY="279.0" prefHeight="26.0" prefWidth="124.0" />
 
-      <Label fx:id="direcc" layoutX="22.0" layoutY="405.0" text="Adress:" />
-      <TextField fx:id="addressField" layoutX="77.0" layoutY="402.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="direcc" layoutX="40.0" layoutY="396.0" text="Adress:" />
+      <TextField fx:id="addressField" layoutX="95.0" layoutY="387.0" prefHeight="26.0" prefWidth="150.0" />
 
-      <Label fx:id="user" layoutX="22.0" layoutY="447.0" text="Username:" />
-      <TextField fx:id="usernameField" layoutX="97.0" layoutY="444.0" prefHeight="26.0" prefWidth="141.0" />
+      <Label fx:id="user" layoutX="40.0" layoutY="445.0" text="Username:" />
+      <TextField fx:id="usernameField" layoutX="115.0" layoutY="436.0" prefHeight="26.0" prefWidth="141.0" />
 
-      <Label fx:id="pass" layoutX="22.0" layoutY="484.0" text="Password:" />
-      <TextField fx:id="passwordField" layoutX="99.0" layoutY="481.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="pass" layoutX="40.0" layoutY="482.0" text="Password:" />
+      <TextField fx:id="passwordField" layoutX="117.0" layoutY="473.0" prefHeight="26.0" prefWidth="150.0" />
 
-      <Label fx:id="nie" layoutX="27.0" layoutY="362.0" text="DNI/NIE:" />
-      <TextField fx:id="dniField" layoutX="101.0" layoutY="359.0" prefHeight="26.0" prefWidth="112.0" />
+      <Label fx:id="nie" layoutX="40.0" layoutY="367.0" text="DNI/NIE:" />
+      <TextField fx:id="dniField" layoutX="108.0" layoutY="358.0" prefHeight="26.0" prefWidth="112.0" />
 
-      <Label fx:id="fechNac" layoutX="27.0" layoutY="336.0" prefHeight="20.0" prefWidth="124.0" text="Date of Birth:" />
-      <TextField fx:id="fechaField" layoutX="127.0" layoutY="333.0" prefHeight="26.0" prefWidth="149.0" />
+      <Label fx:id="fechNac" layoutX="40.0" layoutY="334.0" prefHeight="20.0" prefWidth="124.0" text="Date of Birth:" />
+      <TextField fx:id="fechaField" layoutX="140.0" layoutY="325.0" prefHeight="26.0" prefWidth="149.0" />
 
       <!-- Botón de guardar -->
-      <Button fx:id="save" layoutX="139.0" layoutY="535.0" mnemonicParsing="false" onAction="#saveUser" text="SAVE" />
+      <Button fx:id="save" layoutX="96.0" layoutY="541.0" mnemonicParsing="false" onAction="#saveUser" prefHeight="41.0" prefWidth="124.0" text="SAVE" />
       <ImageView fitHeight="118.0" fitWidth="155.0" layoutX="99.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../ICONS/userU.png" />

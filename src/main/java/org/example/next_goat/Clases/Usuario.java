@@ -78,7 +78,7 @@ public class Usuario {
     }
 
     public void setCorreo_usuario(String correo_usuario) throws EmailIllegalException {
-        String regla="^(.+)@(.+)$";
+        String regla="^(.+)@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         if (correo_usuario.matches(regla)){
             this.correo_usuario=correo_usuario;
         }else {

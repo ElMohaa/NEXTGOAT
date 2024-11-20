@@ -16,7 +16,8 @@
     -fx-background-color: transparent; /* Fondo transparente */
     -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
     -fx-border-color: white;    /* Color del borde inferior (verde) */
-    -fx-padding: 2px;             /* Espaciado interno para mejor apariencia */
+    -fx-padding: 2px;
+    -fx-text-fill: white;
 }
 
 /* Estilo para los botones sin fondo ni borde */
