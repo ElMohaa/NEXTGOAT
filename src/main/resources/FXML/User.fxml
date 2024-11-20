@@ -33,7 +33,7 @@
       <Label fx:id="defeLabel" layoutX="184.0" layoutY="372.0" text="Lab222el" />
       <Label fx:id="fisicoLabel" layoutX="184.0" layoutY="395.0" text="Label" />
       <Label fx:id="mediaLabel" layoutX="100.0" layoutY="243.0" text="LabelMedia" />
-      <Label fx:id="nombreLabel" layoutX="109.0" layoutY="323.0" text="Lsssabel" />
+      <Label fx:id="nombreLabel" alignment="CENTER" layoutX="104.0" layoutY="321.0" prefHeight="26.0" prefWidth="131.0" text="nombre" />
       <ImageView fitHeight="31.0" fitWidth="99.0" layoutX="149.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../IMAGENS/LOGO.png" />
