@@ -5,6 +5,10 @@ import org.example.next_goat.Clases.Usuario;
 import org.example.next_goat.Exceptios.*;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DataBaseConnection {
     private static String urlDB = "jdbc:mysql://192.168.56.101:3306/nextgoat";
@@ -363,6 +367,59 @@ public class DataBaseConnection {
         return usuario; // Retorna el usuario encontrado o null si no se encuentra
     }
 
+    public static Map<String, List<String>> getRutinasPorPosicion(String posicion) {
+        Map<String, List<String>> rutinasSemanales = new HashMap<>();
+        String sql = "SELECT r.dia_semana, r.id_rutina, a.descripcion " +
+                "FROM Rutina r " +
+                "JOIN Actividad a ON r.id_rutina = a.id_rutina " +
+                "WHERE r.posicion = ? " +
+                "ORDER BY FIELD(r.dia_semana, 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES')";
+
+        try (Connection conn = DriverManager.getConnection(getUrlDB(), getUser(), getPassword());
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, posicion);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    String dia = rs.getString("dia_semana").toUpperCase();
+                    String idRutina = rs.getString("id_rutina"); // Obtener el id_rutina
+
+                    // Agregar la rutina al día correspondiente
+                    rutinasSemanales.computeIfAbsent(dia, k -> new ArrayList<>()).add(idRutina);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rutinasSemanales;
+    }
+
+
+    public static List<String> getActividadesPorRutina(String rutina) {
+        List<String> actividades = new ArrayList<>();
+        String sql = "SELECT duracion, titulo, descripcion FROM Actividad WHERE id_rutina = ? ORDER BY orden";
+
+        try (Connection conn = DriverManager.getConnection(getUrlDB(), getUser(), getPassword());
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, rutina);  // Se pasa el id_rutina correspondiente
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    String duracion = rs.getString("duracion");
+                    String titulo = rs.getString("titulo");
+                    String descripcion = rs.getString("descripcion");
+
+                    // Concatenar la actividad completa para enviarla al controlador
+                    actividades.add(titulo + " - " + duracion + " - " + descripcion);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return actividades;
+    }
 
 
 

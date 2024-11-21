@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/rutina.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RutinaController">
+    <children>
+
+        <!-- Botón para volver -->
+        <Button fx:id="back" layoutX="17.0" layoutY="20.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="35.0" />
+        <!-- ComboBox para seleccionar la posición -->
+        <ComboBox fx:id="posicionComboBox" layoutX="82.0" layoutY="45.0" prefHeight="26.0" prefWidth="172.0" />
+
+        <!-- ScrollPane para la lista de rutinas -->
+        <ScrollPane layoutX="3.0" layoutY="84.0" prefHeight="519.0" prefWidth="306.0">
+            <content>
+                <VBox fx:id="rutinaVBox" spacing="10.0" />
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

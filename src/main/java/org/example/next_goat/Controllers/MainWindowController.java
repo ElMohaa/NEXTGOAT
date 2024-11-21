@@ -116,4 +116,8 @@ public class MainWindowController {
     private void buttonUser(ActionEvent event) {
         changeScene(event, "/FXML/User.fxml");
     }
+    @FXML
+    private void buttonRutina(ActionEvent event) {
+        changeScene(event, "/FXML/Rutina.fxml");
+    }
 }

@@ -1,0 +1,90 @@
+/* Estilo para la ventana principal */
+#anchorpane{
+    -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
+}
+
+/* Estilo para el ComboBox */
+.combo-box {
+    -fx-background-color: #08e195;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+
+    -fx-border-radius: 5px;
+
+}
+
+/* Estilo para los botones */
+#back {
+    -fx-background-image: url("../ICONS/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 70%45%;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0), 0, 0, 0, 0);
+}
+
+/* Estilo para los días de la semana */
+.label-dia {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #08e195; /* Fondo para resaltar */
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-alignment: center; /* Centrar el texto */
+    -fx-text-alignment: center;
+}
+
+/* Estilo para cada actividad */
+.vbox-actividad {
+    -fx-background-color: transparent;
+
+}
+.vbox-dia {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+    -fx-background-color: rgb(0, 2, 9); /* Fondo translúcido */
+    -fx-border-color: #08e195;
+    -fx-border-width: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 10px;
+    -fx-margin: 10px 0; /* Separación entre días */
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+/* Títulos y descripciones de actividades */
+.label-titulo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4CAF50;
+}
+
+.label-duracion {
+    -fx-font-size: 14px;
+    -fx-text-fill: #888888;
+}
+
+.label-descripcion {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+    -fx-wrap-text: true;
+    -fx-max-width: 250px;
+}
+
+/* ScrollPane */
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent; /* Fondo transparente en el contenido */
+}
+.scroll-pane .content {
+    -fx-background-color: transparent; /* Fondo transparente para el AnchorPane contenido */
+}
+
+#rutinaVBox {
+    -fx-spacing: 10px;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+

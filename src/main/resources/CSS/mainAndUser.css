@@ -96,7 +96,12 @@
     -fx-border-color: transparent transparent #1def66 transparent;
     -fx-border-width: 0 0 3 0;
 }
-
+#rutina{
+    -fx-background-image: url("../ICONS/iconoDerutina.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%100%;
+    -fx-background-color: transparent
+}
 
 /*USUARIO*/
 #anUser{
