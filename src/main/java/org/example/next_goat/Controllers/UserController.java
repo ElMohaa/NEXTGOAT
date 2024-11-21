@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Clases.MejoraFisica;
 import org.example.next_goat.Clases.UserSession;
 import org.example.next_goat.DataBase.DataBaseConnection;
@@ -90,6 +91,24 @@ public class UserController {
             e.printStackTrace(); // Considera loguear o mostrar un mensaje de error
         }
     }
+    public void showWindowGood(String text){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/good.fxml"));
+            Parent dialogParent = loader.load();
+            Scene dialogScene = new Scene(dialogParent);
+
+            ErrorController puwc=loader.getController();
+            puwc.setErrorText(text);
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(dialogScene);
+            stage.show();
+        } catch (Exception ex) {
+            System.err.println("Error: "+ ex.getMessage());
+
+        }
+    }
 
     @FXML
     private void buttonHome(ActionEvent event) {
@@ -98,6 +117,7 @@ public class UserController {
 
     @FXML
     private void closeSession(ActionEvent event) {
+        showWindowGood("You have successfully logged out");
         changeScene(event, "/FXML/UserLogin.fxml");
     }
 

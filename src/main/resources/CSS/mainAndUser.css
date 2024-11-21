@@ -1,3 +1,27 @@
+/*START*/
+#anchorpaneStart{
+    -fx-background-image: url("../IMAGENS/fondoStart.jpg");
+    -fx-background-size: cover;            /* Ajusta la imagen para cubrir todo el AnchorPane */
+    -fx-background-position: center;
+}
+#welcomeLabelStart{
+    -fx-font-weight:bold;
+    -fx-text-fill: #f2f4f6;
+}
+
+#continueButtonStart{
+    -fx-background-color: #000209; /* Blanco */
+    -fx-text-fill: #f6f7fa; /* Texto negro */
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+#continueButtonStart:hover {
+    -fx-text-fill: #f6f7fa;           /* Color de texto blanco al pasar el ratón sobre el botón */
+    -fx-background-color: #14df5b; /* Fondo verde claro al pasar el ratón */
+}
+
 /*MAIN*/
 .anchorpane {
     -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
@@ -114,14 +138,16 @@
     -fx-text-fill: #f6f7fa;
     -fx-font-weight: bold;
     -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgb(20, 223, 91), 5, 0, 0, 2);
 }
 
 #editar{
-    -fx-background-color: #14df5b;
+    -fx-background-color: #000209;
     -fx-text-fill: #f6f7fa;
     -fx-font-weight: bold;
     -fx-font-size: 15;
-    -fx-background-radius: 15px;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgb(20, 223, 91), 5, 0, 0, 2);
 }
 
 /*EditUser*/

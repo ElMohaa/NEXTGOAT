@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/liga.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
+<AnchorPane fx:id="anchorpaneLiga" prefHeight="615.0" prefWidth="315.0" styleClass="anchorpane" stylesheets="@../CSS/liga.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.LaLigaController">
     <children>
         <Label fx:id="frsa" layoutX="14.0" layoutY="77.0" text="Select a league:" />
         <ComboBox fx:id="leagueComboBox" layoutX="120.0" layoutY="74.0" prefHeight="26.0" prefWidth="159.0" />

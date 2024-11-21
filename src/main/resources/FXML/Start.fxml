@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/star.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.StartController">
-    <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="-56.0" prefHeight="312.0" prefWidth="254.0" style="-fx-font-size: 35;" text="Welcome, " wrapText="true" />
-    <Button fx:id="continueButton" layoutX="85.0" layoutY="331.0" onAction="#handleContinueButton" prefHeight="53.0" prefWidth="145.0" text="START" wrapText="true" />
+<AnchorPane fx:id="anchorpaneStart" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.StartController">
+    <Label fx:id="welcomeLabelStart" layoutX="14.0" layoutY="-56.0" prefHeight="312.0" prefWidth="254.0" style="-fx-font-size: 35;" text="Welcome, " wrapText="true" />
+    <Button fx:id="continueButtonStart" layoutX="85.0" layoutY="407.0" onAction="#handleContinueButton" prefHeight="53.0" prefWidth="145.0" text="START" wrapText="true" />
 </AnchorPane>

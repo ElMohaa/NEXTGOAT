@@ -15,17 +15,17 @@ import java.io.IOException;
 public class StartController {
 
     @FXML
-    private Label welcomeLabel;
+    private Label welcomeLabelStart;
 
     @FXML
-    private Button continueButton;
+    private Button continueButtonStart;
 
     // Este método se llamará para inicializar la pantalla con el nombre del usuario.
     public void initialize(String username) {
-        welcomeLabel.setText("Welcome, " + username);
+        welcomeLabelStart.setText("Welcome, " + username);
     }
     public void setUsername(String username) {
-        welcomeLabel.setText("Welcome, " + username);
+        welcomeLabelStart.setText("Welcome, " + username);
     }
 
     @FXML
@@ -45,7 +45,7 @@ public class StartController {
             // Le pasamos el controlador de UserController a TrainingController
             trainingController.setUserController(userController);
 
-            Stage stage = (Stage) continueButton.getScene().getWindow();
+            Stage stage = (Stage) continueButtonStart.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show(); // Asegúrate de mostrar la nueva escena
         } catch (IOException e) {
