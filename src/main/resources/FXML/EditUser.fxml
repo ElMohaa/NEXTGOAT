@@ -35,7 +35,7 @@
       <TextField fx:id="dniField" layoutX="108.0" layoutY="358.0" prefHeight="26.0" prefWidth="112.0" />
 
       <Label fx:id="fechNac" layoutX="40.0" layoutY="334.0" prefHeight="20.0" prefWidth="124.0" text="Date of Birth:" />
-      <TextField fx:id="fechaField" layoutX="140.0" layoutY="325.0" prefHeight="26.0" prefWidth="149.0" />
+      <TextField fx:id="fechaField" layoutX="140.0" layoutY="325.0" prefHeight="26.0" prefWidth="99.0" />
 
       <!-- Botón de guardar -->
       <Button fx:id="save" layoutX="96.0" layoutY="541.0" mnemonicParsing="false" onAction="#saveUser" prefHeight="41.0" prefWidth="124.0" text="SAVE" />
