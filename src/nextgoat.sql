@@ -14,8 +14,7 @@ CREATE TABLE Usuario (
                               telefono_usuario VARCHAR(15),
                               dirrecion_vivienda VARCHAR(255) NOT NULL,
                               username VARCHAR(50) UNIQUE NOT NULL,
-                              contrsena VARCHAR(100) NOT NULL,
-                              edad_ususario INT (10)
+                              contrsena VARCHAR(100) NOT NULL
 );
 -- Tabla de Mejora Fisica, se almacena el progreso del usuario--
 CREATE TABLE MejoraFisica (
