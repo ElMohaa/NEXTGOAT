@@ -14,12 +14,11 @@ public class Usuario {
     String dirrecion_vivienda;
     String username;
     String contrsena;
-    int edad_ususario;
     String dni_usuario;
 
     public Usuario(){}
 
-    public Usuario(int id_usuario, String nombre_usuario, String apellidos_usuario, Date fecha_nacimiento, String correo_usuario, String telefono_usuario,String dirrecion_vivienda, String username, String contrsena, int edad_ususario,String dni_usuario) {
+    public Usuario(int id_usuario, String nombre_usuario, String apellidos_usuario, Date fecha_nacimiento, String correo_usuario, String telefono_usuario,String dirrecion_vivienda, String username, String contrsena,String dni_usuario) {
         this.id_usuario = id_usuario;
         this.nombre_usuario = nombre_usuario;
         this.apellidos_usuario = apellidos_usuario;
@@ -29,7 +28,6 @@ public class Usuario {
         this.dirrecion_vivienda=dirrecion_vivienda;
         this.username = username;
         this.contrsena = contrsena;
-        this.edad_ususario = edad_ususario;
         this.dni_usuario=dni_usuario;
     }
 
@@ -135,13 +133,7 @@ public class Usuario {
         }
     }
 
-    public int getEdad_ususario() {
-        return edad_ususario;
-    }
 
-    public void setEdad_ususario(int fecha_nacimiento) {
-        this.edad_ususario = edad_ususario;
-    }
 
     public String getDni_usuario() {
         return dni_usuario;
@@ -170,7 +162,6 @@ public class Usuario {
                 ", dirrecion_vivienda='" + dirrecion_vivienda + '\'' +
                 ", username='" + username + '\'' +
                 ", contrsena='" + contrsena + '\'' +
-                ", edad_ususario=" + edad_ususario +
                 ", dni_usuario='" + dni_usuario + '\'' +
                 '}';
     }

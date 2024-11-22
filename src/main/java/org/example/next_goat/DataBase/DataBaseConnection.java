@@ -46,7 +46,7 @@ public class DataBaseConnection {
         String user = getUser();
         String password = getPassword();
 
-        String sql = "INSERT INTO Usuario (nombre_usuario, apellidos_usuario, dni, fecha_nacimiento, correo_usuario, telefono_usuario, dirrecion_vivienda, username, contrsena, edad_ususario) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Usuario (nombre_usuario, apellidos_usuario, dni, fecha_nacimiento, correo_usuario, telefono_usuario, dirrecion_vivienda, username, contrsena) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(urlDB, user, password);
              PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -61,7 +61,7 @@ public class DataBaseConnection {
             pstmt.setString(7, usuario.getDirrecion_vivienda());
             pstmt.setString(8, usuario.getUsername());
             pstmt.setString(9, usuario.getContrsena());
-            pstmt.setInt(10, usuario.getEdad_ususario());
+
 
             pstmt.executeUpdate();
 
@@ -347,7 +347,6 @@ public class DataBaseConnection {
                     usuario.setDirrecion_vivienda(rs.getString("dirrecion_vivienda"));
                     usuario.setUsername(rs.getString("username"));
                     usuario.setContrsena(rs.getString("contrsena"));
-                    usuario.setEdad_ususario(rs.getInt("edad_ususario"));
                     usuario.setDni_usuario(rs.getString("dni"));
                 }
             } catch (SurnameIllegalException e) {

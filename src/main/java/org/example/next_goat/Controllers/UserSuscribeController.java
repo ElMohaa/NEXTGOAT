@@ -84,9 +84,6 @@ public class UserSuscribeController {
             LocalDate birthDate = datePicker.getValue();
             newUser.setFecha_nacimiento(Date.valueOf(birthDate));
 
-            // Calcular la edad
-            int edad = calculateAge(birthDate);
-            newUser.setEdad_ususario(edad);
 
             // Verificar si el usuario ya existe en la base de datos
             if (DataBaseConnection.checkUserExists(newUser)) {
@@ -169,15 +166,5 @@ public class UserSuscribeController {
 
         }
     }
-
-
-
-    private int calculateAge(LocalDate birthDate) {
-        // Obtener la fecha actual
-        LocalDate currentDate = LocalDate.now();
-        // Calcular el periodo entre la fecha de nacimiento y la fecha actual
-        return Period.between(birthDate, currentDate).getYears();
-    }
-
 
 }
