@@ -13,7 +13,7 @@
                 <TableColumn fx:id="posicionCol" prefWidth="22.79998779296875" text=" " />
                 <TableColumn fx:id="escudoCol" prefWidth="35.999996185302734" text=" " />
                 <TableColumn fx:id="equipoCol" prefWidth="120.20001220703125" text="Team" />
-                <TableColumn fx:id="puntosCol" prefWidth="58.20001220703125" text="Points" />
+                <TableColumn fx:id="puntosCol" prefWidth="58.399993896484375" text="Points" />
             </columns>
         </TableView>
 

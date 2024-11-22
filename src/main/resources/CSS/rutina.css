@@ -132,17 +132,16 @@
 
 /* Estilo para la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal {
-    -fx-background-color: transparent; /* Fondo de la barra */
-    -fx-border-radius: 10; /* Bordes redondeados para la barra */
-    -fx-padding: 1; /* Espaciado interno para el track */
+    -fx-opacity: 0;  /* Hace que la barra sea completamente invisible */
+    -fx-background-color: transparent;  /* Elimina el color de fondo */
+    -fx-border-width: 0; /* Espaciado interno para el track */
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal .thumb {
-    -fx-background-color: transparent; /* Color del pulgar */
-    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
-    -fx-min-height: 10px; /* Altura mínima del pulgar */
-    -fx-pref-height: 10px; /* Altura preferida del pulgar */
+    -fx-background-color: transparent;  /* Hace el pulgar invisible */
+    -fx-min-height: 0;  /* Establece la altura mínima a 0 */
+    -fx-pref-height: 0; /* Altura preferida del pulgar */
 }
 
 .scroll-pane .scroll-bar:horizontal .arrow-button{

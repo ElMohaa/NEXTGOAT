@@ -63,6 +63,30 @@
 .table-view .table-row-cell:even {
     -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo ligeramente más oscuro */
 }
+ .scroll-bar:vertical {
+    -fx-background-color: #f6f7fa; /* Fondo de la barra */
+    -fx-border-radius: 5; /* Bordes redondeados para la barra */
+    -fx-padding: 1; /* Espaciado interno para el track */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento vertical */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #44ee7f; /* Color del pulgar */
+    -fx-background-radius: 5; /* Bordes redondeados en el pulgar */
+    -fx-min-width: 5; /* Ancho mínimo del pulgar */
+    -fx-pref-width: 5; /* Ancho preferido del pulgar */
+}
+
+.table-view .scroll-bar:horizontal{
+    -fx-opacity: 0;  /* Hace que la barra sea completamente invisible */
+    -fx-background-color: transparent;  /* Elimina el color de fondo */
+    -fx-border-width: 0;
+}
+.table-view .scroll-bar:horizontal .thumb{
+    -fx-background-color: transparent;  /* Hace el pulgar invisible */
+    -fx-min-height: 0;  /* Establece la altura mínima a 0 */
+    -fx-pref-height: 0;
+}
 
 
 
