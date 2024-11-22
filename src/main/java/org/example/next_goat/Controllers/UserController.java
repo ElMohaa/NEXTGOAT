@@ -125,4 +125,9 @@ public class UserController {
     private void editUser(ActionEvent event) {
         changeScene(event, "/FXML/EditUser.fxml");
     }
+
+    @FXML
+    private void buttonRutina(ActionEvent event) {
+        changeScene(event, "/FXML/Rutina.fxml");
+    }
 }

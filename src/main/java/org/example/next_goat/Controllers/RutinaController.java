@@ -130,7 +130,11 @@ public class RutinaController {
     }
 
     @FXML
-    private void back(ActionEvent event) {
+    private void buttonHome(ActionEvent event) {
         changeScene(event, "/FXML/MainWindow.fxml");
+    }
+    @FXML
+    private void buttonUser(ActionEvent event) {
+        changeScene(event, "/FXML/User.fxml");
     }
 }
