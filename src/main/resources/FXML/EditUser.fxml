@@ -7,7 +7,7 @@
 <AnchorPane fx:id="ancEdit" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/mainAndUser.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.EditUserController">
    <children>
       <!-- Botón de volver -->
-      <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="40.0" />
+      <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="31.0" />
 
       <!-- Etiquetas y TextField para la información del usuario -->
       <Label fx:id="name" layoutX="40.0" layoutY="167.0" text="Name:" />

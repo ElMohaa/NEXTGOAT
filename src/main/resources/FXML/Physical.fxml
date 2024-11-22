@@ -9,7 +9,7 @@
       <Button layoutX="40.0" layoutY="340.0" mnemonicParsing="false" onAction="#buttonSpeed" prefHeight="69.0" prefWidth="239.0" text="SPEED" />
       <Button layoutX="40.0" layoutY="238.0" mnemonicParsing="false" onAction="#buttonResis" prefHeight="69.0" prefWidth="239.0" text="RESISTANCE" />
       <Button layoutX="40.0" layoutY="437.0" mnemonicParsing="false" onAction="#buttonMobby" prefHeight="69.0" prefWidth="239.0" text="MOBILITY" />
-      <Button fx:id="back" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="48.0" prefWidth="33.0" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="61.0" prefWidth="34.0" text=" " />
       <Label fx:id="texto" layoutX="87.0" layoutY="54.0" text="PHYSICAL" />
    </children>
 </AnchorPane>

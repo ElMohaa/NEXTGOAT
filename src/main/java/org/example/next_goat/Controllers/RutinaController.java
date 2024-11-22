@@ -29,7 +29,7 @@ public class RutinaController {
     @FXML
     public void initialize() {
         // Configurar las posiciones en el ComboBox
-        posicionComboBox.getItems().addAll("PORTERO", "DEFENSA", "MEDIOCENTRO", "DELANTERO");
+        posicionComboBox.getItems().addAll("GOALKEEPER", "DEFENSE", "MIDFIELDER", "FORWARD");
 
         // Manejar el cambio de selección en el ComboBox
         posicionComboBox.setOnAction(event -> {
@@ -46,7 +46,7 @@ public class RutinaController {
         rutinaVBox.getChildren().clear();
 
         // Definir el orden correcto de los días
-        String[] diasDeSemana = {"LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES"};
+        String[] diasDeSemana = {"MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"};
 
         for (String dia : diasDeSemana) {
             if (rutinasSemanales.containsKey(dia)) {
@@ -95,7 +95,7 @@ public class RutinaController {
                             Label tituloLabel = new Label(titulo);
                             tituloLabel.getStyleClass().add("label-titulo");
 
-                            Label duracionLabel = new Label("Duración: " + duracion);
+                            Label duracionLabel = new Label("Durattion: " + duracion);
                             duracionLabel.getStyleClass().add("label-duracion");
 
                             Label descripcionLabel = new Label(descripcion);
