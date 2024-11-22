@@ -132,12 +132,7 @@
 }
 
 /* Estilo para resaltar la celda seleccionada */
-#matchesListView .list-cell:filled:selected,
-#matchesListView .list-cell:filled:hover {
-    -fx-background-color: #aeefc5; /* Fondo al pasar el cursor o seleccionar */
-    -fx-text-fill: black; /* Texto de color negro */
-    -fx-font-weight: bold; /* Texto en negrita */
-}
+
 
 
 #leagueComboBox.list-cell {

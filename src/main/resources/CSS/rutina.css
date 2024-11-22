@@ -59,7 +59,7 @@
 .label-dia {
     -fx-font-size: 17px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-text-fill: #1b1a1a;
     -fx-background-color: #08e195; /* Fondo para resaltar */
     -fx-padding: 10px;
     -fx-border-radius: 5;
