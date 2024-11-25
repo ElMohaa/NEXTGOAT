@@ -19,6 +19,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.next_goat.Clases.*;
 
 import java.io.IOException;
@@ -202,8 +203,9 @@ public class LaLigaController {
                     }
                 });
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                showWindowError("You not hava2222e1 internet connection");
+
             }
         }).start();
     }
@@ -226,8 +228,9 @@ public class LaLigaController {
                     leagueComboBox.getItems().addAll(competitions); // Añadir competiciones directamente
                 });
 
-            } catch (IOException e) {
-                e.printStackTrace(); // Maneja la excepción como consideres apropiado
+            } catch (Exception e) {
+                showWindowError("Something went wrong. Check your internet connection.");
+                 // Maneja la excepción como consideres apropiado
             }
         }).start();
     }
@@ -266,8 +269,9 @@ public class LaLigaController {
                 System.out.println("No hay equipos en la clasificación o la respuesta es nula.");
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
+
         }
     }
 
@@ -290,6 +294,27 @@ public class LaLigaController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void showWindowError(String text){
+        Platform.runLater(() -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/error.fxml"));
+                Parent dialogParent = loader.load();
+                Scene dialogScene = new Scene(dialogParent);
+
+                ErrorController puwc=loader.getController();
+                puwc.setErrorText(text);
+
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.setScene(dialogScene);
+                stage.toFront();
+                stage.show();
+            } catch (Exception ex) {
+                System.err.println("Error: "+ ex.getMessage());
+
+            }
+        });
     }
 
 
