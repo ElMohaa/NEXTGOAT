@@ -7,10 +7,10 @@
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../CSS/rutina.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RutinaController">
     <children>
         <!-- ComboBox para seleccionar la posición -->
-        <ComboBox fx:id="posicionComboBox" layoutX="82.0" layoutY="45.0" prefHeight="26.0" prefWidth="172.0" />
+        <ComboBox fx:id="posicionComboBox" layoutX="70.0" layoutY="60.0" prefHeight="26.0" prefWidth="172.0" />
 
         <!-- ScrollPane para la lista de rutinas -->
-        <ScrollPane layoutX="3.0" layoutY="84.0" prefHeight="465.0" prefWidth="306.0">
+        <ScrollPane layoutX="3.0" layoutY="106.0" prefHeight="444.0" prefWidth="306.0">
             <content>
                 <VBox fx:id="rutinaVBox" spacing="10.0" />
             </content>
@@ -29,5 +29,6 @@
                 <Button fx:id="rutina" layoutX="34.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="30.0" />
             </children>
         </Pane>
+      <Label fx:id="laa" layoutX="56.0" layoutY="27.0" text="SELECT THE ROUTINE" />
     </children>
 </AnchorPane>

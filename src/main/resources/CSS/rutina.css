@@ -182,5 +182,10 @@
     -fx-border-width: 0 0 3 0;
     -fx-padding: 5;
 }
+#laa{
+    -fx-text-fill: #24e367;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
 
 
