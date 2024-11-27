@@ -2,6 +2,7 @@ package org.example.next_goat.Clases;
 
 import org.example.next_goat.Exceptios.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Usuario {
@@ -68,7 +69,14 @@ public class Usuario {
     }
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento=fecha_nacimiento;
+        LocalDate fechaActual = LocalDate.now();
+        LocalDate fechaNacimiento = new java.sql.Date(fecha_nacimiento.getTime()).toLocalDate();
+
+        if (fechaNacimiento.isAfter(fechaActual)) {
+            throw new IllegalArgumentException("La fecha de nacimiento no puede ser futura.");
+        }
+
+        this.fecha_nacimiento = fecha_nacimiento;
     }
 
     public String getCorreo_usuario() {

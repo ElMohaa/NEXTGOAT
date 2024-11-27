@@ -124,7 +124,9 @@ public class UserSuscribeController {
         }catch(EmailIllegalException ma ){
             showWindowError("The email does not have the correct format");
 
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e){
+            showWindowError("The date of birth cannot be in the future");
+        }catch (Exception e) {
             System.err.println("Error al registrar al usuario: " + e.getMessage());
             e.printStackTrace();
         }
