@@ -22,8 +22,8 @@
       <Label fx:id="tele" layoutX="40.0" layoutY="288.0" text="Phone:" />
       <TextField fx:id="phoneField" layoutX="95.0" layoutY="279.0" prefHeight="26.0" prefWidth="124.0" />
 
-      <Label fx:id="direcc" layoutX="40.0" layoutY="396.0" text="Adress:" />
-      <TextField fx:id="addressField" layoutX="95.0" layoutY="387.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="direcc" layoutX="40.0" layoutY="396.0" text="City:" />
+      <TextField fx:id="addressField" layoutX="80.0" layoutY="387.0" prefHeight="26.0" prefWidth="150.0" />
 
       <Label fx:id="user" layoutX="40.0" layoutY="445.0" text="Username:" />
       <TextField fx:id="usernameField" layoutX="115.0" layoutY="436.0" prefHeight="26.0" prefWidth="141.0" />

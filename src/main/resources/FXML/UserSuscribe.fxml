@@ -17,7 +17,7 @@
       <TextField fx:id="passwordField" layoutX="29.0" layoutY="348.0" promptText="Password" />
       <TextField fx:id="emailField" layoutX="29.0" layoutY="412.0" prefHeight="26.0" prefWidth="194.0" promptText="Email" />
       <TextField fx:id="phoneField" layoutX="29.0" layoutY="446.0" prefHeight="26.0" prefWidth="138.0" promptText="Telephone Number" />
-      <TextField fx:id="addressField" layoutX="29.0" layoutY="222.0" prefHeight="26.0" prefWidth="102.0" promptText="Address" />
+      <TextField fx:id="addressField" layoutX="29.0" layoutY="222.0" prefHeight="26.0" prefWidth="102.0" promptText="City" />
       <DatePicker fx:id="datePicker" layoutX="29.0" layoutY="261.0" promptText="Date of Birth" />
       <Button fx:id="botnSing" layoutX="76.0" layoutY="14.0" mnemonicParsing="false" text="Sing Up" />
       <TextField fx:id="dniField" layoutX="29.0" layoutY="189.0" promptText="DNI or NIE" />
