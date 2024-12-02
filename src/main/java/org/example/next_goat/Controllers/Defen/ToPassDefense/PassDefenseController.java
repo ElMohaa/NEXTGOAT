@@ -51,7 +51,7 @@ public class PassDefenseController {
             Parent skillView = loader.load();
 
             ViewPassControll controller = loader.getController();
-            controller.setPassNumber(skillNumber); // Establece el número de habilidad
+            controller.setPassNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

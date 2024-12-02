@@ -92,7 +92,6 @@ public class EditUserController {
             currentUser.setFecha_nacimiento(fechaNac);
 
             // Verificar si el usuario ya existe en la base de datos
-            // Verificar si el usuario ya existe en la base de datos
             if (DataBaseConnection.checkUserExists(currentUser)) {
                 // Mostrar un mensaje de error si el usuario ya existe
                 showWindowError("An account with that username already exists");;

@@ -53,8 +53,7 @@ public class BallControll {
             Parent skillView = loader.load();
 
             DriblleController controller = loader.getController();
-            controller.setDriblleNumber(skillNumber); // Establece el número de habilidad
-
+            controller.setDriblleNumber(skillNumber);
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(skillScene);

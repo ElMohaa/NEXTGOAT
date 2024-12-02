@@ -38,7 +38,7 @@ public class Match {
             String formattedDate = matchDateTime.format(formatter);
             return homeTeam.getShortName() + " VS " + awayTeam.getShortName() + ": " + formattedDate;
         } catch (Exception e) {
-            // Si ocurre un error al parsear, manejarlo aquí
+
             return homeTeam.getShortName() + " VS " + awayTeam.getShortName() + " - Fecha inválida";
         }
     }
@@ -68,7 +68,7 @@ public class Match {
 
 
         public String getShortName() {
-            return shortName; // Método para obtener shortName
+            return shortName;
         }
     }
 }

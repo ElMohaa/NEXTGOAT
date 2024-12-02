@@ -48,7 +48,7 @@ public class ToPassControll {
             Parent skillView = loader.load();
 
             PassViewController controller = loader.getController();
-            controller.setPassNumber(skillNumber); // Establece el número de habilidad
+            controller.setPassNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

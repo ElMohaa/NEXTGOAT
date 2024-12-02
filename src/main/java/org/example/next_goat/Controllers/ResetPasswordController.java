@@ -18,7 +18,7 @@ import java.io.IOException;
 public class ResetPasswordController {
 
     @FXML
-    private TextField usernameField; // Campo para ingresar el nombre de usuario
+    private TextField usernameField;
     @FXML
     private TextField verificationCodeField;
     @FXML
@@ -30,8 +30,8 @@ public class ResetPasswordController {
     @FXML
     private Button changePasswordButton;
 
-    private String generatedCode; // Almacena el código generado
-    private String userEmail; // Almacena el correo del usuario
+    private String generatedCode;
+    private String userEmail;
 
     @FXML
     private void handleSendCodeAction(ActionEvent event) {
@@ -83,14 +83,11 @@ public class ResetPasswordController {
             showWindowGood( "Password updated successfully");
             // Redirigir a la pantalla de inicio de sesión si es necesario
             try {
-                // Cargar la vista del login
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/UserLogin.fxml"));
                 Parent loginRoot = loader.load();
 
-                // Obtener el stage actual a partir del evento
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-                // Configurar la nueva escena de login
                 Scene loginScene = new Scene(loginRoot);
                 stage.setScene(loginScene);
                 stage.show();
@@ -105,10 +102,9 @@ public class ResetPasswordController {
     @FXML
     private void handleCancelAction(ActionEvent event) {
         try {
-            // Cargar la pantalla de Login
             Parent loginPage = FXMLLoader.load(getClass().getResource("/FXML/UserLogin.fxml"));
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            // Cambiar la escena a la pantalla de login
+
             stage.setScene(new Scene(loginPage, 315, 615));
             stage.setTitle("Login");
         } catch (Exception e) {

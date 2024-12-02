@@ -88,7 +88,7 @@ public class UserController {
             window.setScene(newScene);
             window.show();
         } catch (IOException e) {
-            e.printStackTrace(); // Considera loguear o mostrar un mensaje de error
+            e.printStackTrace();
         }
     }
     public void showWindowGood(String text){

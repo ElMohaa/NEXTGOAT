@@ -19,7 +19,7 @@ public class ViewResistance {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setResiNumber(int skillNumber) {
         this.skillNumber = skillNumber;

@@ -24,14 +24,14 @@ public class RutinaController {
     private ComboBox<String> posicionComboBox;
 
     @FXML
-    private VBox rutinaVBox; // Contenedor para mostrar las rutinas por día
+    private VBox rutinaVBox;
 
     @FXML
     public void initialize() {
-        // Configurar las posiciones en el ComboBox
+
         posicionComboBox.getItems().addAll("GOALKEEPER", "DEFENSE", "MIDFIELDER", "FORWARD");
 
-        // Manejar el cambio de selección en el ComboBox
+
         posicionComboBox.setOnAction(event -> {
             String posicionSeleccionada = posicionComboBox.getValue();
             cargarRutinas(posicionSeleccionada);
@@ -39,13 +39,13 @@ public class RutinaController {
     }
 
     private void cargarRutinas(String posicion) {
-        // Obtener rutinas desde la base de datos
+
         Map<String, List<String>> rutinasSemanales = DataBaseConnection.getRutinasPorPosicion(posicion);
 
-        // Limpiar el contenedor
+
         rutinaVBox.getChildren().clear();
 
-        // Definir el orden correcto de los días
+
         String[] diasDeSemana = {"MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"};
 
         for (String dia : diasDeSemana) {
@@ -64,7 +64,6 @@ public class RutinaController {
                 VBox actividadesVBox = new VBox(10);
                 diaVBox.getChildren().add(actividadesVBox);
 
-                // Usamos un Set para almacenar actividades únicas y evitar duplicados
                 Set<String> actividadesUnicas = new HashSet<>();
 
                 // Añadir las actividades correspondientes para ese día
@@ -88,10 +87,10 @@ public class RutinaController {
 
                         // Comprobar si la actividad ya se ha añadido (evitar duplicados)
                         if (!actividadesUnicas.contains(actividadClave)) {
-                            // Añadir la actividad al Set para futuras comprobaciones
+
                             actividadesUnicas.add(actividadClave);
 
-                            // Crear los Labels correspondientes para la actividad
+
                             Label tituloLabel = new Label(titulo);
                             tituloLabel.getStyleClass().add("label-titulo");
 
@@ -100,9 +99,9 @@ public class RutinaController {
 
                             Label descripcionLabel = new Label(descripcion);
                             descripcionLabel.getStyleClass().add("label-descripcion");
-                            descripcionLabel.setWrapText(true); // Habilitar salto de línea
+                            descripcionLabel.setWrapText(true);
 
-                            // Añadir el contenido de la actividad a un VBox
+
                             VBox actividadVBox = new VBox(5);
                             actividadVBox.getStyleClass().add("vbox-actividad");
                             actividadVBox.getChildren().addAll(tituloLabel, duracionLabel, descripcionLabel);
@@ -120,12 +119,11 @@ public class RutinaController {
             Parent newView = loader.load();
             Scene newScene = new Scene(newView);
 
-            // Obtener la ventana actual y establecer la nueva escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(newScene);
             window.show();
         } catch (IOException e) {
-            e.printStackTrace(); // Considera loguear o mostrar un mensaje de error
+            e.printStackTrace();
         }
     }
 

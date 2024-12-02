@@ -34,12 +34,10 @@ public class FootballApiClient {
         String endpoint = "/teams?name=" + URLEncoder.encode(teamName, StandardCharsets.UTF_8);
         String jsonResponse = sendRequest(endpoint);
 
-        // Verifica que jsonResponse no esté vacío
         if (jsonResponse == null || jsonResponse.isEmpty()) {
             throw new RuntimeException("Respuesta vacía de la API para el equipo: " + teamName);
         }
 
-        // Parsear la respuesta para obtener el ID del equipo
         Gson gson = new Gson();
         TeamsResponse teamsResponse = gson.fromJson(jsonResponse, TeamsResponse.class);
 
@@ -78,7 +76,6 @@ public class FootballApiClient {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
 
-        // Establece el token en la cabecera
         connection.setRequestProperty("X-Auth-Token", API_KEY);
 
         int responseCode = connection.getResponseCode();

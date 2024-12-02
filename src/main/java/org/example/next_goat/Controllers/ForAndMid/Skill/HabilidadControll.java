@@ -43,7 +43,7 @@ public class HabilidadControll {
             Parent skillView = loader.load();
 
             SkillController controller = loader.getController();
-            controller.setSkillNumber(skillNumber); // Establece el número de habilidad
+            controller.setSkillNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

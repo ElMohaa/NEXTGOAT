@@ -44,14 +44,14 @@ public class TrainingController {
 
     // Obtener el id_usuario del usuario logueado
     int idUsuario = UserSession.getInstance().getIdUsuario();
-    private UserController userController;  // Referencia al UserController para actualizar el Label
+    private UserController userController;
 
     // Método para recibir la instancia del UserController
     public void setUserController(UserController userController) {
         this.userController = userController;
     }
 
-    // Método genérico para cargar y cambiar la escena
+
     private void changeScene(ActionEvent event, String fxmlPath) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));

@@ -38,7 +38,7 @@ public class PassGKController {
             Parent skillView = loader.load();
 
             ViewPassGK controller = loader.getController();
-            controller.setPassGkNumber(skillNumber); // Establece el número de habilidad
+            controller.setPassGkNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

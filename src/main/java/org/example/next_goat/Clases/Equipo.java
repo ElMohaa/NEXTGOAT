@@ -6,7 +6,7 @@ public class Equipo {
     private int puntos;
     private String crest;
 
-    // Constructor
+
     public Equipo(int posicion, String nombre, int puntos, String crest) {
         this.posicion = posicion;
         this.nombre = nombre;
@@ -14,7 +14,7 @@ public class Equipo {
         this.crest = crest;
     }
 
-    // Getters
+
     public int getPosicion() {
         return posicion;
     }

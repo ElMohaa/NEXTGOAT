@@ -46,7 +46,7 @@ public class SootController {
             Parent skillView = loader.load();
 
             ViewSoot controller = loader.getController();
-            controller.setSootNumber(skillNumber); // Establece el número de habilidad
+            controller.setSootNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

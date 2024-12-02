@@ -18,7 +18,7 @@ public class ViewSeatedController {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setSeatedlNumber(int skillNumber) {
         this.skillNumber = skillNumber;

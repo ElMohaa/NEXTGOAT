@@ -19,7 +19,7 @@ public class ViewMobility {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setMobiNumber(int skillNumber) {
         this.skillNumber = skillNumber;

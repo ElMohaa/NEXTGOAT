@@ -18,7 +18,7 @@ public class ViewDefenseControll {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setControllNumber(int skillNumber) {
         this.skillNumber = skillNumber;

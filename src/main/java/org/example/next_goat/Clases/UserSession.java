@@ -5,10 +5,10 @@ public class UserSession {
     private int idUsuario;
     private String nombreUsuario;
 
-    // Constructor privado para evitar la creación de instancias
+
     private UserSession() {}
 
-    // Método para obtener la instancia única (Singleton)
+
     public static UserSession getInstance() {
         if (instance == null) {
             instance = new UserSession();
@@ -16,7 +16,7 @@ public class UserSession {
         return instance;
     }
 
-    // Métodos para acceder y modificar el id_usuario y otros datos del usuario
+
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -33,9 +33,9 @@ public class UserSession {
         this.nombreUsuario = nombreUsuario;
     }
 
-    // Limpiar la sesión (cuando el usuario cierre sesión, por ejemplo)
+
     public void clearSession() {
-        this.idUsuario = -1; // O cualquier valor que indique que no hay usuario logueado
+        this.idUsuario = -1;
         this.nombreUsuario = null;
     }
 }

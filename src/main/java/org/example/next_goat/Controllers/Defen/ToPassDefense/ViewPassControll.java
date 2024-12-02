@@ -18,7 +18,7 @@ public class ViewPassControll {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setPassNumber(int skillNumber) {
         this.skillNumber = skillNumber;

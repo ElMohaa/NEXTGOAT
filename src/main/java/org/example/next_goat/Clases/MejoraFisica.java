@@ -10,7 +10,7 @@ public class MejoraFisica {
     private int defensa;
     private int media;
 
-    // Constructor vacío
+
     public MejoraFisica() {
     }
 
@@ -19,7 +19,7 @@ public class MejoraFisica {
         this.id_usuario = id_usuario;
     }
 
-    // Constructor completo
+
     public MejoraFisica( int id_usuario, int ritmo, int regate, int fisico, int tiro, int pase, int defensa, int media) {
         this.id_usuario = id_usuario;
         this.ritmo = ritmo;
@@ -30,9 +30,6 @@ public class MejoraFisica {
         this.defensa = defensa;
         this.media = media;
     }
-
-    // Getters y Setters
-
 
 
     public int getId_usuario() {
@@ -100,13 +97,13 @@ public class MejoraFisica {
     }
 
     public int calcularMedia(int a, int b, int c, int d, int e, int f) {
-        // Sumar los atributos
+
         int suma = a + b + c + d + e + f;
         // Calcular la media, restar el id_usuario y dividir entre 6
         media = (int) Math.round(suma / 6.0);
         if (media<0){
             media = 0;
-        }// El cálculo redondeará el valor
+        }
         return media;
     }
 
@@ -120,7 +117,7 @@ public class MejoraFisica {
         }
     }
 
-    // Método para mostrar el objeto MejoraFisica como String
+
     @Override
     public String toString() {
         return "MejoraFisica{" +

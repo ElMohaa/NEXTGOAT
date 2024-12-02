@@ -19,7 +19,7 @@ public class SkillController {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setSkillNumber(int skillNumber) {
         this.skillNumber = skillNumber;

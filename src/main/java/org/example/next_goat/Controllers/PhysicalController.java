@@ -15,14 +15,11 @@ public class PhysicalController {
     // Método genérico para cargar y cambiar la escena
     private void changeScene(ActionEvent event, String fxmlPath) {
         try {
-            // Cargar la vista desde el archivo FXML especificado
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent newView = loader.load();
 
-            // Crear una nueva escena con la vista cargada
             Scene newScene = new Scene(newView);
 
-            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(newScene);
             window.show();

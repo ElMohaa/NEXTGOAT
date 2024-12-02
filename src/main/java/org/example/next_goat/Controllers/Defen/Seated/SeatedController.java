@@ -40,7 +40,7 @@ public class SeatedController {
             Parent skillView = loader.load();
 
             ViewSeatedController controller = loader.getController();
-            controller.setSeatedlNumber(skillNumber); // Establece el número de habilidad
+            controller.setSeatedlNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

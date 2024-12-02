@@ -19,7 +19,7 @@ public class ViewKneeController {
     @FXML
     private MediaView mediaView;
 
-    private int skillNumber; // Almacena el número de habilidad
+    private int skillNumber;
 
     public void setRecoveNumber(int skillNumber) {
         this.skillNumber = skillNumber;

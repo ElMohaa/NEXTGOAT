@@ -47,7 +47,7 @@ public class ControlGKControll {
             Parent skillView = loader.load();
 
             ViewControlGK controller = loader.getController();
-            controller.setControltNumber(skillNumber); // Establece el número de habilidad
+            controller.setControltNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

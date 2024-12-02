@@ -40,7 +40,7 @@ public class ControllDefense {
             Parent skillView = loader.load();
 
             ViewDefenseControll controller = loader.getController();
-            controller.setControllNumber(skillNumber); // Establece el número de habilidad
+            controller.setControllNumber(skillNumber);
 
             Scene skillScene = new Scene(skillView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
