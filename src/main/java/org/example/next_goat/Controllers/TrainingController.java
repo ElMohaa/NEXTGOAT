@@ -93,8 +93,6 @@ public class TrainingController {
             boolean actualizado = DataBaseConnection.updateMejoraFisica(mejoraFisica);
 
             if (actualizado) {
-                System.out.println("Valor de pase actualizado exitosamente.");
-
                 if (userController != null) {
                     userController.actualizarLabelPase(nuevoPase);
                 }

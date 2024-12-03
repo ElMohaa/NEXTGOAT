@@ -100,7 +100,6 @@ public class UserSuscribeController {
 
             // Insertar el usuario en la base de datos
             DataBaseConnection.insertUser(newUser);
-            System.out.println("Usuario registrado correctamente.");
             showWindowGood("You are already registered");
 
             // Volver a la pantalla de inicio de sesión
