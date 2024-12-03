@@ -39,11 +39,10 @@ public class StartController {
             UserController userController = (UserController) ((Node) event.getSource()).getScene().getWindow()
                     .getUserData();  // Recuperamos el UserController que se pasó previamente
 
-            // Recupera el controlador de TrainingController
-            MainWindowController trainingController = loader.getController();
+            // Recupera el controlador de MainWindowController
+            MainWindowController mainwidowController = loader.getController();
 
-            // Le pasamos el controlador de UserController a TrainingController
-            trainingController.setUserController(userController);
+            mainwidowController.setUserController(userController);
 
             Stage stage = (Stage) continueButtonStart.getScene().getWindow();
             stage.setScene(new Scene(root));

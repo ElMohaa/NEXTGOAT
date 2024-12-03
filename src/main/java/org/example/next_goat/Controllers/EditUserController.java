@@ -48,11 +48,11 @@ public class EditUserController {
 
     // Método para cargar la información actual del usuario desde la base de datos
     private void loadUserInfo() {
-        int userId = UserSession.getInstance().getIdUsuario(); // Obtener el id del usuario desde la sesión
-        currentUser = DataBaseConnection.getUserById(userId); // Obtener la información del usuario desde la base de datos
+        int userId = UserSession.getInstance().getIdUsuario();
+        currentUser = DataBaseConnection.getUserById(userId);
 
         if (currentUser != null) {
-            // Rellenar los campos con la información actual
+
             nameField.setText(currentUser.getNombre_usuario());
             surnameField.setText(currentUser.getApellidos_usuario());
             emailField.setText(currentUser.getCorreo_usuario());
@@ -104,14 +104,12 @@ public class EditUserController {
                 return;
             }
 
-            // Actualizar los datos en la base de datos
+
             DataBaseConnection.updateUser(currentUser);
 
-            // Mostrar un mensaje de confirmación
             showWindowGood( "The information has been updated successfully");
 
-            // Volver a la pantalla anterior
-            //back(event);
+
         } catch (DNIIllegalException d){
             showWindowError("The DNI or NIE is incorrect.");
 

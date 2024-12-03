@@ -26,10 +26,10 @@ public class UserLoginController {
     private Button resset;
 
     @FXML
-    private TextField usernameField; // Agrega este campo
+    private TextField usernameField;
 
     @FXML
-    private TextField passwordField; // Agrega este campo
+    private TextField passwordField;
 
     // Método para iniciar sesión
     @FXML
@@ -47,21 +47,20 @@ public class UserLoginController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Start.fxml"));
                 Parent startPage = loader.load();
 
-                // Obtener el controlador de Start.fxml
+
                 String nombre=DataBaseConnection.getFullNameByUsername(username);
                 StartController startController = loader.getController();
-                startController.setUsername(nombre); // Pasar el nombre de usuario
+                startController.setUsername(nombre);
 
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 Scene startScene = new Scene(startPage);
                 stage.setScene(startScene);
-                stage.setTitle("Inicio"); // Cambia el título a "Inicio"
+                stage.setTitle("Inicio");
             } catch (Exception e) {
                 System.err.println("Error al cargar la ventana de inicio: " + e.getMessage());
                 e.printStackTrace();
             }
         } else {
-            // Si la autenticación falla, muestra un mensaje de error
             showWindowError( "Incorrect username or password.");
         }
     }
@@ -89,9 +88,8 @@ public class UserLoginController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ResetPassword.fxml"));
             Parent root = loader.load();
 
-            // Obtener el Stage actual desde el botón (u otro nodo de la ventana actual)
             Stage stage = (Stage) usernameField.getScene().getWindow();
-            stage.setScene(new Scene(root)); // Cambia la escena a la nueva ventana
+            stage.setScene(new Scene(root));
         } catch (IOException e) {
             e.printStackTrace();
         }

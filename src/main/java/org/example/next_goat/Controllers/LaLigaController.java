@@ -27,23 +27,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LaLigaController {
-    @FXML
-    private TextField equipoField; // Buscar equipo
 
     @FXML
-    private ComboBox<Competition> leagueComboBox;  // Cambiado para usar el objeto Competition
+    private ComboBox<Competition> leagueComboBox;
     @FXML
-    private ListView<Match> matchesListView; // Para mostrar los partidos
+    private ListView<Match> matchesListView;
     @FXML
-    private TableView<Equipo> clasificacionTable; // Para mostrar la clasificación
+    private TableView<Equipo> clasificacionTable;
     @FXML
-    private TableColumn<Equipo, String> posicionCol;// Columna de posición
+    private TableColumn<Equipo, String> posicionCol;
     @FXML
     private TableColumn<Equipo, String> escudoCol;
     @FXML
-    private TableColumn<Equipo, String> equipoCol; // Columna de equipo
+    private TableColumn<Equipo, String> equipoCol;
     @FXML
-    private TableColumn<Equipo, String> puntosCol; // Columna de puntos
+    private TableColumn<Equipo, String> puntosCol;
 
     private FootballApiClient footballApiClient = new FootballApiClient();
 
@@ -59,15 +57,15 @@ public class LaLigaController {
             Competition selectedCompetition = leagueComboBox.getValue();
             if (selectedCompetition != null) {
                 loadClasificacion(selectedCompetition);
-                loadUpcomingMatches(selectedCompetition);// Cargar la clasificación de la liga seleccionada
+                loadUpcomingMatches(selectedCompetition);
             }
         });
 
         matchesListView.setCellFactory(param -> new ListCell<Match>() {
             private final ImageView homeCrestView = new ImageView();
             private final ImageView awayCrestView = new ImageView();
-            private final Label teamsLabel = new Label(); // Añadir esta línea
-            private final Label dateLabel = new Label();  // Añadir esta línea
+            private final Label teamsLabel = new Label();
+            private final Label dateLabel = new Label();
 
             {
                 homeCrestView.setFitHeight(20);
@@ -86,11 +84,10 @@ public class LaLigaController {
                     homeCrestView.setImage(new Image(match.getHomeTeamCrest()));
                     awayCrestView.setImage(new Image(match.getAwayTeamCrest()));
 
-                    // Configura el texto de los equipos y la fecha
+
                     teamsLabel.setText(match.getHomeTeam().getShortName() + " VS " + match.getAwayTeam().getShortName());
                     dateLabel.setText(match.getFormattedDate());
 
-                    // Organiza los elementos visualmente
                     HBox teamsBox = new HBox(5, homeCrestView, teamsLabel, awayCrestView);
                     teamsBox.setStyle("-fx-alignment: center;");
 
@@ -164,8 +161,8 @@ public class LaLigaController {
             private final ImageView imageView = new ImageView();
 
             {
-                imageView.setFitWidth(23.5); // Ancho del escudo
-                imageView.setFitHeight(23.5); // Altura del escudo
+                imageView.setFitWidth(23.5);
+                imageView.setFitHeight(23.5);
             }
 
             @Override
@@ -211,7 +208,7 @@ public class LaLigaController {
     }
 
 
-    // Cargar las competiciones (ligas)
+    // Cargar las ligas
     private void loadCompetitions() {
         new Thread(() -> {
             try {
@@ -225,18 +222,17 @@ public class LaLigaController {
                 // Actualizar el ComboBox en el hilo de la UI
                 Platform.runLater(() -> {
                     leagueComboBox.getItems().clear();
-                    leagueComboBox.getItems().addAll(competitions); // Añadir competiciones directamente
+                    leagueComboBox.getItems().addAll(competitions);
                 });
 
             } catch (Exception e) {
                 showWindowError("Something went wrong. Check your internet connection.");
-                 // Maneja la excepción como consideres apropiado
             }
         }).start();
     }
 
 
-    // Cargar la clasificación de la liga seleccionada
+
     // Método para cargar la clasificación de la liga seleccionada
     private void loadClasificacion(Competition competition) {
         try {
@@ -279,14 +275,12 @@ public class LaLigaController {
     @FXML
     private void buttonBack(ActionEvent event) {
         try {
-            // Cargar la vista de LaLiga
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainWindow.fxml"));
             Parent traView = loader.load();
 
-            // Crear una nueva escena con la ventana de LaLiga
             Scene laLigaScene = new Scene(traView);
 
-            // Obtener el stage actual y cambiar la escena
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(laLigaScene);
             window.show();
