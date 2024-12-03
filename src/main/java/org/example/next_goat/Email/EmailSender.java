@@ -13,8 +13,8 @@ public class EmailSender {
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
 
-        final String username = "youarenextgoat@gmail.com"; // Cambia con tu correo
-        final String password = "lzkv xvnd ybaa qasp"; // Cambia con tu contraseña
+        final String username = "youarenextgoat@gmail.com"; 
+        final String password = "lzkv xvnd ybaa qasp";
 
         Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
