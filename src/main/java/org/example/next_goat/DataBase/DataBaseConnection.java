@@ -65,15 +65,14 @@ public class DataBaseConnection {
 
             pstmt.executeUpdate();
 
-            // Obtener el id_usuario generado automáticamente
             try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    long idUsuario = generatedKeys.getLong(1);  // El id del nuevo usuario insertado
+                    long idUsuario = generatedKeys.getLong(1);
                     // Ahora insertamos un registro en la tabla MejoraFisica
                     String sqlMejoraFisica = "INSERT INTO MejoraFisica (id_usuario) VALUES (?)";
                     try (PreparedStatement pstmtMejora = conn.prepareStatement(sqlMejoraFisica)) {
                         pstmtMejora.setLong(1, idUsuario);
-                        pstmtMejora.executeUpdate();  // Inserta el registro de mejora física para el nuevo usuario
+                        pstmtMejora.executeUpdate();
                     }
                 }
             }
@@ -143,27 +142,27 @@ public class DataBaseConnection {
         return false;
     }
     public static String getFullNameByUsername(String username) {
-        String fullName = null; // Variable para almacenar el nombre completo
+        String fullName = null;
 
-        // Intenta conectarse a la base de datos y ejecutar la consulta
+
         try (Connection connection = DriverManager.getConnection(urlDB, user, password)) {
-            // Consulta SQL para obtener el nombre completo
+
             String sql = "SELECT nombre_usuario FROM Usuario WHERE username = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, username); // Establece el nombre de usuario en la consulta
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            // Si se encuentra un resultado, obtén el nombre completo
+
             if (resultSet.next()) {
                 fullName = resultSet.getString("nombre_usuario");
             }
 
         } catch (SQLException e) {
-            e.printStackTrace(); // Manejo de excepciones
+            e.printStackTrace();
         }
 
-        return fullName; // Retorna el nombre completo (o null si no se encuentra)
+        return fullName; // Devuelve el nombre completo
     }
 
     public static boolean authenticateUser(String username, String passwordd) {
@@ -175,7 +174,7 @@ public class DataBaseConnection {
             pstmt.setString(2, passwordd);
             ResultSet rs = pstmt.executeQuery();
 
-            return rs.next(); // Si hay un resultado, el usuario existe y la contraseña es correcta
+            return rs.next();
         } catch (SQLException e) {
             System.out.println("Error en la autenticación: " + e.getMessage());
             return false;
@@ -198,7 +197,7 @@ public class DataBaseConnection {
         } catch (SQLException e) {
             System.out.println("Error al obtener el correo por username: " + e.getMessage());
         }
-        return null; // Retorna null si no se encuentra el usuario
+        return null;
     }
     public static boolean updateUserPasswordByUsername(String username, String newPassword) {
         String sql = "UPDATE Usuario SET contrsena = ? WHERE username = ?";
@@ -274,24 +273,24 @@ public class DataBaseConnection {
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
-                    return rs.getInt("id_usuario"); // Devuelve el correo electrónico asociado
+                    return rs.getInt("id_usuario");
                 }
             }
         } catch (SQLException e) {
             System.out.println("Error al obtener el correo por username: " + e.getMessage());
         }
-        return 0; // Retorna null si no se encuentra el usuario
+        return 0;
     }
 
     public static String getFullNameById(int id) {
         String fullName = null; // Variable para almacenar el nombre completo
 
-        // Intenta conectarse a la base de datos y ejecutar la consulta
+
         try (Connection connection = DriverManager.getConnection(urlDB, user, password)) {
-            // Consulta SQL para obtener el nombre completo
+
             String sql = "SELECT nombre_usuario FROM Usuario WHERE id_usuario = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, id); // Establece el nombre de usuario en la consulta
+            preparedStatement.setInt(1, id);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -300,9 +299,9 @@ public class DataBaseConnection {
                 fullName = resultSet.getString("nombre_usuario");
             }
         } catch (SQLException e) {
-            e.printStackTrace(); // Manejo de excepciones
+            e.printStackTrace();
         }
-        return fullName; // Retorna el nombre completo (o null si no se encuentra)
+        return fullName;
     }
     public static void updateUser(Usuario usuario) {
         String query = "UPDATE Usuario SET nombre_usuario = ?, apellidos_usuario = ?,dni = ?,fecha_nacimiento=?, correo_usuario = ?, telefono_usuario = ?, dirrecion_vivienda = ?, username = ?, contrsena = ? WHERE id_usuario = ?";

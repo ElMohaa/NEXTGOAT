@@ -57,7 +57,7 @@ public class Match {
         private String name;
         private String crest;
 
-        private String shortName; // Añadir shortName
+        private String shortName;
 
         public String getName() {
             return name;

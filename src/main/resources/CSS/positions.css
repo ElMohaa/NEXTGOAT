@@ -38,40 +38,40 @@
     -fx-background-color: transparent;
 }
 .scroll-pane .viewport {
-    -fx-background-color: transparent; /* Fondo transparente en el contenido */
+    -fx-background-color: transparent;
 }
 
 /* Estilo para el contenido dentro del AnchorPane */
 .scroll-pane .content {
-    -fx-background-color: transparent; /* Fondo transparente para el AnchorPane contenido */
+    -fx-background-color: transparent;
 }
 .scroll-pane .scroll-bar:vertical {
-    -fx-background-color: #f6f7fa; /* Fondo de la barra */
-    -fx-border-radius: 10; /* Bordes redondeados para la barra */
-    -fx-padding: 1; /* Espaciado interno para el track */
+    -fx-background-color: #f6f7fa;
+    -fx-border-radius: 10;
+    -fx-padding: 1;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento vertical */
 .scroll-pane .scroll-bar:vertical .thumb {
-    -fx-background-color: #75d816; /* Color del pulgar */
-    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
-    -fx-min-width: 10px; /* Ancho mínimo del pulgar */
-    -fx-pref-width: 10px; /* Ancho preferido del pulgar */
+    -fx-background-color: #75d816;
+    -fx-background-radius: 10;
+    -fx-min-width: 10px;
+    -fx-pref-width: 10px;
 }
 
 /* Estilo para la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal {
-    -fx-background-color: #eeeeee; /* Fondo de la barra */
-    -fx-border-radius: 10; /* Bordes redondeados para la barra */
-    -fx-padding: 1; /* Espaciado interno para el track */
+    -fx-background-color: #eeeeee;
+    -fx-border-radius: 10;
+    -fx-padding: 1;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal .thumb {
-    -fx-background-color: #1def66; /* Color del pulgar */
-    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
-    -fx-min-height: 10px; /* Altura mínima del pulgar */
-    -fx-pref-height: 10px; /* Altura preferida del pulgar */
+    -fx-background-color: #1def66;
+    -fx-background-radius: 10;
+    -fx-min-height: 10px;
+    -fx-pref-height: 10px;
 }
 
 #anchorpaneR {

@@ -66,7 +66,7 @@ public class UserLoginController {
     }
 
 
-    // Navegar a la ventana de Sign Up
+
     @FXML
     private void handleSignUpButtonAction(ActionEvent event) {
         try {
@@ -84,7 +84,7 @@ public class UserLoginController {
     @FXML
     private void handleForgotPasswordAction() {
         try {
-            // Cargar la nueva ventana de restablecer contraseña
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ResetPassword.fxml"));
             Parent root = loader.load();
 

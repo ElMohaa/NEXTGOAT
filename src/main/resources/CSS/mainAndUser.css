@@ -1,7 +1,7 @@
 /*START*/
 #anchorpaneStart{
     -fx-background-image: url("../IMAGENS/fondoStart.jpg");
-    -fx-background-size: cover;            /* Ajusta la imagen para cubrir todo el AnchorPane */
+    -fx-background-size: cover;
     -fx-background-position: center;
 }
 #welcomeLabelStart{
@@ -10,16 +10,16 @@
 }
 
 #continueButtonStart{
-    -fx-background-color: #000209; /* Blanco */
-    -fx-text-fill: #f6f7fa; /* Texto negro */
+    -fx-background-color: #000209;
+    -fx-text-fill: #f6f7fa;
     -fx-font-weight: bold;
     -fx-font-size: 20;
     -fx-background-radius: 10;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
 }
 #continueButtonStart:hover {
-    -fx-text-fill: #f6f7fa;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: #14df5b; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #f6f7fa;
+    -fx-background-color: #14df5b;
 }
 
 /*MAIN*/
@@ -27,7 +27,7 @@
     -fx-background-color: linear-gradient(  #0a145a, #14dfc7);
 }
 #entrenamiento {
-    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    -fx-background-color: #f6f7fa;
     -fx-background-radius: 25px;
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
     -fx-font-size: 20px;
@@ -41,7 +41,7 @@
 
 
 #atletismo {
-    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    -fx-background-color: #f6f7fa;
     -fx-background-radius: 25px;
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
     -fx-font-size: 20px;
@@ -49,12 +49,12 @@
     -fx-text-fill: #000209;
 }
 #atletismo:hover {
-    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #000310;
+    -fx-background-color: #1def66;
 }
 
 #lesion {
-    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    -fx-background-color: #f6f7fa;
     -fx-background-radius: 25px;
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
     -fx-font-size: 20px;
@@ -62,11 +62,11 @@
     -fx-text-fill: #000209;
 }
 #lesion:hover {
-    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #000310;
+    -fx-background-color: #1def66;
 }
 #ligas {
-    -fx-background-color: #f6f7fa; /* Agrega la imagen de fondo */
+    -fx-background-color: #f6f7fa;
     -fx-background-radius: 25px;
     -fx-effect: dropshadow(gaussian, rgb(29, 239, 102), 5, 0, 0, 4);
     -fx-font-size: 20px;
@@ -74,8 +74,8 @@
     -fx-text-fill: #000209;
 }
 #ligas:hover {
-    -fx-text-fill: #000310;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: #1def66; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #000310;
+    -fx-background-color: #1def66;
 }
 #barra{
     -fx-background-color: #079c8f;
@@ -166,7 +166,7 @@
 }
 .text-field{
     -fx-background-color: transparent;
-    -fx-border-width: 0 0 1px 0;  /* Solo borde en la parte inferior */
+    -fx-border-width: 0 0 1px 0;
     -fx-border-color: #14df5b;
     -fx-text-fill: white;
 }

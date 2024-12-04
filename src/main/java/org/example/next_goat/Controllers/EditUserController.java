@@ -69,7 +69,7 @@ public class EditUserController {
     @FXML
     private void saveUser(ActionEvent event)  {
         try {
-            // Obtener los valores de los TextField
+
             String name = nameField.getText();
             String surname = surnameField.getText();
             String email = emailField.getText();

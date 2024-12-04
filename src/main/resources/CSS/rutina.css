@@ -15,29 +15,29 @@
 }
 /* Estilo para las opciones desplegadas (list-view del ComboBox) */
 .combo-box-popup .list-view {
-    -fx-background-color: #aeefc5; /* Fondo azul de las opciones desplegadas */
-    -fx-text-fill: white; /* Texto de las opciones */
-    -fx-font-weight: bold; /* Negrita */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 /* Estilo para las celdas de las opciones */
 .combo-box-popup .list-cell {
-    -fx-background-color: #aeefc5; /* Fondo azul */
-    -fx-text-fill: white; /* Texto blanco */
-    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 /* Cambiar el color de fondo y texto al pasar el ratón */
 .combo-box-popup .list-cell:hover {
-    -fx-background-color: #655d5d; /* Fondo más claro al pasar el ratón */
-    -fx-text-fill: black; /* Texto negro */
+    -fx-background-color: #655d5d;
+    -fx-text-fill: black;
 }
 
 /* Estilo para la opción seleccionada */
 .combo-box-popup .list-cell:selected {
-    -fx-background-color: #ffffff; /* Fondo celeste de la opción seleccionada */
-    -fx-text-fill: black; /* Texto negro */
-    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
 
 
@@ -60,11 +60,11 @@
     -fx-font-size: 17px;
     -fx-font-weight: bold;
     -fx-text-fill: #1b1a1a;
-    -fx-background-color: #08e195; /* Fondo para resaltar */
+    -fx-background-color: #08e195;
     -fx-padding: 10px;
     -fx-border-radius: 5;
     -fx-background-radius: 5;
-    -fx-alignment: center; /* Centrar el texto */
+    -fx-alignment: center;
     -fx-text-alignment: center;
 }
 
@@ -76,12 +76,12 @@
 .vbox-dia {
     -fx-spacing: 10px;
     -fx-padding: 10px;
-    -fx-background-color: rgb(251, 251, 251); /* Fondo translúcido */
+    -fx-background-color: rgb(251, 251, 251);
     -fx-border-color: #08e195;
     -fx-border-width: 2px;
     -fx-background-radius: 10;
     -fx-border-radius: 10;
-    -fx-margin: 10px 0; /* Separación entre días */
+    -fx-margin: 10px 0;
     -fx-text-alignment: center;
     -fx-alignment: center;
 }
@@ -111,37 +111,37 @@
     -fx-background-color: transparent;
 }
 .scroll-pane .viewport {
-    -fx-background-color: transparent; /* Fondo transparente en el contenido */
+    -fx-background-color: transparent;
 }
 .scroll-pane .content {
-    -fx-background-color: transparent; /* Fondo transparente para el AnchorPane contenido */
+    -fx-background-color: transparent;
 }
 .scroll-pane .scroll-bar:vertical {
-    -fx-background-color: #f6f7fa; /* Fondo de la barra */
-    -fx-border-radius: 10; /* Bordes redondeados para la barra */
-    -fx-padding: 1; /* Espaciado interno para el track */
+    -fx-background-color: #f6f7fa;
+    -fx-border-radius: 10;
+    -fx-padding: 1;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento vertical */
 .scroll-pane .scroll-bar:vertical .thumb {
-    -fx-background-color: #08e195; /* Color del pulgar */
-    -fx-background-radius: 10; /* Bordes redondeados en el pulgar */
-    -fx-min-width: 10px; /* Ancho mínimo del pulgar */
-    -fx-pref-width: 10px; /* Ancho preferido del pulgar */
+    -fx-background-color: #08e195;
+    -fx-background-radius: 10;
+    -fx-min-width: 10px;
+    -fx-pref-width: 10px;
 }
 
 /* Estilo para la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal {
-    -fx-opacity: 0;  /* Hace que la barra sea completamente invisible */
-    -fx-background-color: transparent;  /* Elimina el color de fondo */
-    -fx-border-width: 0; /* Espaciado interno para el track */
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento horizontal */
 .scroll-pane .scroll-bar:horizontal .thumb {
-    -fx-background-color: transparent;  /* Hace el pulgar invisible */
-    -fx-min-height: 0;  /* Establece la altura mínima a 0 */
-    -fx-pref-height: 0; /* Altura preferida del pulgar */
+    -fx-background-color: transparent;
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
 }
 
 .scroll-pane .scroll-bar:horizontal .arrow-button{

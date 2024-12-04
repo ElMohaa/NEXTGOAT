@@ -22,7 +22,7 @@ public class ClasificacionResponse {
         private Team team;
         private int points;
 
-        // Getters
+
         public int getPosition() {
             return position;
         }
@@ -40,7 +40,7 @@ public class ClasificacionResponse {
         private String name;
         private String crest;
 
-        // Getter
+
         public String getName() {
             return name;
         }

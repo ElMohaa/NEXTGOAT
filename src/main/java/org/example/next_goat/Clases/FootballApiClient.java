@@ -15,7 +15,7 @@ public class FootballApiClient {
     private static final String BASE_URL = "https://api.football-data.org/v4";
 
     // Token de autenticación de la API
-    private static final String API_KEY = "e6e28ccf195848d380518569beb75823";  // Aquí va tu token
+    private static final String API_KEY = "e6e28ccf195848d380518569beb75823";
 
     // Método para obtener las competiciones
     public String getCompetitions() throws IOException {

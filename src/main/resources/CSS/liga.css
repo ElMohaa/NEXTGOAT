@@ -10,119 +10,119 @@
 
 /* Fondo general de la TableView */
 .table-view {
-    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo transparente */
-    -fx-control-inner-background: rgba(174, 239, 197, 0.23); /* Fondo interno */
+    -fx-background-color: rgba(174, 239, 197, 0.23);
+    -fx-control-inner-background: rgba(174, 239, 197, 0.23);
     -fx-background-insets: 0;
-    -fx-border-color: #14dfc7; /* Borde para que destaque */
-    -fx-border-width: 2; /* Grosor del borde */
-    -fx-border-radius: 5; /* Esquinas redondeadas */
-    -fx-padding: 5; /* Espaciado interior */
+    -fx-border-color: #14dfc7;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
 }
 
 /* Estilo para los encabezados de las columnas */
 .table-view .column-header {
-    -fx-background-color: #44ee7f; /* Fondo del encabezado */
-    -fx-text-fill: black; /* Texto blanco */
-    -fx-font-weight: bold; /* Texto en negrita */
-    -fx-alignment: center; /* Centrar texto */
-    -fx-border-color: #44ee7f; /* Borde oscuro */
-    -fx-border-width: 0 0 2 0; /* Borde inferior */
+    -fx-background-color: #44ee7f;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-border-color: #44ee7f;
+    -fx-border-width: 0 0 2 0;
 }
 
 /* Estilo para las celdas de la tabla */
 .table-view .table-cell {
-    -fx-background-color: #aeefc5; /* Fondo de las celdas */
-    -fx-border-color: rgba(0, 0, 0, 0.1); /* Línea de separación entre celdas */
-    -fx-border-width: 0 0 1 0; /* Solo borde inferior */
-    -fx-text-fill: #000209; /* Texto en negro */
-    -fx-font-weight: bold; /* Texto en negrita */
-    -fx-padding: 4; /* Espaciado interno */
-    -fx-alignment: center-left; /* Alinear texto a la izquierda */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1); /* Sombra ligera */
+    -fx-background-color: #aeefc5;
+    -fx-border-color: rgba(0, 0, 0, 0.1);
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: #000209;
+    -fx-font-weight: bold;
+    -fx-padding: 4;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1);
 }
 
 /* Estilo para las celdas seleccionadas */
 .table-view .table-cell:selected {
-    -fx-background-color: #14dfc7; /* Fondo celeste */
-    -fx-text-fill: white; /* Texto blanco */
-    -fx-font-weight: bold; /* Negrita */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 2); /* Sombra destacada */
+    -fx-background-color: #14dfc7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 2);
 }
 
 /* Estilo para filas al pasar el cursor */
 .table-view .table-row-cell:hover {
-    -fx-background-color: rgba(20, 223, 199, 0.5); /* Fondo semitransparente */
-    -fx-cursor: hand; /* Cambia el cursor al pasar el mouse */
+    -fx-background-color: rgba(20, 223, 199, 0.5);
+    -fx-cursor: hand;
 }
 
 /* Estilo para filas alternadas */
 .table-view .table-row-cell:odd {
-    -fx-background-color: rgba(174, 239, 197, 0.1); /* Fondo claro */
+    -fx-background-color: rgba(174, 239, 197, 0.1);
 }
 
 .table-view .table-row-cell:even {
-    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo ligeramente más oscuro */
+    -fx-background-color: rgba(174, 239, 197, 0.23);
 }
  .scroll-bar:vertical {
-    -fx-background-color: #f6f7fa; /* Fondo de la barra */
-    -fx-border-radius: 5; /* Bordes redondeados para la barra */
-    -fx-padding: 1; /* Espaciado interno para el track */
+    -fx-background-color: #f6f7fa;
+    -fx-border-radius: 5;
+    -fx-padding: 1;
 }
 
 /* Estilo para el pulgar de la barra de desplazamiento vertical */
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #44ee7f; /* Color del pulgar */
-    -fx-background-radius: 5; /* Bordes redondeados en el pulgar */
-    -fx-min-width: 5; /* Ancho mínimo del pulgar */
-    -fx-pref-width: 5; /* Ancho preferido del pulgar */
+    -fx-background-color: #44ee7f;
+    -fx-background-radius: 5;
+    -fx-min-width: 5;
+    -fx-pref-width: 5;
 }
 
 .table-view .scroll-bar:horizontal{
-    -fx-opacity: 0;  /* Hace que la barra sea completamente invisible */
-    -fx-background-color: transparent;  /* Elimina el color de fondo */
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
     -fx-border-width: 0;
 }
 .table-view .scroll-bar:horizontal .thumb{
-    -fx-background-color: transparent;  /* Hace el pulgar invisible */
-    -fx-min-height: 0;  /* Establece la altura mínima a 0 */
+    -fx-background-color: transparent;
+    -fx-min-height: 0;
     -fx-pref-height: 0;
 }
 
 
 
-/* Estilo para el ComboBox (si también lo quieres con fondo negro) */
+
 /* Estilo general para el ComboBox */
 .combo-box {
-    -fx-background-color: #aeefc5; /* Fondo del ComboBox cerrado */
-    -fx-text-fill: #000209; /* Texto del ComboBox cerrado */
-    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: #000209;
+    -fx-font-weight: bold;
 }
 
 /* Estilo para las opciones desplegadas (list-view del ComboBox) */
 .combo-box-popup .list-view {
-    -fx-background-color: #aeefc5; /* Fondo azul de las opciones desplegadas */
-    -fx-text-fill: white; /* Texto de las opciones */
-    -fx-font-weight: bold; /* Negrita */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 /* Estilo para las celdas de las opciones */
 .combo-box-popup .list-cell {
-    -fx-background-color: #aeefc5; /* Fondo azul */
-    -fx-text-fill: white; /* Texto blanco */
-    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }
 
 /* Cambiar el color de fondo y texto al pasar el ratón */
 .combo-box-popup .list-cell:hover {
-    -fx-background-color: #ffffff; /* Fondo más claro al pasar el ratón */
-    -fx-text-fill: black; /* Texto negro */
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
 }
 
 /* Estilo para la opción seleccionada */
 .combo-box-popup .list-cell:selected {
-    -fx-background-color: #ffffff; /* Fondo celeste de la opción seleccionada */
-    -fx-text-fill: black; /* Texto negro */
-    -fx-font-weight: bold; /* Texto en negrita */
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
 }
 
 
@@ -134,35 +134,33 @@
 #partidosLabel, #frsa {
     -fx-text-fill: #1def66;
     -fx-font-weight: bold;
-    -fx-font-size: 14; /* Esto ya lo tienes, sigue con color verde */
+    -fx-font-size: 14;
 }
 /* Estilo para el ListView */
 #matchesListView {
-    -fx-background-color: rgba(174, 239, 197, 0.23); /* Fondo transparente */
-    -fx-control-inner-background: rgba(174, 239, 197, 0.23); /* Fondo interno transparente */
-    -fx-background-insets: 0; /* Ajustar márgenes del fondo */
+    -fx-background-color: rgba(174, 239, 197, 0.23);
+    -fx-control-inner-background: rgba(174, 239, 197, 0.23);
+    -fx-background-insets: 0;
     -fx-font-weight: bold;
     -fx-text-fill: #000209;
 }
 
 /* Estilo para las celdas del ListView */
 #matchesListView .list-cell {
-    -fx-background-color: #aeefc5; /* Fondo de la celda (blanco en este caso) */
-    -fx-background-insets: 0 0 4 0; /* Margen inferior para crear separación */
-    -fx-padding: 10; /* Espaciado interno en las celdas */
-    -fx-text-fill: black; /* Texto en negro */
-    -fx-font-weight: bold; /* Negrita */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, 0, 0, 2); /* Sombra para mayor contraste */
+    -fx-background-color: #aeefc5;
+    -fx-background-insets: 0 0 4 0;
+    -fx-padding: 10;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, 0, 0, 2);
 }
 
 /* Estilo para resaltar la celda seleccionada */
 
-
-
 #leagueComboBox.list-cell {
-    -fx-background-color: #aeefc5; /* Fondo de las celdas */
-    -fx-text-fill: #000209; /* Color del texto (verde, en tu caso) */
-    -fx-font-weight: bold; /* Negrita en las celdas */
+    -fx-background-color: #aeefc5;
+    -fx-text-fill: #000209;
+    -fx-font-weight: bold;
 }
 
 

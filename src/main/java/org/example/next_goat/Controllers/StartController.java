@@ -46,7 +46,7 @@ public class StartController {
 
             Stage stage = (Stage) continueButtonStart.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.show(); // Asegúrate de mostrar la nueva escena
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

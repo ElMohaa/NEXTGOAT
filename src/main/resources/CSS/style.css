@@ -3,36 +3,36 @@
 }
 
 .loginButton{
-    -fx-background-color: #000209; /* Blanco */
-    -fx-text-fill: #f6f7fa; /* Texto negro */
+    -fx-background-color: #000209;
+    -fx-text-fill: #f6f7fa;
     -fx-font-family: "Arial Black";
     -fx-font-weight: bold;
     -fx-background-radius: 10;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
 }
 .loginButton:hover {
-    -fx-text-fill: #000209;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: #14df5b; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #000209;
+    -fx-background-color: #14df5b;
 }
 
 #signUpButton {
-    -fx-background-color: transparent; /* Verde claro */
+    -fx-background-color: transparent;
     -fx-text-fill: #f6f7fa;
     -fx-font-family: "Arial Black";
-    -fx-font-weight: bold;/* Texto blanco */
+    -fx-font-weight: bold;
 }
 #loginview{
-    -fx-background-color: transparent; /* Verde claro */
+    -fx-background-color: transparent;
     -fx-text-fill: #f6f7fa;
     -fx-font-family: "Arial Black";
     -fx-font-weight: bold;
     -fx-border-color: transparent transparent #1def66 transparent;
-    -fx-border-width: 0 0 2 0; /* Solo línea abajo */
+    -fx-border-width: 0 0 2 0;
 
 }
 
 #forgotPasswordButton {
-    -fx-background-color: transparent; /* Amarillo */
+    -fx-background-color: transparent;
     -fx-text-fill: #000000;
     -fx-font-weight: bold;
 }
@@ -41,6 +41,6 @@
 
 }
 #signUpButton:hover {
-    -fx-text-fill: #0cd151;           /* Color de texto blanco al pasar el ratón sobre el botón */
-    -fx-background-color: transparent; /* Fondo verde claro al pasar el ratón */
+    -fx-text-fill: #0cd151;
+    -fx-background-color: transparent;
 }

@@ -12,11 +12,11 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
     -fx-background-color: transparent;
-    -fx-text-fill: #1b1a1a;  /* El texto será visible */
-    -fx-font-size: 25;   /* Tamaño del texto */
-    -fx-font-weight: bold; /* Fuente en negrita */
-    -fx-border-radius: 20px; /* Bordes redondeados */
-    -fx-background-radius: 20px; /* Bordes redondeados */
+    -fx-text-fill: #1b1a1a;
+    -fx-font-size: 25;
+    -fx-font-weight: bold; /
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
     -fx-effect: dropshadow(gaussian, rgb(130, 232, 164), 10, 0.5, 2, 2); /* Sombra en los botones */
     -fx-padding: 10px;
     -fx-border-width: 2;
