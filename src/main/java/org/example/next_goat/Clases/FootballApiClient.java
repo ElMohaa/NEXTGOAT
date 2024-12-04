@@ -55,7 +55,11 @@ public class FootballApiClient {
         String endpoint = "/teams/" + teamId + "/matches?status=SCHEDULED";
         return sendRequest(endpoint);
     }
-
+    //Obtener los proximos partidos de una competitcion
+    public String getUpcomingMatchesByCompetition(int competitionId) throws IOException {
+        String endpoint = "/competitions/" + competitionId + "/matches?status=SCHEDULED&limit=8";
+        return sendRequest(endpoint);
+    }
 
     // Método para obtener la clasificación por ID de competición
     public String getClasificacionByCompetition(int competitionId) throws IOException {
@@ -85,9 +89,5 @@ public class FootballApiClient {
         } else {
             throw new RuntimeException("HTTP error code : " + responseCode);
         }
-    }
-    public String getUpcomingMatchesByCompetition(int competitionId) throws IOException {
-        String endpoint = "/competitions/" + competitionId + "/matches?status=SCHEDULED&limit=8";
-        return sendRequest(endpoint);
     }
 }
