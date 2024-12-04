@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/fisico.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Resistance.ResistanceController">
    <children>
-      <Button fx:id="back" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
       <Button layoutX="65.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonResistence1" prefHeight="49.0" prefWidth="187.0" text="Power Skips" />
       <Button layoutX="65.0" layoutY="192.0" mnemonicParsing="false" onAction="#buttonResistence2" prefHeight="49.0" prefWidth="187.0" text="Single Leg Bounds" />
       <Button layoutX="65.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonResistence3" prefHeight="49.0" prefWidth="187.0" text="Bounding" />

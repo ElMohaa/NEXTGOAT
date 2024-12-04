@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Defen.ControllDefense.ControllDefense">
     <children>
-        <Button fx:id="back" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+        <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
         <Button layoutX="80.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonControlll1" prefHeight="49.0" prefWidth="160.0" text="Inside Cotrol" />
         <Button layoutX="80.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonControlll2" prefHeight="49.0" prefWidth="160.0" text="Thigh Control" />
         <Button layoutX="80.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonControlll3" prefHeight="49.0" prefWidth="160.0" text="Chest Control" />

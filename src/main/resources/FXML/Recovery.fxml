@@ -6,7 +6,7 @@
 
 <AnchorPane fx:id="anchorpaneR" minHeight="615.0" minWidth="315.0" stylesheets="@../CSS/positions.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.RecoveryController">
    <children>
-      <Button fx:id="back" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="59.0" prefWidth="29.0" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0" mnemonicParsing="false" onAction="#buttonBack"  text=" " />
       <Label fx:id="texto" layoutX="93.0" layoutY="45.0" text="RECOVERY" />
       <ScrollPane layoutX="14.0" layoutY="108.0" prefHeight="493.0" prefWidth="288.0">
         <content>

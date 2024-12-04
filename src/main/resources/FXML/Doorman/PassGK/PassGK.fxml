@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Goalkeeper.PassGK.PassGKController">
     <children>
-        <Button fx:id="back" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+        <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
         <Button layoutX="85.0" layoutY="136.0" mnemonicParsing="false" onAction="#buttonSoot7" prefHeight="49.0" prefWidth="152.0" text="Pass Long GK" />
         <Button layoutX="85.0" layoutY="213.0" mnemonicParsing="false" onAction="#buttonSoot8" prefHeight="49.0" prefWidth="152.0" text="Drop Kick" />
         <Button layoutX="85.0" layoutY="283.0" mnemonicParsing="false" onAction="#buttonSoot3" prefHeight="49.0" prefWidth="152.0" text="Pass Easy" />

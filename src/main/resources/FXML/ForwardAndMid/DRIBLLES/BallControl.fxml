@@ -12,7 +12,7 @@
       <Button layoutX="36.0" layoutY="389.0" onAction="#buttonDriblle5" prefHeight="49.0" prefWidth="244.0" text="Sole Role Drag 90s back" />
       <Button layoutX="36.0" layoutY="461.0" onAction="#buttonDriblle6" prefHeight="49.0" prefWidth="244.0" text="Skill CR7" />
       <Button layoutX="36.0" layoutY="528.0" onAction="#buttonDriblle7" prefHeight="49.0" prefWidth="244.0" text="Skill Easy" />
-      <Button fx:id="back" layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
       <Label fx:id="text" layoutX="90.0" layoutY="49.0" text="DRIBLLES" />
    </children>
 </AnchorPane>

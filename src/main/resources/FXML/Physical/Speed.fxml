@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/fisico.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Speed.SpeedController">
    <children>
-      <Button fx:id="back" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
       <Button layoutX="85.0" layoutY="131.0" mnemonicParsing="false" onAction="#buttonSpeed1" prefHeight="49.0" prefWidth="151.0" text="Broad Jumps" />
       <Button layoutX="85.0" layoutY="201.0" mnemonicParsing="false" onAction="#buttonSpeed2" prefHeight="49.0" prefWidth="151.0" text="Calf Speed" />
       <Button layoutX="85.0" layoutY="275.0" mnemonicParsing="false" onAction="#buttonSpeed3" prefHeight="49.0" prefWidth="151.0" text="Fall Sprints" />

@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../CSS/fisico.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.Physical.Mobility.MobilityController">
    <children>
-      <Button fx:id="back" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
       <Button layoutX="70.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonMobi1" prefHeight="49.0" prefWidth="175.0" text="Kneeling Cars" />
       <Button layoutX="70.0" layoutY="196.0" mnemonicParsing="false" onAction="#buttonMobi2" prefHeight="49.0" prefWidth="175.0" text="Bridge Abdution" />
       <Button layoutX="70.0" layoutY="268.0" mnemonicParsing="false" onAction="#buttonMobi3" prefHeight="49.0" prefWidth="175.0" text="Active 90/90" />

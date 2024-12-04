@@ -5,7 +5,7 @@
 
 <AnchorPane fx:id="anchorpane" prefHeight="615.0" prefWidth="315.0" stylesheets="@../../../CSS/opciones.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.next_goat.Controllers.ForAndMid.ToPass.ToPassControll">
    <children>
-      <Button fx:id="back" layoutX="26.0" layoutY="34.0" mnemonicParsing="false" onAction="#buttonBack" text=" " />
+      <Button fx:id="back" layoutX="14.0" layoutY="27.0" prefHeight="57.0" prefWidth="24.0"  mnemonicParsing="false" onAction="#buttonBack" text=" " />
       <Button layoutX="36.0" layoutY="129.0" mnemonicParsing="false" onAction="#buttonPass1" prefHeight="49.0" prefWidth="244.0" text="Curl Pass" />
       <Button layoutX="36.0" layoutY="199.0" mnemonicParsing="false" onAction="#buttonPass2" prefHeight="49.0" prefWidth="244.0" text="Trivela Pass" />
       <Button layoutX="36.0" layoutY="265.0" mnemonicParsing="false" onAction="#buttonPass3" prefHeight="49.0" prefWidth="244.0" text="Long Pass" />
