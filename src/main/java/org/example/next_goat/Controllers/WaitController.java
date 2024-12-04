@@ -15,7 +15,7 @@ import java.io.IOException;
 public class WaitController {
     @FXML
     private void initialize() {
-        PauseTransition pause = new PauseTransition(Duration.seconds(4));
+        PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
 
         pause.setOnFinished(event -> {
             cargarSiguienteFXML();

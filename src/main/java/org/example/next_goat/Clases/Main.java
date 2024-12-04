@@ -23,7 +23,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 315, 615));
         primaryStage.show();
 
-        PauseTransition pause = new PauseTransition(Duration.seconds(4));
+        PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
 
         pause.setOnFinished(event -> {
             primaryStage.close();

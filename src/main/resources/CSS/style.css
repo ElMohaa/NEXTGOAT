@@ -36,6 +36,10 @@
     -fx-text-fill: #000000;
     -fx-font-weight: bold;
 }
+#forgotPasswordButton:hover{
+    -fx-underline: true, bold;
+
+}
 #signUpButton:hover {
     -fx-text-fill: #0cd151;           /* Color de texto blanco al pasar el ratón sobre el botón */
     -fx-background-color: transparent; /* Fondo verde claro al pasar el ratón */
