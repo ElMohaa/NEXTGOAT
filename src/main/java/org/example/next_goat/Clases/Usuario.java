@@ -45,12 +45,16 @@ public class Usuario {
     }
 
     public void setNombre_usuario(String nombre_usuario) throws NameIllegalException {
-        if (nombre_usuario.matches("[a-zA-Z]+")){
-            this.nombre_usuario=nombre_usuario;
-        }else {
+        if (nombre_usuario.matches("[a-zA-Z]+")) {
+            // Convertimos la primera letra a mayúscula y el resto a minúscula.
+            String nombreFormateado = nombre_usuario.substring(0, 1).toUpperCase() +
+                    nombre_usuario.substring(1).toLowerCase();
+            this.nombre_usuario = nombreFormateado;
+        } else {
             throw new NameIllegalException("El nombre solo debe contener letras");
         }
     }
+
 
     public String getApellidos_usuario() {
         return apellidos_usuario;
@@ -58,11 +62,32 @@ public class Usuario {
 
     public void setApellidos_usuario(String apellidos_usuario) throws SurnameIllegalException {
         if (apellidos_usuario.matches("[a-zA-Z\\s]+")) {
-            this.apellidos_usuario = apellidos_usuario;
+            // Convertimos cada palabra del apellido a la forma "PrimeraLetraMayúscula".
+            String apellidosFormateados = formatApellidos(apellidos_usuario);
+            this.apellidos_usuario = apellidosFormateados;
         } else {
             throw new SurnameIllegalException("El apellido no puede contener números ni caracteres especiales");
         }
     }
+
+    // Método auxiliar para formatear los apellidos.
+    private String formatApellidos(String apellidos) {
+        String[] palabras = apellidos.split("\\s+"); // Dividimos por espacios.
+        StringBuilder apellidosFormateados = new StringBuilder();
+
+        for (String palabra : palabras) {
+            if (!palabra.isEmpty()) {
+                // Formateamos cada palabra: primera letra mayúscula y el resto minúsculas.
+                apellidosFormateados.append(palabra.substring(0, 1).toUpperCase())
+                        .append(palabra.substring(1).toLowerCase())
+                        .append(" "); // Añadimos un espacio después de cada palabra.
+            }
+        }
+
+        // Eliminamos el último espacio adicional y devolvemos el resultado.
+        return apellidosFormateados.toString().trim();
+    }
+
 
     public Date getFecha_nacimiento() {
         return fecha_nacimiento;
